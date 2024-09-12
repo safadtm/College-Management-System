@@ -34,9 +34,12 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.Cornsilk;
+            ClientSize = new Size(1068, 539);
+            ForeColor = Color.Cornsilk;
             Name = "SplashScreenForm";
             Text = "Splash Screen";
+            Load += SplashScreenForm_Load;
             ResumeLayout(false);
         }
 
