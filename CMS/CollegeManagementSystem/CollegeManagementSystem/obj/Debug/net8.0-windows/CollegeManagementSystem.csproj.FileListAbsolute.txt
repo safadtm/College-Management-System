@@ -24,3 +24,7 @@ C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\Colleg
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.pdb
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.genruntimeconfig.cache
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\ref\CollegeManagementSystem.dll
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Properties.Resources.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.LoginForms.principalloginform.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.LoginForms.studentloginform.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.LoginForms.teacherloginform.resources

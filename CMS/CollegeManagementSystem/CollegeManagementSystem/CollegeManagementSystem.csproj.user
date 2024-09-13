@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Forms\LoginForms\principalloginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\LoginForms\studentloginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\LoginForms\teacherloginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\StartupForms\SplashScreenForm.cs">
       <SubType>Form</SubType>
     </Compile>
