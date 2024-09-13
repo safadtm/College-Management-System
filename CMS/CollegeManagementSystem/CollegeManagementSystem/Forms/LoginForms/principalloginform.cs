@@ -21,5 +21,34 @@ namespace CollegeManagementSystem.Forms.LoginForms
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox2.UseSystemPasswordChar = false; // Shows password
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true; // Hides password
+            }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            principalregistrationform form1 = new principalregistrationform();
+            form1.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // forget password page
+        }
     }
 }

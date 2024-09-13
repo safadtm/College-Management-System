@@ -28,3 +28,4 @@ C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\Colleg
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.LoginForms.principalloginform.resources
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.LoginForms.studentloginform.resources
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.LoginForms.teacherloginform.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.LoginForms.principalregistrationform.resources
