@@ -6,6 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+	<ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+	<ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,7 +19,6 @@
     <Folder Include="Database\Backup\" />
     <Folder Include="Database\Data\" />
     <Folder Include="Database\Scripts\" />
-    <Folder Include="Forms\Dashboard\" />
     <Folder Include="Forms\CourseManagement\" />
     <Folder Include="Forms\AttendanceManagement\" />
     <Folder Include="Forms\GradeManagement\" />

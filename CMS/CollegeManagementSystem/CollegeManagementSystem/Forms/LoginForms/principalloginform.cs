@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CollegeManagementSystem.Forms.Dashboard;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,6 +50,19 @@ namespace CollegeManagementSystem.Forms.LoginForms
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // forget password page
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string username = textBox1.Text;
+
+            this.Hide();
+            PrincipalDashboard principalDashboard = new PrincipalDashboard
+            {
+                Username = username 
+            };
+
+            principalDashboard.Show();
         }
     }
 }
