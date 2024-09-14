@@ -12,6 +12,7 @@ namespace CollegeManagementSystem.Forms.LoginForms
 {
     public partial class principalregistrationform : Form
     {
+        string gender;
         public principalregistrationform()
         {
             InitializeComponent();
@@ -20,8 +21,28 @@ namespace CollegeManagementSystem.Forms.LoginForms
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            principalloginform form2= new principalloginform();
+            principalloginform form2 = new principalloginform();
             form2.Show();
+        }
+
+        private void principalregistrationform_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            gender = "Male";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            gender = "Female";
         }
     }
 }
