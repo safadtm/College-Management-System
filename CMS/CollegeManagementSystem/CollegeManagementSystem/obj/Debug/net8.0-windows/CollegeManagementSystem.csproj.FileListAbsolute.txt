@@ -32,3 +32,6 @@ C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\Colleg
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.Dashboard.PrincipalDashboard.resources
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.Dashboard.StudentDashboard.resources
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.Dashboard.TeacherDashboard.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.ProfileForms.PrincipleProfileForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.ProfileForms.StudentProfileForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.ProfileForms.TeacherProfileForm.resources

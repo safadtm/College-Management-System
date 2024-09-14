@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CollegeManagementSystem.Forms.ProfileForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,6 +44,12 @@ namespace CollegeManagementSystem.Forms.Dashboard
             this.Hide();
             SplashScreenForm sp = new SplashScreenForm();
             sp.Show();
+        }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TeacherProfileForm teacherProfileForm = new TeacherProfileForm();   
+            teacherProfileForm.Show();
         }
     }
 }

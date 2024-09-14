@@ -138,13 +138,14 @@
             // viewProfileToolStripMenuItem
             // 
             viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            viewProfileToolStripMenuItem.Size = new Size(163, 26);
+            viewProfileToolStripMenuItem.Size = new Size(180, 26);
             viewProfileToolStripMenuItem.Text = "View Profile";
+            viewProfileToolStripMenuItem.Click += viewProfileToolStripMenuItem_Click;
             // 
             // ediToolStripMenuItem
             // 
             ediToolStripMenuItem.Name = "ediToolStripMenuItem";
-            ediToolStripMenuItem.Size = new Size(163, 26);
+            ediToolStripMenuItem.Size = new Size(180, 26);
             ediToolStripMenuItem.Text = "Edit Profile";
             // 
             // exitToolStripMenuItem
