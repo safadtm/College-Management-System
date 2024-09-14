@@ -24,5 +24,25 @@ namespace CollegeManagementSystem.Forms.Dashboard
         {
             Application.Exit();
         }
+
+        private void StudentDashboard_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Username))
+            {
+
+                label1.Text = $"Welcome, {Username}";
+            }
+            label2.Text = "Grades Overview : 54%";
+            label3.Text = "Total Attendence : 90%";
+            label4.Text = "Upcoming Classes : 6";
+            label5.Text = "Course Progress : 10%";
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SplashScreenForm sp = new SplashScreenForm();
+            sp.Show();
+        }
     }
 }

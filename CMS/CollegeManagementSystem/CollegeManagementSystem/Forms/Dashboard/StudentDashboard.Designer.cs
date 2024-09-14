@@ -36,7 +36,14 @@
             viewProfileToolStripMenuItem = new ToolStripMenuItem();
             ediToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
+            label1 = new Label();
+            panel1 = new Panel();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
             menuStrip1.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -45,65 +52,135 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, manageTeachersToolStripMenuItem, manageDepartmentsToolStripMenuItem, profileToolStripMenuItem, exitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1396, 36);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(1142, 29);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
             // homeToolStripMenuItem
             // 
             homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            homeToolStripMenuItem.Size = new Size(79, 32);
+            homeToolStripMenuItem.Size = new Size(64, 25);
             homeToolStripMenuItem.Text = "Home";
+            homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
             // 
             // manageTeachersToolStripMenuItem
             // 
             manageTeachersToolStripMenuItem.Name = "manageTeachersToolStripMenuItem";
-            manageTeachersToolStripMenuItem.Size = new Size(126, 32);
+            manageTeachersToolStripMenuItem.Size = new Size(100, 25);
             manageTeachersToolStripMenuItem.Text = "Attendence";
             // 
             // manageDepartmentsToolStripMenuItem
             // 
             manageDepartmentsToolStripMenuItem.Name = "manageDepartmentsToolStripMenuItem";
-            manageDepartmentsToolStripMenuItem.Size = new Size(87, 32);
+            manageDepartmentsToolStripMenuItem.Size = new Size(71, 25);
             manageDepartmentsToolStripMenuItem.Text = "Grades";
             // 
             // profileToolStripMenuItem
             // 
             profileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewProfileToolStripMenuItem, ediToolStripMenuItem });
             profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            profileToolStripMenuItem.Size = new Size(82, 32);
+            profileToolStripMenuItem.Size = new Size(67, 25);
             profileToolStripMenuItem.Text = "Profile";
             // 
             // viewProfileToolStripMenuItem
             // 
             viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            viewProfileToolStripMenuItem.Size = new Size(200, 32);
+            viewProfileToolStripMenuItem.Size = new Size(163, 26);
             viewProfileToolStripMenuItem.Text = "View Profile";
             // 
             // ediToolStripMenuItem
             // 
             ediToolStripMenuItem.Name = "ediToolStripMenuItem";
-            ediToolStripMenuItem.Size = new Size(200, 32);
+            ediToolStripMenuItem.Size = new Size(163, 26);
             ediToolStripMenuItem.Text = "Edit Profile";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(57, 32);
+            exitToolStripMenuItem.Size = new Size(46, 25);
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Emoji", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 45);
+            label1.Name = "label1";
+            label1.Size = new Size(133, 36);
+            label1.TabIndex = 2;
+            label1.Text = "Welcome";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(203, 241, 245);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Location = new Point(12, 169);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(459, 297);
+            panel1.TabIndex = 3;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(21, 223);
+            label5.Name = "label5";
+            label5.Size = new Size(176, 26);
+            label5.TabIndex = 3;
+            label5.Text = "Total Departments :";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(21, 160);
+            label4.Name = "label4";
+            label4.Size = new Size(135, 26);
+            label4.TabIndex = 2;
+            label4.Text = "Total Courses :";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(21, 102);
+            label3.Name = "label3";
+            label3.Size = new Size(141, 26);
+            label3.TabIndex = 1;
+            label3.Text = "Total Students :";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(21, 42);
+            label2.Name = "label2";
+            label2.Size = new Size(143, 26);
+            label2.TabIndex = 0;
+            label2.Text = "Total Teachers :";
+            // 
             // StudentDashboard
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
-            ClientSize = new Size(1396, 712);
+            ClientSize = new Size(1142, 534);
+            Controls.Add(panel1);
+            Controls.Add(label1);
             Controls.Add(menuStrip1);
+            Margin = new Padding(2);
             Name = "StudentDashboard";
             Text = "Student Dashboard";
+            Load += StudentDashboard_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -118,5 +195,11 @@
         private ToolStripMenuItem viewProfileToolStripMenuItem;
         private ToolStripMenuItem ediToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private Label label1;
+        private Panel panel1;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
     }
 }
