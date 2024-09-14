@@ -49,8 +49,15 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PrincipleProfileForm principleProfileForm = new PrincipleProfileForm(); 
-            principleProfileForm.Show();
+            PrincipalProfileForm principalProfileForm = new PrincipalProfileForm();
+            principalProfileForm.Show();
+        }
+
+        private void ediToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EditPrincipalProfileForm editPrincipalProfileForm = new EditPrincipalProfileForm(); 
+            editPrincipalProfileForm.Show();
         }
     }
 }

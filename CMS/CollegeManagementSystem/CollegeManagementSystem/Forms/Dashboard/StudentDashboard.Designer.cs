@@ -95,6 +95,7 @@
             ediToolStripMenuItem.Name = "ediToolStripMenuItem";
             ediToolStripMenuItem.Size = new Size(180, 26);
             ediToolStripMenuItem.Text = "Edit Profile";
+            ediToolStripMenuItem.Click += ediToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 

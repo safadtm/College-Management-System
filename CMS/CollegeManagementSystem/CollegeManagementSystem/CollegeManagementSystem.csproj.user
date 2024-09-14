@@ -22,7 +22,16 @@
     <Compile Update="Forms\LoginForms\TeacherLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ProfileForms\PrincipleProfileForm.cs">
+    <Compile Update="Forms\ProfileForms\EditPrincipalProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ProfileForms\EditStudentProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ProfileForms\EditTeacherProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ProfileForms\PrincipalProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\ProfileForms\StudentProfileForm.cs">

@@ -386,7 +386,7 @@
             Controls.Add(pictureBox1);
             Margin = new Padding(2);
             Name = "principalregistrationform";
-            Text = "principalregistrationform";
+            Text = "Principal Registration Form";
             Load += principalregistrationform_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

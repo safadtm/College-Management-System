@@ -48,8 +48,16 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TeacherProfileForm teacherProfileForm = new TeacherProfileForm();   
+            TeacherProfileForm teacherProfileForm = new TeacherProfileForm();
             teacherProfileForm.Show();
+        }
+
+        private void ediToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            EditTeacherProfileForm editTeacherProfileForm = new EditTeacherProfileForm();
+            editTeacherProfileForm.Show();
         }
     }
 }
