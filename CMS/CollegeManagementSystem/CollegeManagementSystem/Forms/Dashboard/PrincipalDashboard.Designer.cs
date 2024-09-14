@@ -113,20 +113,20 @@
             // 
             manageCoursesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addCourseToolStripMenuItem, allCoursesToolStripMenuItem });
             manageCoursesToolStripMenuItem.Name = "manageCoursesToolStripMenuItem";
-            manageCoursesToolStripMenuItem.Size = new Size(78, 25);
-            manageCoursesToolStripMenuItem.Text = "Courses";
+            manageCoursesToolStripMenuItem.Size = new Size(80, 25);
+            manageCoursesToolStripMenuItem.Text = "Subjects";
             // 
             // addCourseToolStripMenuItem
             // 
             addCourseToolStripMenuItem.Name = "addCourseToolStripMenuItem";
-            addCourseToolStripMenuItem.Size = new Size(161, 26);
-            addCourseToolStripMenuItem.Text = "Add Course";
+            addCourseToolStripMenuItem.Size = new Size(180, 26);
+            addCourseToolStripMenuItem.Text = "Add Subject";
             // 
             // allCoursesToolStripMenuItem
             // 
             allCoursesToolStripMenuItem.Name = "allCoursesToolStripMenuItem";
-            allCoursesToolStripMenuItem.Size = new Size(161, 26);
-            allCoursesToolStripMenuItem.Text = "All Courses";
+            allCoursesToolStripMenuItem.Size = new Size(180, 26);
+            allCoursesToolStripMenuItem.Text = "All Subjects";
             // 
             // profileToolStripMenuItem
             // 

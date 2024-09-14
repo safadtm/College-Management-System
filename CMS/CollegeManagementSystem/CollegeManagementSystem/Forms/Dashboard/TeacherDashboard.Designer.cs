@@ -39,8 +39,6 @@
             manageCoursesToolStripMenuItem = new ToolStripMenuItem();
             addCourseToolStripMenuItem = new ToolStripMenuItem();
             allCoursesToolStripMenuItem = new ToolStripMenuItem();
-            exitToolStripMenuItem = new ToolStripMenuItem();
-            vToolStripMenuItem = new ToolStripMenuItem();
             timetableToolStripMenuItem = new ToolStripMenuItem();
             viewTimetableToolStripMenuItem = new ToolStripMenuItem();
             editTimetableToolStripMenuItem = new ToolStripMenuItem();
@@ -54,6 +52,9 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            editAttendenceToolStripMenuItem = new ToolStripMenuItem();
+            editGradesToolStripMenuItem = new ToolStripMenuItem();
+            addTimetableToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -61,7 +62,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, manageTeachersToolStripMenuItem, manageDepartmentsToolStripMenuItem, manageCoursesToolStripMenuItem, exitToolStripMenuItem, timetableToolStripMenuItem, profileToolStripMenuItem, exitToolStripMenuItem1 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, manageTeachersToolStripMenuItem, manageDepartmentsToolStripMenuItem, manageCoursesToolStripMenuItem, timetableToolStripMenuItem, profileToolStripMenuItem, exitToolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
@@ -86,18 +87,18 @@
             // addTeacherToolStripMenuItem
             // 
             addTeacherToolStripMenuItem.Name = "addTeacherToolStripMenuItem";
-            addTeacherToolStripMenuItem.Size = new Size(165, 26);
+            addTeacherToolStripMenuItem.Size = new Size(180, 26);
             addTeacherToolStripMenuItem.Text = "Add Student";
             // 
             // allTeachersToolStripMenuItem
             // 
             allTeachersToolStripMenuItem.Name = "allTeachersToolStripMenuItem";
-            allTeachersToolStripMenuItem.Size = new Size(165, 26);
+            allTeachersToolStripMenuItem.Size = new Size(180, 26);
             allTeachersToolStripMenuItem.Text = "All Students";
             // 
             // manageDepartmentsToolStripMenuItem
             // 
-            manageDepartmentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addDepartmentToolStripMenuItem, allDepartmentsToolStripMenuItem });
+            manageDepartmentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addDepartmentToolStripMenuItem, allDepartmentsToolStripMenuItem, editAttendenceToolStripMenuItem });
             manageDepartmentsToolStripMenuItem.Name = "manageDepartmentsToolStripMenuItem";
             manageDepartmentsToolStripMenuItem.Size = new Size(100, 25);
             manageDepartmentsToolStripMenuItem.Text = "Attendence";
@@ -116,7 +117,7 @@
             // 
             // manageCoursesToolStripMenuItem
             // 
-            manageCoursesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addCourseToolStripMenuItem, allCoursesToolStripMenuItem });
+            manageCoursesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addCourseToolStripMenuItem, allCoursesToolStripMenuItem, editGradesToolStripMenuItem });
             manageCoursesToolStripMenuItem.Name = "manageCoursesToolStripMenuItem";
             manageCoursesToolStripMenuItem.Size = new Size(71, 25);
             manageCoursesToolStripMenuItem.Text = "Grades";
@@ -124,30 +125,18 @@
             // addCourseToolStripMenuItem
             // 
             addCourseToolStripMenuItem.Name = "addCourseToolStripMenuItem";
-            addCourseToolStripMenuItem.Size = new Size(161, 26);
+            addCourseToolStripMenuItem.Size = new Size(180, 26);
             addCourseToolStripMenuItem.Text = "Add Grades";
             // 
             // allCoursesToolStripMenuItem
             // 
             allCoursesToolStripMenuItem.Name = "allCoursesToolStripMenuItem";
-            allCoursesToolStripMenuItem.Size = new Size(161, 26);
+            allCoursesToolStripMenuItem.Size = new Size(180, 26);
             allCoursesToolStripMenuItem.Text = "All Grades";
-            // 
-            // exitToolStripMenuItem
-            // 
-            exitToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { vToolStripMenuItem });
-            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(12, 25);
-            // 
-            // vToolStripMenuItem
-            // 
-            vToolStripMenuItem.Name = "vToolStripMenuItem";
-            vToolStripMenuItem.Size = new Size(90, 26);
-            vToolStripMenuItem.Text = "V";
             // 
             // timetableToolStripMenuItem
             // 
-            timetableToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewTimetableToolStripMenuItem, editTimetableToolStripMenuItem });
+            timetableToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addTimetableToolStripMenuItem, viewTimetableToolStripMenuItem, editTimetableToolStripMenuItem });
             timetableToolStripMenuItem.Name = "timetableToolStripMenuItem";
             timetableToolStripMenuItem.Size = new Size(90, 25);
             timetableToolStripMenuItem.Text = "Timetable";
@@ -254,6 +243,24 @@
             label2.TabIndex = 0;
             label2.Text = "Total Teachers :";
             // 
+            // editAttendenceToolStripMenuItem
+            // 
+            editAttendenceToolStripMenuItem.Name = "editAttendenceToolStripMenuItem";
+            editAttendenceToolStripMenuItem.Size = new Size(190, 26);
+            editAttendenceToolStripMenuItem.Text = "Edit Attendence";
+            // 
+            // editGradesToolStripMenuItem
+            // 
+            editGradesToolStripMenuItem.Name = "editGradesToolStripMenuItem";
+            editGradesToolStripMenuItem.Size = new Size(180, 26);
+            editGradesToolStripMenuItem.Text = "Edit Grades";
+            // 
+            // addTimetableToolStripMenuItem
+            // 
+            addTimetableToolStripMenuItem.Name = "addTimetableToolStripMenuItem";
+            addTimetableToolStripMenuItem.Size = new Size(186, 26);
+            addTimetableToolStripMenuItem.Text = "Add Timetable";
+            // 
             // TeacherDashboard
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -291,8 +298,6 @@
         private ToolStripMenuItem profileToolStripMenuItem;
         private ToolStripMenuItem viewProfileToolStripMenuItem;
         private ToolStripMenuItem ediToolStripMenuItem;
-        private ToolStripMenuItem exitToolStripMenuItem;
-        private ToolStripMenuItem vToolStripMenuItem;
         private ToolStripMenuItem timetableToolStripMenuItem;
         private ToolStripMenuItem viewTimetableToolStripMenuItem;
         private ToolStripMenuItem editTimetableToolStripMenuItem;
@@ -303,5 +308,8 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private ToolStripMenuItem editAttendenceToolStripMenuItem;
+        private ToolStripMenuItem editGradesToolStripMenuItem;
+        private ToolStripMenuItem addTimetableToolStripMenuItem;
     }
 }
