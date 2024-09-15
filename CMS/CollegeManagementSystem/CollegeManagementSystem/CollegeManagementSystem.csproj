@@ -21,7 +21,6 @@
     <Folder Include="Database\Scripts\" />
     <Folder Include="Models\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Data\" />
     <Folder Include="Resources\" />
   </ItemGroup>
 

@@ -1,7 +1,9 @@
-﻿using System;
+﻿using CollegeManagementSystem.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,12 +20,29 @@ namespace CollegeManagementSystem.Forms.LoginForms
             InitializeComponent();
         }
 
+        private void TestDatabaseConnection()
+        {
+            using (SqlConnection connection = new DatabaseHelper().GetConnection())
+            {
+                try
+                {
+                    connection.Open();
+                    MessageBox.Show("Database connection successful!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Connection failed: {ex.Message}");
+                }
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            principalloginform form2 = new principalloginform();
-            form2.Show();
+            TestDatabaseConnection();
+          //  this.Hide();
+          //  principalloginform form2 = new principalloginform();
+          //  form2.Show();
         }
 
         private void principalregistrationform_Load(object sender, EventArgs e)
