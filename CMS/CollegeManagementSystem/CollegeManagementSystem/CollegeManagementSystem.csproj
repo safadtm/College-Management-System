@@ -19,9 +19,6 @@
     <Folder Include="Database\Backup\" />
     <Folder Include="Database\Data\" />
     <Folder Include="Database\Scripts\" />
-    <Folder Include="Forms\CourseManagement\" />
-    <Folder Include="Forms\AttendanceManagement\" />
-    <Folder Include="Forms\GradeManagement\" />
     <Folder Include="Models\" />
     <Folder Include="Controllers\" />
     <Folder Include="Data\" />

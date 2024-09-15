@@ -46,3 +46,12 @@ C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\Colleg
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.UserManagement.Student.AllStudentForm.resources
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.UserManagement.Teacher.AddTeacherForm.resources
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.UserManagement.Teacher.AllTeacherForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.AttendanceManagement.AddAttendenceForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.AttendanceManagement.AllAttendenceForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.AttendanceManagement.EditAttendenceForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.GradeManagement.AddGradesForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.GradeManagement.AllGradesForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.GradeManagement.EditGradesForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.TimeTableManagement.AddTimeTableForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.TimeTableManagement.EditTimeTableForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.TimeTableManagement.ViewTimeTableForm.resources

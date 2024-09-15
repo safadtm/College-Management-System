@@ -1,6 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Forms\AttendanceManagement\AddAttendenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\AttendanceManagement\EditAttendenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\AttendanceManagement\AllAttendenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Dashboard\PrincipalDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -14,6 +23,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\DepartmentMangement\AllDeptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\GradeManagement\AddGradesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\GradeManagement\AllGradesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\GradeManagement\EditGradesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\LoginForms\PrincipalLoginForm.cs">
@@ -53,6 +71,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\SubjectManagement\AllSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\TimeTableManagement\AddTimeTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\TimeTableManagement\EditTimeTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\TimeTableManagement\ViewTimeTableForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\UserManagement\Student\AddStudentForm.cs">

@@ -36,10 +36,13 @@
             manageDepartmentsToolStripMenuItem = new ToolStripMenuItem();
             addDepartmentToolStripMenuItem = new ToolStripMenuItem();
             allDepartmentsToolStripMenuItem = new ToolStripMenuItem();
+            editAttendenceToolStripMenuItem = new ToolStripMenuItem();
             manageCoursesToolStripMenuItem = new ToolStripMenuItem();
             addCourseToolStripMenuItem = new ToolStripMenuItem();
             allCoursesToolStripMenuItem = new ToolStripMenuItem();
+            editGradesToolStripMenuItem = new ToolStripMenuItem();
             timetableToolStripMenuItem = new ToolStripMenuItem();
+            addTimetableToolStripMenuItem = new ToolStripMenuItem();
             viewTimetableToolStripMenuItem = new ToolStripMenuItem();
             editTimetableToolStripMenuItem = new ToolStripMenuItem();
             profileToolStripMenuItem = new ToolStripMenuItem();
@@ -52,9 +55,6 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            editAttendenceToolStripMenuItem = new ToolStripMenuItem();
-            editGradesToolStripMenuItem = new ToolStripMenuItem();
-            addTimetableToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -87,14 +87,16 @@
             // addTeacherToolStripMenuItem
             // 
             addTeacherToolStripMenuItem.Name = "addTeacherToolStripMenuItem";
-            addTeacherToolStripMenuItem.Size = new Size(180, 26);
+            addTeacherToolStripMenuItem.Size = new Size(165, 26);
             addTeacherToolStripMenuItem.Text = "Add Student";
+            addTeacherToolStripMenuItem.Click += addTeacherToolStripMenuItem_Click;
             // 
             // allTeachersToolStripMenuItem
             // 
             allTeachersToolStripMenuItem.Name = "allTeachersToolStripMenuItem";
-            allTeachersToolStripMenuItem.Size = new Size(180, 26);
+            allTeachersToolStripMenuItem.Size = new Size(165, 26);
             allTeachersToolStripMenuItem.Text = "All Students";
+            allTeachersToolStripMenuItem.Click += allTeachersToolStripMenuItem_Click;
             // 
             // manageDepartmentsToolStripMenuItem
             // 
@@ -108,12 +110,21 @@
             addDepartmentToolStripMenuItem.Name = "addDepartmentToolStripMenuItem";
             addDepartmentToolStripMenuItem.Size = new Size(190, 26);
             addDepartmentToolStripMenuItem.Text = "Add Attendence";
+            addDepartmentToolStripMenuItem.Click += addDepartmentToolStripMenuItem_Click;
             // 
             // allDepartmentsToolStripMenuItem
             // 
             allDepartmentsToolStripMenuItem.Name = "allDepartmentsToolStripMenuItem";
             allDepartmentsToolStripMenuItem.Size = new Size(190, 26);
             allDepartmentsToolStripMenuItem.Text = "All Attendence";
+            allDepartmentsToolStripMenuItem.Click += allDepartmentsToolStripMenuItem_Click;
+            // 
+            // editAttendenceToolStripMenuItem
+            // 
+            editAttendenceToolStripMenuItem.Name = "editAttendenceToolStripMenuItem";
+            editAttendenceToolStripMenuItem.Size = new Size(190, 26);
+            editAttendenceToolStripMenuItem.Text = "Edit Attendence";
+            editAttendenceToolStripMenuItem.Click += editAttendenceToolStripMenuItem_Click;
             // 
             // manageCoursesToolStripMenuItem
             // 
@@ -125,14 +136,23 @@
             // addCourseToolStripMenuItem
             // 
             addCourseToolStripMenuItem.Name = "addCourseToolStripMenuItem";
-            addCourseToolStripMenuItem.Size = new Size(180, 26);
+            addCourseToolStripMenuItem.Size = new Size(161, 26);
             addCourseToolStripMenuItem.Text = "Add Grades";
+            addCourseToolStripMenuItem.Click += addCourseToolStripMenuItem_Click;
             // 
             // allCoursesToolStripMenuItem
             // 
             allCoursesToolStripMenuItem.Name = "allCoursesToolStripMenuItem";
-            allCoursesToolStripMenuItem.Size = new Size(180, 26);
+            allCoursesToolStripMenuItem.Size = new Size(161, 26);
             allCoursesToolStripMenuItem.Text = "All Grades";
+            allCoursesToolStripMenuItem.Click += allCoursesToolStripMenuItem_Click;
+            // 
+            // editGradesToolStripMenuItem
+            // 
+            editGradesToolStripMenuItem.Name = "editGradesToolStripMenuItem";
+            editGradesToolStripMenuItem.Size = new Size(161, 26);
+            editGradesToolStripMenuItem.Text = "Edit Grades";
+            editGradesToolStripMenuItem.Click += editGradesToolStripMenuItem_Click;
             // 
             // timetableToolStripMenuItem
             // 
@@ -141,17 +161,26 @@
             timetableToolStripMenuItem.Size = new Size(90, 25);
             timetableToolStripMenuItem.Text = "Timetable";
             // 
+            // addTimetableToolStripMenuItem
+            // 
+            addTimetableToolStripMenuItem.Name = "addTimetableToolStripMenuItem";
+            addTimetableToolStripMenuItem.Size = new Size(186, 26);
+            addTimetableToolStripMenuItem.Text = "Add Timetable";
+            addTimetableToolStripMenuItem.Click += addTimetableToolStripMenuItem_Click;
+            // 
             // viewTimetableToolStripMenuItem
             // 
             viewTimetableToolStripMenuItem.Name = "viewTimetableToolStripMenuItem";
             viewTimetableToolStripMenuItem.Size = new Size(186, 26);
             viewTimetableToolStripMenuItem.Text = "View Timetable";
+            viewTimetableToolStripMenuItem.Click += viewTimetableToolStripMenuItem_Click;
             // 
             // editTimetableToolStripMenuItem
             // 
             editTimetableToolStripMenuItem.Name = "editTimetableToolStripMenuItem";
             editTimetableToolStripMenuItem.Size = new Size(186, 26);
             editTimetableToolStripMenuItem.Text = "Edit Timetable";
+            editTimetableToolStripMenuItem.Click += editTimetableToolStripMenuItem_Click;
             // 
             // profileToolStripMenuItem
             // 
@@ -163,14 +192,14 @@
             // viewProfileToolStripMenuItem
             // 
             viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            viewProfileToolStripMenuItem.Size = new Size(180, 26);
+            viewProfileToolStripMenuItem.Size = new Size(163, 26);
             viewProfileToolStripMenuItem.Text = "View Profile";
             viewProfileToolStripMenuItem.Click += viewProfileToolStripMenuItem_Click;
             // 
             // ediToolStripMenuItem
             // 
             ediToolStripMenuItem.Name = "ediToolStripMenuItem";
-            ediToolStripMenuItem.Size = new Size(180, 26);
+            ediToolStripMenuItem.Size = new Size(163, 26);
             ediToolStripMenuItem.Text = "Edit Profile";
             ediToolStripMenuItem.Click += ediToolStripMenuItem_Click;
             // 
@@ -242,24 +271,6 @@
             label2.Size = new Size(143, 26);
             label2.TabIndex = 0;
             label2.Text = "Total Teachers :";
-            // 
-            // editAttendenceToolStripMenuItem
-            // 
-            editAttendenceToolStripMenuItem.Name = "editAttendenceToolStripMenuItem";
-            editAttendenceToolStripMenuItem.Size = new Size(190, 26);
-            editAttendenceToolStripMenuItem.Text = "Edit Attendence";
-            // 
-            // editGradesToolStripMenuItem
-            // 
-            editGradesToolStripMenuItem.Name = "editGradesToolStripMenuItem";
-            editGradesToolStripMenuItem.Size = new Size(180, 26);
-            editGradesToolStripMenuItem.Text = "Edit Grades";
-            // 
-            // addTimetableToolStripMenuItem
-            // 
-            addTimetableToolStripMenuItem.Name = "addTimetableToolStripMenuItem";
-            addTimetableToolStripMenuItem.Size = new Size(186, 26);
-            addTimetableToolStripMenuItem.Text = "Add Timetable";
             // 
             // TeacherDashboard
             // 
