@@ -33,6 +33,8 @@
             manageTeachersToolStripMenuItem = new ToolStripMenuItem();
             addTeacherToolStripMenuItem = new ToolStripMenuItem();
             allTeachersToolStripMenuItem = new ToolStripMenuItem();
+            studentsToolStripMenuItem = new ToolStripMenuItem();
+            viewStudentsToolStripMenuItem = new ToolStripMenuItem();
             manageDepartmentsToolStripMenuItem = new ToolStripMenuItem();
             addDepartmentToolStripMenuItem = new ToolStripMenuItem();
             allDepartmentsToolStripMenuItem = new ToolStripMenuItem();
@@ -56,7 +58,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, manageTeachersToolStripMenuItem, manageDepartmentsToolStripMenuItem, manageCoursesToolStripMenuItem, profileToolStripMenuItem, exitToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, manageTeachersToolStripMenuItem, studentsToolStripMenuItem, manageDepartmentsToolStripMenuItem, manageCoursesToolStripMenuItem, profileToolStripMenuItem, exitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
@@ -83,12 +85,28 @@
             addTeacherToolStripMenuItem.Name = "addTeacherToolStripMenuItem";
             addTeacherToolStripMenuItem.Size = new Size(164, 26);
             addTeacherToolStripMenuItem.Text = "Add Teacher";
+            addTeacherToolStripMenuItem.Click += addTeacherToolStripMenuItem_Click;
             // 
             // allTeachersToolStripMenuItem
             // 
             allTeachersToolStripMenuItem.Name = "allTeachersToolStripMenuItem";
             allTeachersToolStripMenuItem.Size = new Size(164, 26);
             allTeachersToolStripMenuItem.Text = "All Teachers";
+            allTeachersToolStripMenuItem.Click += allTeachersToolStripMenuItem_Click;
+            // 
+            // studentsToolStripMenuItem
+            // 
+            studentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewStudentsToolStripMenuItem });
+            studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
+            studentsToolStripMenuItem.Size = new Size(82, 25);
+            studentsToolStripMenuItem.Text = "Students";
+            // 
+            // viewStudentsToolStripMenuItem
+            // 
+            viewStudentsToolStripMenuItem.Name = "viewStudentsToolStripMenuItem";
+            viewStudentsToolStripMenuItem.Size = new Size(178, 26);
+            viewStudentsToolStripMenuItem.Text = "View Students";
+            viewStudentsToolStripMenuItem.Click += viewStudentsToolStripMenuItem_Click;
             // 
             // manageDepartmentsToolStripMenuItem
             // 
@@ -102,12 +120,14 @@
             addDepartmentToolStripMenuItem.Name = "addDepartmentToolStripMenuItem";
             addDepartmentToolStripMenuItem.Size = new Size(195, 26);
             addDepartmentToolStripMenuItem.Text = "Add Department";
+            addDepartmentToolStripMenuItem.Click += addDepartmentToolStripMenuItem_Click;
             // 
             // allDepartmentsToolStripMenuItem
             // 
             allDepartmentsToolStripMenuItem.Name = "allDepartmentsToolStripMenuItem";
             allDepartmentsToolStripMenuItem.Size = new Size(195, 26);
             allDepartmentsToolStripMenuItem.Text = "All Departments";
+            allDepartmentsToolStripMenuItem.Click += allDepartmentsToolStripMenuItem_Click;
             // 
             // manageCoursesToolStripMenuItem
             // 
@@ -121,12 +141,14 @@
             addCourseToolStripMenuItem.Name = "addCourseToolStripMenuItem";
             addCourseToolStripMenuItem.Size = new Size(180, 26);
             addCourseToolStripMenuItem.Text = "Add Subject";
+            addCourseToolStripMenuItem.Click += addCourseToolStripMenuItem_Click;
             // 
             // allCoursesToolStripMenuItem
             // 
             allCoursesToolStripMenuItem.Name = "allCoursesToolStripMenuItem";
             allCoursesToolStripMenuItem.Size = new Size(180, 26);
             allCoursesToolStripMenuItem.Text = "All Subjects";
+            allCoursesToolStripMenuItem.Click += allCoursesToolStripMenuItem_Click;
             // 
             // profileToolStripMenuItem
             // 
@@ -138,14 +160,14 @@
             // viewProfileToolStripMenuItem
             // 
             viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            viewProfileToolStripMenuItem.Size = new Size(180, 26);
+            viewProfileToolStripMenuItem.Size = new Size(163, 26);
             viewProfileToolStripMenuItem.Text = "View Profile";
             viewProfileToolStripMenuItem.Click += viewProfileToolStripMenuItem_Click;
             // 
             // ediToolStripMenuItem
             // 
             ediToolStripMenuItem.Name = "ediToolStripMenuItem";
-            ediToolStripMenuItem.Size = new Size(180, 26);
+            ediToolStripMenuItem.Size = new Size(163, 26);
             ediToolStripMenuItem.Text = "Edit Profile";
             ediToolStripMenuItem.Click += ediToolStripMenuItem_Click;
             // 
@@ -263,5 +285,7 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private ToolStripMenuItem studentsToolStripMenuItem;
+        private ToolStripMenuItem viewStudentsToolStripMenuItem;
     }
 }

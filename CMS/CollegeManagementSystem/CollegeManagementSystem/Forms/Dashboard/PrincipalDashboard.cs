@@ -1,4 +1,8 @@
-﻿using CollegeManagementSystem.Forms.ProfileForms;
+﻿using CollegeManagementSystem.Forms.DepartmentMangement;
+using CollegeManagementSystem.Forms.ProfileForms;
+using CollegeManagementSystem.Forms.SubjectManagement;
+using CollegeManagementSystem.Forms.UserManagement.Student;
+using CollegeManagementSystem.Forms.UserManagement.Teacher;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,8 +60,61 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void ediToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EditPrincipalProfileForm editPrincipalProfileForm = new EditPrincipalProfileForm(); 
+            EditPrincipalProfileForm editPrincipalProfileForm = new EditPrincipalProfileForm();
             editPrincipalProfileForm.Show();
+        }
+
+        private void addTeacherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // add teacher page
+            this.Hide();
+            AddTeacherForm addTeacherForm = new AddTeacherForm();
+            addTeacherForm.Show();
+
+        }
+
+        private void allTeachersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // all teacher page
+            AllTeacherForm allTeacherForm = new AllTeacherForm();
+            allTeacherForm.Show();
+        }
+
+        private void viewStudentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // all students page without any conditions
+            AllStudentForm allStudentForm = new AllStudentForm();
+            allStudentForm.Show();
+        }
+
+        private void addDepartmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // add department
+            this.Hide();
+            AddDeptForm addDeptForm = new AddDeptForm();
+            addDeptForm.Show();
+        }
+
+        private void allDepartmentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // all departments
+            AllDeptForm allDeptForm = new AllDeptForm();
+            allDeptForm.Show();
+        }
+
+        private void addCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // add subject
+            this.Hide();
+            AddDeptForm addDeptForm   =new AddDeptForm();
+            addDeptForm.Show();
+        }
+
+        private void allCoursesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // all subjects
+            AllSubForm allSubForm = new AllSubForm();   
+            allSubForm.Show();
         }
     }
 }

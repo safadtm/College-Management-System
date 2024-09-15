@@ -22,7 +22,6 @@
     <Folder Include="Forms\CourseManagement\" />
     <Folder Include="Forms\AttendanceManagement\" />
     <Folder Include="Forms\GradeManagement\" />
-    <Folder Include="Forms\UserManagement\" />
     <Folder Include="Models\" />
     <Folder Include="Controllers\" />
     <Folder Include="Data\" />

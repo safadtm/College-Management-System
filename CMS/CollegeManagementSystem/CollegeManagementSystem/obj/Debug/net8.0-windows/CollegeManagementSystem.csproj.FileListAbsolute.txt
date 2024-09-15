@@ -38,3 +38,11 @@ C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\Colleg
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.ProfileForms.EditStudentProfileForm.resources
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.ProfileForms.EditTeacherProfileForm.resources
 C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.ProfileForms.PrincipalProfileForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.DepartmentMangement.AddDeptForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.DepartmentMangement.AllDeptForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.SubjectManagement.AddSubForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.SubjectManagement.AllSubForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.UserManagement.Student.AddStudentForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.UserManagement.Student.AllStudentForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.UserManagement.Teacher.AddTeacherForm.resources
+C:\Users\safad\SDSA\College-Management-System\CMS\CollegeManagementSystem\CollegeManagementSystem\obj\Debug\net8.0-windows\CollegeManagementSystem.Forms.UserManagement.Teacher.AllTeacherForm.resources
