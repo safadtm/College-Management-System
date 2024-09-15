@@ -20,6 +20,7 @@ namespace CollegeManagementSystem.Forms.LoginForms
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             this.Hide();
             principalloginform form2 = new principalloginform();
             form2.Show();

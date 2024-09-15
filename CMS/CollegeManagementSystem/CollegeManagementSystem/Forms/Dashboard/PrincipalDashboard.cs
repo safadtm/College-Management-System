@@ -106,8 +106,8 @@ namespace CollegeManagementSystem.Forms.Dashboard
         {
             // add subject
             this.Hide();
-            AddDeptForm addDeptForm   =new AddDeptForm();
-            addDeptForm.Show();
+            AddSubForm addSubForm   =new AddSubForm();
+            addSubForm.Show();
         }
 
         private void allCoursesToolStripMenuItem_Click(object sender, EventArgs e)

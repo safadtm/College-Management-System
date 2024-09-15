@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CollegeManagementSystem.Forms.Dashboard;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace CollegeManagementSystem.Forms.DepartmentMangement
         public AddDeptForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("New Department Added");
+            this.Hide();
+            PrincipalDashboard principalDashboard = new PrincipalDashboard();   
+            principalDashboard.Show();
+
         }
     }
 }
