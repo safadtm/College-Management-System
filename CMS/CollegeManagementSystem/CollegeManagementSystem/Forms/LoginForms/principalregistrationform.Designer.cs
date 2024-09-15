@@ -30,31 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(principalregistrationform));
             button1 = new Button();
-            checkBox1 = new CheckBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtEmail = new TextBox();
+            txtFullName = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            textBox4 = new TextBox();
+            txtPhone = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            textBox5 = new TextBox();
+            txtAddress = new TextBox();
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            textBox8 = new TextBox();
+            txtExperience = new TextBox();
             label9 = new Label();
-            textBox9 = new TextBox();
+            txtUsername = new TextBox();
             label10 = new Label();
-            textBox10 = new TextBox();
+            txtPassword = new TextBox();
             label11 = new Label();
-            textBox11 = new TextBox();
+            txtConfirmPassword = new TextBox();
             label12 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
-            radioButton1 = new RadioButton();
+            dateTimePickerDOB = new DateTimePicker();
+            dateTimePickerJoined = new DateTimePicker();
+            radioButtonMale = new RadioButton();
             radioButton2 = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -63,7 +62,7 @@
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button1.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(517, 377);
+            button1.Location = new Point(530, 356);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(105, 42);
@@ -72,36 +71,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // checkBox1
+            // txtEmail
             // 
-            checkBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(517, 336);
-            checkBox1.Margin = new Padding(2);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(138, 25);
-            checkBox1.TabIndex = 16;
-            checkBox1.Text = "Show Password";
-            checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtEmail.Location = new Point(158, 153);
+            txtEmail.Margin = new Padding(2);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(202, 29);
+            txtEmail.TabIndex = 15;
             // 
-            // textBox2
+            // txtFullName
             // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Location = new Point(158, 153);
-            textBox2.Margin = new Padding(2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(202, 29);
-            textBox2.TabIndex = 15;
-            // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(158, 103);
-            textBox1.Margin = new Padding(2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(202, 29);
-            textBox1.TabIndex = 14;
+            txtFullName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtFullName.Location = new Point(158, 103);
+            txtFullName.Margin = new Padding(2);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(202, 29);
+            txtFullName.TabIndex = 14;
             // 
             // label3
             // 
@@ -151,14 +137,14 @@
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
-            // textBox4
+            // txtPhone
             // 
-            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox4.Location = new Point(158, 197);
-            textBox4.Margin = new Padding(2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(202, 29);
-            textBox4.TabIndex = 20;
+            txtPhone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtPhone.Location = new Point(158, 197);
+            txtPhone.Margin = new Padding(2);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(202, 29);
+            txtPhone.TabIndex = 20;
             // 
             // label4
             // 
@@ -184,14 +170,14 @@
             label5.TabIndex = 18;
             label5.Text = "Phone";
             // 
-            // textBox5
+            // txtAddress
             // 
-            textBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox5.Location = new Point(158, 336);
-            textBox5.Margin = new Padding(2);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(202, 29);
-            textBox5.TabIndex = 25;
+            txtAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtAddress.Location = new Point(158, 336);
+            txtAddress.Margin = new Padding(2);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(202, 29);
+            txtAddress.TabIndex = 25;
             // 
             // label6
             // 
@@ -229,14 +215,14 @@
             label8.TabIndex = 26;
             label8.Text = "Joined";
             // 
-            // textBox8
+            // txtExperience
             // 
-            textBox8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox8.Location = new Point(508, 156);
-            textBox8.Margin = new Padding(2);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(202, 29);
-            textBox8.TabIndex = 29;
+            txtExperience.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtExperience.Location = new Point(508, 156);
+            txtExperience.Margin = new Padding(2);
+            txtExperience.Name = "txtExperience";
+            txtExperience.Size = new Size(202, 29);
+            txtExperience.TabIndex = 29;
             // 
             // label9
             // 
@@ -250,14 +236,14 @@
             label9.TabIndex = 28;
             label9.Text = "Experience";
             // 
-            // textBox9
+            // txtUsername
             // 
-            textBox9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox9.Location = new Point(508, 199);
-            textBox9.Margin = new Padding(2);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(202, 29);
-            textBox9.TabIndex = 31;
+            txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtUsername.Location = new Point(508, 199);
+            txtUsername.Margin = new Padding(2);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(202, 29);
+            txtUsername.TabIndex = 31;
             // 
             // label10
             // 
@@ -271,14 +257,14 @@
             label10.TabIndex = 30;
             label10.Text = "Username";
             // 
-            // textBox10
+            // txtPassword
             // 
-            textBox10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox10.Location = new Point(508, 244);
-            textBox10.Margin = new Padding(2);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(202, 29);
-            textBox10.TabIndex = 33;
+            txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtPassword.Location = new Point(508, 244);
+            txtPassword.Margin = new Padding(2);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(202, 29);
+            txtPassword.TabIndex = 33;
             // 
             // label11
             // 
@@ -292,14 +278,14 @@
             label11.TabIndex = 32;
             label11.Text = "Password";
             // 
-            // textBox11
+            // txtConfirmPassword
             // 
-            textBox11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox11.Location = new Point(508, 290);
-            textBox11.Margin = new Padding(2);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(202, 29);
-            textBox11.TabIndex = 35;
+            txtConfirmPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtConfirmPassword.Location = new Point(508, 290);
+            txtConfirmPassword.Margin = new Padding(2);
+            txtConfirmPassword.Name = "txtConfirmPassword";
+            txtConfirmPassword.Size = new Size(202, 29);
+            txtConfirmPassword.TabIndex = 35;
             // 
             // label12
             // 
@@ -313,31 +299,31 @@
             label12.TabIndex = 34;
             label12.Text = "Re Password";
             // 
-            // dateTimePicker1
+            // dateTimePickerDOB
             // 
-            dateTimePicker1.Location = new Point(158, 243);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 29);
-            dateTimePicker1.TabIndex = 36;
+            dateTimePickerDOB.Location = new Point(158, 243);
+            dateTimePickerDOB.Name = "dateTimePickerDOB";
+            dateTimePickerDOB.Size = new Size(200, 29);
+            dateTimePickerDOB.TabIndex = 36;
             // 
-            // dateTimePicker2
+            // dateTimePickerJoined
             // 
-            dateTimePicker2.Location = new Point(508, 103);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(200, 29);
-            dateTimePicker2.TabIndex = 37;
+            dateTimePickerJoined.Location = new Point(508, 103);
+            dateTimePickerJoined.Name = "dateTimePickerJoined";
+            dateTimePickerJoined.Size = new Size(200, 29);
+            dateTimePickerJoined.TabIndex = 37;
             // 
-            // radioButton1
+            // radioButtonMale
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(158, 294);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(62, 25);
-            radioButton1.TabIndex = 38;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Male";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            radioButtonMale.AutoSize = true;
+            radioButtonMale.Location = new Point(158, 294);
+            radioButtonMale.Name = "radioButtonMale";
+            radioButtonMale.Size = new Size(62, 25);
+            radioButtonMale.TabIndex = 38;
+            radioButtonMale.TabStop = true;
+            radioButtonMale.Text = "Male";
+            radioButtonMale.UseVisualStyleBackColor = true;
+            radioButtonMale.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // radioButton2
             // 
@@ -358,28 +344,27 @@
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(865, 443);
             Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox11);
+            Controls.Add(radioButtonMale);
+            Controls.Add(dateTimePickerJoined);
+            Controls.Add(dateTimePickerDOB);
+            Controls.Add(txtConfirmPassword);
             Controls.Add(label12);
-            Controls.Add(textBox10);
+            Controls.Add(txtPassword);
             Controls.Add(label11);
-            Controls.Add(textBox9);
+            Controls.Add(txtUsername);
             Controls.Add(label10);
-            Controls.Add(textBox8);
+            Controls.Add(txtExperience);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(textBox5);
+            Controls.Add(txtAddress);
             Controls.Add(label6);
             Controls.Add(label7);
-            Controls.Add(textBox4);
+            Controls.Add(txtPhone);
             Controls.Add(label4);
             Controls.Add(label5);
             Controls.Add(button1);
-            Controls.Add(checkBox1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtEmail);
+            Controls.Add(txtFullName);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -395,31 +380,30 @@
 
         #endregion
         private Button button1;
-        private CheckBox checkBox1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtEmail;
+        private TextBox txtFullName;
         private Label label3;
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
-        private TextBox textBox4;
+        private TextBox txtPhone;
         private Label label4;
         private Label label5;
-        private TextBox textBox5;
+        private TextBox txtAddress;
         private Label label6;
         private Label label7;
         private Label label8;
-        private TextBox textBox8;
+        private TextBox txtExperience;
         private Label label9;
-        private TextBox textBox9;
+        private TextBox txtUsername;
         private Label label10;
-        private TextBox textBox10;
+        private TextBox txtPassword;
         private Label label11;
-        private TextBox textBox11;
+        private TextBox txtConfirmPassword;
         private Label label12;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
-        private RadioButton radioButton1;
+        private DateTimePicker dateTimePickerDOB;
+        private DateTimePicker dateTimePickerJoined;
+        private RadioButton radioButtonMale;
         private RadioButton radioButton2;
     }
 }
