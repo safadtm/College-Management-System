@@ -11,6 +11,7 @@ namespace CollegeManagementSystem.Controllers
     public class PrincipalController
     {
         DatabaseHelper databaseHelper = new DatabaseHelper();
+
         // Principal Register Controller 
         public bool RegisterPrincipal(string fullName, string email, string phone, string dob, string gender, string address, string joined, string experience, string username, string password)
         {
@@ -39,10 +40,16 @@ namespace CollegeManagementSystem.Controllers
         }
 
         // principal profile fetching
-        // Method to get principal by username
+
         public Principal GetPrincipalByUsername(string username)
         {
             return databaseHelper.GetPrincipalByUsername(username);
         }
+
+
+        
+        // add teacher
+
+        // fetch teachers
     }
 }

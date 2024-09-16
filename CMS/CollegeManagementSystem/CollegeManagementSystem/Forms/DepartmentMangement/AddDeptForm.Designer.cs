@@ -30,7 +30,7 @@
         {
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtDepartmentName = new TextBox();
             button1 = new Button();
             SuspendLayout();
             // 
@@ -54,12 +54,12 @@
             label2.TabIndex = 1;
             label2.Text = "Department Name ";
             // 
-            // textBox1
+            // txtDepartmentName
             // 
-            textBox1.Location = new Point(236, 123);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(185, 29);
-            textBox1.TabIndex = 2;
+            txtDepartmentName.Location = new Point(236, 123);
+            txtDepartmentName.Name = "txtDepartmentName";
+            txtDepartmentName.Size = new Size(185, 29);
+            txtDepartmentName.TabIndex = 2;
             // 
             // button1
             // 
@@ -78,7 +78,7 @@
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(513, 281);
             Controls.Add(button1);
-            Controls.Add(textBox1);
+            Controls.Add(txtDepartmentName);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "AddDeptForm";
@@ -91,7 +91,7 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtDepartmentName;
         private Button button1;
     }
 }

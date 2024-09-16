@@ -1,4 +1,5 @@
-﻿using CollegeManagementSystem.Forms.Dashboard;
+﻿using CollegeManagementSystem.Controllers;
+using CollegeManagementSystem.Forms.Dashboard;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,10 +21,31 @@ namespace CollegeManagementSystem.Forms.DepartmentMangement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("New Department Added");
-            this.Hide();
-            PrincipalDashboard principalDashboard = new PrincipalDashboard();   
-            principalDashboard.Show();
+
+            string departmentName = txtDepartmentName.Text;
+
+            if (!string.IsNullOrWhiteSpace(departmentName))
+            {
+                DepartmentController departmentController = new DepartmentController();
+                bool isSuccess = departmentController.AddDepartment(departmentName);
+
+                if (isSuccess)
+                {
+                    MessageBox.Show("Department added successfully.");
+                    this.Hide();
+                    PrincipalDashboard principalDashboard = new PrincipalDashboard();
+                    principalDashboard.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error adding department.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a department name.");
+            }
+
 
         }
     }

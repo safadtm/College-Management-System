@@ -31,11 +31,11 @@
             button1 = new Button();
             label2 = new Label();
             label1 = new Label();
-            textBox2 = new TextBox();
+            txtSubjectName = new TextBox();
             label3 = new Label();
             label4 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            cmbDepartment = new ComboBox();
+            cmbSemester = new ComboBox();
             SuspendLayout();
             // 
             // button1
@@ -68,12 +68,12 @@
             label1.TabIndex = 4;
             label1.Text = "Add new subject to your college";
             // 
-            // textBox2
+            // txtSubjectName
             // 
-            textBox2.Location = new Point(250, 132);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(185, 29);
-            textBox2.TabIndex = 9;
+            txtSubjectName.Location = new Point(250, 132);
+            txtSubjectName.Name = "txtSubjectName";
+            txtSubjectName.Size = new Size(185, 29);
+            txtSubjectName.TabIndex = 9;
             // 
             // label3
             // 
@@ -95,21 +95,21 @@
             label4.TabIndex = 10;
             label4.Text = "Department";
             // 
-            // comboBox1
+            // cmbDepartment
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(249, 177);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(186, 29);
-            comboBox1.TabIndex = 11;
+            cmbDepartment.FormattingEnabled = true;
+            cmbDepartment.Location = new Point(249, 177);
+            cmbDepartment.Name = "cmbDepartment";
+            cmbDepartment.Size = new Size(186, 29);
+            cmbDepartment.TabIndex = 11;
             // 
-            // comboBox2
+            // cmbSemester
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(249, 221);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(188, 29);
-            comboBox2.TabIndex = 12;
+            cmbSemester.FormattingEnabled = true;
+            cmbSemester.Location = new Point(249, 221);
+            cmbSemester.Name = "cmbSemester";
+            cmbSemester.Size = new Size(188, 29);
+            cmbSemester.TabIndex = 12;
             // 
             // AddSubForm
             // 
@@ -117,16 +117,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(500, 370);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbSemester);
+            Controls.Add(cmbDepartment);
             Controls.Add(label4);
-            Controls.Add(textBox2);
+            Controls.Add(txtSubjectName);
             Controls.Add(label3);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "AddSubForm";
             Text = "AddSubForm";
+            Load += AddSubForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -136,10 +137,10 @@
         private Button button1;
         private Label label2;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox txtSubjectName;
         private Label label3;
         private Label label4;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cmbDepartment;
+        private ComboBox cmbSemester;
     }
 }

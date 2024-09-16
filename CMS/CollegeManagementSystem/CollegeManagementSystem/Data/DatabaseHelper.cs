@@ -128,5 +128,150 @@ namespace CollegeManagementSystem.Data
                 return null;
             }
         }
+
+
+        // principal add department
+        // Method to insert a department
+        public bool InsertDepartment(string departmentName)
+        {
+            string query = "INSERT INTO Department (DeptName) VALUES (@DepartmentName)";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@DepartmentName", departmentName);
+
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error inserting department: " + ex.Message);
+                return false;
+            }
+        }
+
+
+        // fetch department
+        // Load departments from the database
+        public List<Department> GetDepartments()
+        {
+            string query = "SELECT DepartmentID, DepartmentName FROM Department";
+            List<Department> departments = new List<Department>();
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            departments.Add(new Department
+                            {
+                                DepartmentID = Convert.ToInt32(reader["DepartmentID"]),
+                                DepartmentName = reader["DepartmentName"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading departments: " + ex.Message);
+            }
+
+            return departments;
+        }
+
+        // fetch semester
+        // Load semesters from the database
+        public List<Semester> GetSemesters()
+        {
+            string query = "SELECT SemesterID, SemesterName FROM Semester";
+            List<Semester> semesters = new List<Semester>();
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            semesters.Add(new Semester
+                            {
+                                SemesterID = Convert.ToInt32(reader["SemesterID"]),
+                                SemesterName = reader["SemName"].ToString(),
+                                StartDate = reader["StartDate"].ToString(),
+                                EndDate= reader["EndDate"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading departments: " + ex.Message);
+            }
+
+            return semesters;
+        }
+
+
+        // principal add subject
+        // Method to insert a subject
+        public bool InsertSubject(string subjectName, int departmentID, int semesterID, int? teacherID)
+        {
+            string query = "INSERT INTO Subjects (SubjectName, DepartmentID, SemesterID, TeacherID) " +
+                           "VALUES (@SubjectName, @DepartmentID, @SemesterID, @TeacherID)";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@SubjectName", subjectName);
+                        cmd.Parameters.AddWithValue("@DepartmentID", departmentID);
+                        cmd.Parameters.AddWithValue("@SemesterID", semesterID);
+
+                        // If teacherID is null, we handle it like this:
+                        if (teacherID.HasValue)
+                            cmd.Parameters.AddWithValue("@TeacherID", teacherID.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@TeacherID", DBNull.Value);  // Set NULL for TeacherID
+
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error inserting subject: " + ex.Message);
+                return false;
+            }
+        }
+
+
+        // fetch subject 
+
+        // principal add teacher
+
+        // fetch teacher
     }
 }
