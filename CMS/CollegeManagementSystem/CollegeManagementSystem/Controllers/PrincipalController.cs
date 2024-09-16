@@ -37,5 +37,12 @@ namespace CollegeManagementSystem.Controllers
         {
             return databaseHelper.ValidatePrincipalCredentials(username, password);
         }
+
+        // principal profile fetching
+        // Method to get principal by username
+        public Principal GetPrincipalByUsername(string username)
+        {
+            return databaseHelper.GetPrincipalByUsername(username);
+        }
     }
 }

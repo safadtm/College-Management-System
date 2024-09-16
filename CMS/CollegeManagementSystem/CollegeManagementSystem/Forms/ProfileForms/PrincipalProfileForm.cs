@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CollegeManagementSystem.Controllers;
+using CollegeManagementSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,23 +14,40 @@ namespace CollegeManagementSystem.Forms.ProfileForms
 {
     public partial class PrincipalProfileForm : Form
     {
+        // Property to store the username
+        public string Username { get; set; }
+        private PrincipalController principalController;
+
+
         public PrincipalProfileForm()
         {
             InitializeComponent();
+            principalController = new PrincipalController();
         }
 
         private void PrincipalProfileForm_Load(object sender, EventArgs e)
         {
-            label1.Text = "Hi, Full Name";
-            label2.Text = "Username : princi";
-            label3.Text = "Full Name : hello joker";
-            label4.Text = "Email : princi@gmail.com";
-            label5.Text = "Phone : 9687451232";
-            label6.Text = "Date of birth : 10-45-1994";
-            label7.Text = "Gender : Male";
-            label8.Text = "Addres : xyz, road ernakulam";
-            label9.Text = "Joined : 15-10-2024";
-            label10.Text = "Experince : UC College Aluva";
+            // Get principal data using the controller
+            Principal principal = principalController.GetPrincipalByUsername(Username);
+
+            if (principal != null)
+            {
+                // Update the labels with the fetched data
+                label1.Text = "Hi, " + principal.FullName;
+                label2.Text = "Username: " + Username;
+                label3.Text = "Full Name: " + principal.FullName;
+                label4.Text = "Email: " + principal.Email;
+                label5.Text = "Phone: " + principal.Phone;
+                label6.Text = "Date of Birth: " + principal.DOB;
+                label7.Text = "Gender: " + principal.Gender;
+                label8.Text = "Address: " + principal.Address;
+                label9.Text = "Joined: " + principal.Joined;
+                label10.Text = "Experience: " + principal.Experience;
+            }
+            else
+            {
+                MessageBox.Show("Principal details not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
