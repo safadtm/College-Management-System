@@ -64,7 +64,7 @@ namespace CollegeManagementSystem.Forms.ProfileForms
                 Address = txtAddress.Text,
                 Joined = dateTimePickerJoined.Value.ToString("yyyy-MM-dd"),
                 Experience = txtExperience.Text,
-                Username=Username
+                Username = Username
             };
 
             PrincipalController principalController = new PrincipalController();
@@ -74,8 +74,8 @@ namespace CollegeManagementSystem.Forms.ProfileForms
             {
                 MessageBox.Show("Profile updated successfully.");
                 this.Hide();
-                PrincipalDashboard principalDashboard = new PrincipalDashboard();
-                principalDashboard.Show();
+                this.DialogResult = DialogResult.OK; 
+                this.Close();
             }
             else
             {

@@ -24,9 +24,12 @@ namespace CollegeManagementSystem.Forms.ProfileForms
             InitializeComponent();
             principalController = new PrincipalController();
         }
-
-        private void PrincipalProfileForm_Load(object sender, EventArgs e)
+        public void RefreshProfileData()
         {
+            // Fetch the principal's data again
+            LoadProfileData();
+        }
+        public void LoadProfileData() {
             // Get principal data using the controller
             Principal principal = principalController.GetPrincipalByUsername(Username);
 
@@ -48,6 +51,11 @@ namespace CollegeManagementSystem.Forms.ProfileForms
             {
                 MessageBox.Show("Principal details not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void PrincipalProfileForm_Load(object sender, EventArgs e)
+        {
+            RefreshProfileData();
+         
         }
     }
 }

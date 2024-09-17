@@ -1,4 +1,5 @@
-﻿using CollegeManagementSystem.Forms.DepartmentMangement;
+﻿using CollegeManagementSystem.Controllers;
+using CollegeManagementSystem.Forms.DepartmentMangement;
 using CollegeManagementSystem.Forms.ProfileForms;
 using CollegeManagementSystem.Forms.SubjectManagement;
 using CollegeManagementSystem.Forms.UserManagement.Student;
@@ -24,6 +25,8 @@ namespace CollegeManagementSystem.Forms.Dashboard
         {
             InitializeComponent();
         }
+
+        private PrincipalDashboard principalDashboard;
 
         private void PrincipalDashboard_Load(object sender, EventArgs e)
         {
@@ -54,21 +57,30 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PrincipalProfileForm principalProfileForm = new PrincipalProfileForm
-            {
-                Username = Username
-            };
-            principalProfileForm.Show();
+
+            PrincipalProfileForm principalProfileForm = new PrincipalProfileForm();
+            principalProfileForm.Username = this.Username;
+            principalProfileForm.ShowDialog();
         }
 
         private void ediToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             EditPrincipalProfileForm editPrincipalProfileForm = new EditPrincipalProfileForm
             {
                 Username = Username
             };
-            editPrincipalProfileForm.Show();
+
+            this.Hide();
+
+            if (editPrincipalProfileForm.ShowDialog() == DialogResult.OK)
+            {
+                PrincipalController principalController = new PrincipalController();
+                principalController.GetPrincipalByUsername(Username);
+
+            }
+
+            this.Show();
+
         }
 
         private void addTeacherToolStripMenuItem_Click(object sender, EventArgs e)
@@ -113,14 +125,14 @@ namespace CollegeManagementSystem.Forms.Dashboard
         {
             // add subject
             this.Hide();
-            AddSubForm addSubForm   =new AddSubForm();
+            AddSubForm addSubForm = new AddSubForm();
             addSubForm.Show();
         }
 
         private void allCoursesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // all subjects
-            AllSubForm allSubForm = new AllSubForm();   
+            AllSubForm allSubForm = new AllSubForm();
             allSubForm.Show();
         }
     }
