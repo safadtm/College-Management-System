@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CollegeManagementSystem.Controllers;
+using CollegeManagementSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +18,15 @@ namespace CollegeManagementSystem.Forms.SubjectManagement
         {
             InitializeComponent();
         }
+
+        private void AllSubForm_Load(object sender, EventArgs e)
+        {
+            SubjectController subjectController = new SubjectController();
+            subjectController.LoadSubjectsIntoDataGridView(dataGridViewSubjects);
+
+        }
+
+
+
     }
 }

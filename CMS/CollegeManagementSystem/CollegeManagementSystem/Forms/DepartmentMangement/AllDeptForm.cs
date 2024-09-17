@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CollegeManagementSystem.Controllers;
+using CollegeManagementSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +18,14 @@ namespace CollegeManagementSystem.Forms.DepartmentMangement
         {
             InitializeComponent();
         }
+
+        private void AllDeptForm_Load(object sender, EventArgs e)
+        {
+            DepartmentController departmentController = new DepartmentController();
+            departmentController.LoadDepartmentsIntoGridView(dataGridViewDepartments);
+        }
+
+
+        
     }
 }

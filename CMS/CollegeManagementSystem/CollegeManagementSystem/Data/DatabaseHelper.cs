@@ -215,7 +215,7 @@ namespace CollegeManagementSystem.Data
                                 SemesterID = Convert.ToInt32(reader["SemesterID"]),
                                 SemesterName = reader["SemName"].ToString(),
                                 StartDate = reader["StartDate"].ToString(),
-                                EndDate= reader["EndDate"].ToString()
+                                EndDate = reader["EndDate"].ToString()
                             });
                         }
                     }
@@ -269,6 +269,46 @@ namespace CollegeManagementSystem.Data
 
 
         // fetch subject 
+
+        public List<Subject> GetSubjects()
+        {
+            string query = @"
+        SELECT s.SubjectID, s.SubName, d.DeptName, t.FullName 
+        FROM Subject s
+        LEFT JOIN Department d ON s.DepartmentID = d.DepartmentID
+        LEFT JOIN Teacher t ON s.TeacherID = t.TeacherID";
+
+
+            List<Subject> subjects = new List<Subject>();
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            subjects.Add(new Subject
+                            {
+                                SubjectID = Convert.ToInt32(reader["SubjectID"]),
+                                SubjectName = reader["SubName"].ToString(),
+                                DepartmentName = reader["DeptName"].ToString(),
+                                TeacherName = reader["FullName"] != DBNull.Value ? reader["TeacherName"].ToString() : "Not assigned"
+                            });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) {
+                Console.WriteLine("Error loading subjects: " + ex.Message);
+            }
+            return subjects;
+        }
+
 
         // principal add teacher
 
