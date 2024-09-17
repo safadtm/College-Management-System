@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTeacherForm));
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
-            textBox10 = new TextBox();
+            radioButtonFemale = new RadioButton();
+            radioButtonMale = new RadioButton();
+            dateTimePickerJoined = new DateTimePicker();
+            dateTimePickerDOB = new DateTimePicker();
+            txtPassword = new TextBox();
             label11 = new Label();
-            textBox9 = new TextBox();
+            txtUsername = new TextBox();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
-            textBox5 = new TextBox();
+            txtAddress = new TextBox();
             label6 = new Label();
             label7 = new Label();
-            textBox4 = new TextBox();
+            txtPhone = new TextBox();
             label4 = new Label();
             label5 = new Label();
             button1 = new Button();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtEmail = new TextBox();
+            txtFullName = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -55,13 +55,13 @@
             label13 = new Label();
             label14 = new Label();
             button2 = new Button();
-            comboBox1 = new ComboBox();
-            checkedListBox1 = new CheckedListBox();
-            checkedListBox2 = new CheckedListBox();
-            checkedListBox3 = new CheckedListBox();
-            checkedListBox4 = new CheckedListBox();
-            checkedListBox5 = new CheckedListBox();
-            checkedListBox6 = new CheckedListBox();
+            cmbDepartment = new ComboBox();
+            sem1 = new CheckedListBox();
+            sem2 = new CheckedListBox();
+            sem3 = new CheckedListBox();
+            sem4 = new CheckedListBox();
+            sem5 = new CheckedListBox();
+            sem6 = new CheckedListBox();
             checkedListBox7 = new CheckedListBox();
             checkedListBox8 = new CheckedListBox();
             checkedListBox9 = new CheckedListBox();
@@ -71,50 +71,50 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // radioButton2
+            // radioButtonFemale
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(254, 304);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(78, 25);
-            radioButton2.TabIndex = 66;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Female";
-            radioButton2.UseVisualStyleBackColor = true;
+            radioButtonFemale.AutoSize = true;
+            radioButtonFemale.Location = new Point(254, 304);
+            radioButtonFemale.Name = "radioButtonFemale";
+            radioButtonFemale.Size = new Size(78, 25);
+            radioButtonFemale.TabIndex = 66;
+            radioButtonFemale.TabStop = true;
+            radioButtonFemale.Text = "Female";
+            radioButtonFemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButtonMale
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(171, 304);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(62, 25);
-            radioButton1.TabIndex = 65;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Male";
-            radioButton1.UseVisualStyleBackColor = true;
+            radioButtonMale.AutoSize = true;
+            radioButtonMale.Location = new Point(171, 304);
+            radioButtonMale.Name = "radioButtonMale";
+            radioButtonMale.Size = new Size(62, 25);
+            radioButtonMale.TabIndex = 65;
+            radioButtonMale.TabStop = true;
+            radioButtonMale.Text = "Male";
+            radioButtonMale.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker2
+            // dateTimePickerJoined
             // 
-            dateTimePicker2.Location = new Point(171, 395);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(200, 29);
-            dateTimePicker2.TabIndex = 64;
+            dateTimePickerJoined.Location = new Point(171, 395);
+            dateTimePickerJoined.Name = "dateTimePickerJoined";
+            dateTimePickerJoined.Size = new Size(200, 29);
+            dateTimePickerJoined.TabIndex = 64;
             // 
-            // dateTimePicker1
+            // dateTimePickerDOB
             // 
-            dateTimePicker1.Location = new Point(171, 253);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 29);
-            dateTimePicker1.TabIndex = 63;
+            dateTimePickerDOB.Location = new Point(171, 253);
+            dateTimePickerDOB.Name = "dateTimePickerDOB";
+            dateTimePickerDOB.Size = new Size(200, 29);
+            dateTimePickerDOB.TabIndex = 63;
             // 
-            // textBox10
+            // txtPassword
             // 
-            textBox10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox10.Location = new Point(516, 501);
-            textBox10.Margin = new Padding(2);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(172, 29);
-            textBox10.TabIndex = 60;
+            txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtPassword.Location = new Point(516, 501);
+            txtPassword.Margin = new Padding(2);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(172, 29);
+            txtPassword.TabIndex = 60;
             // 
             // label11
             // 
@@ -128,14 +128,14 @@
             label11.TabIndex = 59;
             label11.Text = "Password";
             // 
-            // textBox9
+            // txtUsername
             // 
-            textBox9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox9.Location = new Point(516, 456);
-            textBox9.Margin = new Padding(2);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(172, 29);
-            textBox9.TabIndex = 58;
+            txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtUsername.Location = new Point(516, 456);
+            txtUsername.Margin = new Padding(2);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(172, 29);
+            txtUsername.TabIndex = 58;
             // 
             // label10
             // 
@@ -173,14 +173,14 @@
             label8.TabIndex = 54;
             label8.Text = "Joined";
             // 
-            // textBox5
+            // txtAddress
             // 
-            textBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox5.Location = new Point(171, 346);
-            textBox5.Margin = new Padding(2);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(200, 29);
-            textBox5.TabIndex = 53;
+            txtAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtAddress.Location = new Point(171, 346);
+            txtAddress.Margin = new Padding(2);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(200, 29);
+            txtAddress.TabIndex = 53;
             // 
             // label6
             // 
@@ -206,14 +206,14 @@
             label7.TabIndex = 51;
             label7.Text = "Gender";
             // 
-            // textBox4
+            // txtPhone
             // 
-            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox4.Location = new Point(171, 207);
-            textBox4.Margin = new Padding(2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(200, 29);
-            textBox4.TabIndex = 50;
+            txtPhone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtPhone.Location = new Point(171, 207);
+            txtPhone.Margin = new Padding(2);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(200, 29);
+            txtPhone.TabIndex = 50;
             // 
             // label4
             // 
@@ -252,23 +252,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Location = new Point(171, 163);
-            textBox2.Margin = new Padding(2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 29);
-            textBox2.TabIndex = 45;
+            txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtEmail.Location = new Point(171, 163);
+            txtEmail.Margin = new Padding(2);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(200, 29);
+            txtEmail.TabIndex = 45;
             // 
-            // textBox1
+            // txtFullName
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(171, 113);
-            textBox1.Margin = new Padding(2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(200, 29);
-            textBox1.TabIndex = 44;
+            txtFullName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtFullName.Location = new Point(171, 113);
+            txtFullName.Margin = new Padding(2);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(200, 29);
+            txtFullName.TabIndex = 44;
             // 
             // label3
             // 
@@ -355,66 +355,67 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // comboBox1
+            // cmbDepartment
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(516, 117);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(172, 29);
-            comboBox1.TabIndex = 72;
+            cmbDepartment.FormattingEnabled = true;
+            cmbDepartment.Location = new Point(516, 117);
+            cmbDepartment.Name = "cmbDepartment";
+            cmbDepartment.Size = new Size(172, 29);
+            cmbDepartment.TabIndex = 72;
             // 
-            // checkedListBox1
+            // sem1
             // 
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Location = new Point(516, 163);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(137, 28);
-            checkedListBox1.TabIndex = 73;
+            sem1.FormattingEnabled = true;
+            sem1.Location = new Point(516, 163);
+            sem1.Name = "sem1";
+            sem1.Size = new Size(137, 28);
+            sem1.TabIndex = 73;
+            sem1.SelectedIndexChanged += sem1_SelectedIndexChanged;
             // 
-            // checkedListBox2
+            // sem2
             // 
-            checkedListBox2.FormattingEnabled = true;
-            checkedListBox2.Location = new Point(659, 163);
-            checkedListBox2.Name = "checkedListBox2";
-            checkedListBox2.Size = new Size(137, 28);
-            checkedListBox2.TabIndex = 74;
+            sem2.FormattingEnabled = true;
+            sem2.Location = new Point(659, 163);
+            sem2.Name = "sem2";
+            sem2.Size = new Size(137, 28);
+            sem2.TabIndex = 74;
             // 
-            // checkedListBox3
+            // sem3
             // 
-            checkedListBox3.FormattingEnabled = true;
-            checkedListBox3.Location = new Point(516, 197);
-            checkedListBox3.Name = "checkedListBox3";
-            checkedListBox3.Size = new Size(137, 28);
-            checkedListBox3.TabIndex = 75;
+            sem3.FormattingEnabled = true;
+            sem3.Location = new Point(516, 197);
+            sem3.Name = "sem3";
+            sem3.Size = new Size(137, 28);
+            sem3.TabIndex = 75;
             // 
-            // checkedListBox4
+            // sem4
             // 
-            checkedListBox4.FormattingEnabled = true;
-            checkedListBox4.Location = new Point(659, 197);
-            checkedListBox4.Name = "checkedListBox4";
-            checkedListBox4.Size = new Size(137, 28);
-            checkedListBox4.TabIndex = 76;
+            sem4.FormattingEnabled = true;
+            sem4.Location = new Point(659, 197);
+            sem4.Name = "sem4";
+            sem4.Size = new Size(137, 28);
+            sem4.TabIndex = 76;
             // 
-            // checkedListBox5
+            // sem5
             // 
-            checkedListBox5.FormattingEnabled = true;
-            checkedListBox5.Location = new Point(516, 231);
-            checkedListBox5.Name = "checkedListBox5";
-            checkedListBox5.Size = new Size(137, 28);
-            checkedListBox5.TabIndex = 77;
+            sem5.FormattingEnabled = true;
+            sem5.Location = new Point(516, 231);
+            sem5.Name = "sem5";
+            sem5.Size = new Size(137, 28);
+            sem5.TabIndex = 77;
             // 
-            // checkedListBox6
+            // sem6
             // 
-            checkedListBox6.FormattingEnabled = true;
-            checkedListBox6.Location = new Point(659, 231);
-            checkedListBox6.Name = "checkedListBox6";
-            checkedListBox6.Size = new Size(137, 28);
-            checkedListBox6.TabIndex = 78;
+            sem6.FormattingEnabled = true;
+            sem6.Location = new Point(659, 231);
+            sem6.Name = "sem6";
+            sem6.Size = new Size(137, 28);
+            sem6.TabIndex = 78;
             // 
             // checkedListBox7
             // 
             checkedListBox7.FormattingEnabled = true;
-            checkedListBox7.Location = new Point(659, 351);
+            checkedListBox7.Location = new Point(659, 346);
             checkedListBox7.Name = "checkedListBox7";
             checkedListBox7.Size = new Size(137, 28);
             checkedListBox7.TabIndex = 84;
@@ -471,41 +472,42 @@
             Controls.Add(checkedListBox10);
             Controls.Add(checkedListBox11);
             Controls.Add(checkedListBox12);
-            Controls.Add(checkedListBox6);
-            Controls.Add(checkedListBox5);
-            Controls.Add(checkedListBox4);
-            Controls.Add(checkedListBox3);
-            Controls.Add(checkedListBox2);
-            Controls.Add(checkedListBox1);
-            Controls.Add(comboBox1);
+            Controls.Add(sem6);
+            Controls.Add(sem5);
+            Controls.Add(sem4);
+            Controls.Add(sem3);
+            Controls.Add(sem2);
+            Controls.Add(sem1);
+            Controls.Add(cmbDepartment);
             Controls.Add(button2);
             Controls.Add(label14);
             Controls.Add(label13);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox10);
+            Controls.Add(radioButtonFemale);
+            Controls.Add(radioButtonMale);
+            Controls.Add(dateTimePickerJoined);
+            Controls.Add(dateTimePickerDOB);
+            Controls.Add(txtPassword);
             Controls.Add(label11);
-            Controls.Add(textBox9);
+            Controls.Add(txtUsername);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(textBox5);
+            Controls.Add(txtAddress);
             Controls.Add(label6);
             Controls.Add(label7);
-            Controls.Add(textBox4);
+            Controls.Add(txtPhone);
             Controls.Add(label4);
             Controls.Add(label5);
             Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtEmail);
+            Controls.Add(txtFullName);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Name = "AddTeacherForm";
             Text = "AddTeacherForm";
+            Load += AddTeacherForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -513,25 +515,25 @@
 
         #endregion
 
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox10;
+        private RadioButton radioButtonFemale;
+        private RadioButton radioButtonMale;
+        private DateTimePicker dateTimePickerJoined;
+        private DateTimePicker dateTimePickerDOB;
+        private TextBox txtPassword;
         private Label label11;
-        private TextBox textBox9;
+        private TextBox txtUsername;
         private Label label10;
         private Label label9;
         private Label label8;
-        private TextBox textBox5;
+        private TextBox txtAddress;
         private Label label6;
         private Label label7;
-        private TextBox textBox4;
+        private TextBox txtPhone;
         private Label label4;
         private Label label5;
         private Button button1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtEmail;
+        private TextBox txtFullName;
         private Label label3;
         private Label label2;
         private Label label1;
@@ -539,13 +541,13 @@
         private Label label13;
         private Label label14;
         private Button button2;
-        private ComboBox comboBox1;
-        private CheckedListBox checkedListBox1;
-        private CheckedListBox checkedListBox2;
-        private CheckedListBox checkedListBox3;
-        private CheckedListBox checkedListBox4;
-        private CheckedListBox checkedListBox5;
-        private CheckedListBox checkedListBox6;
+        private ComboBox cmbDepartment;
+        private CheckedListBox sem1;
+        private CheckedListBox sem2;
+        private CheckedListBox sem3;
+        private CheckedListBox sem4;
+        private CheckedListBox sem5;
+        private CheckedListBox sem6;
         private CheckedListBox checkedListBox7;
         private CheckedListBox checkedListBox8;
         private CheckedListBox checkedListBox9;
