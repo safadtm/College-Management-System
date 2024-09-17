@@ -24,7 +24,7 @@ namespace CollegeManagementSystem.Data
 
             try
             {
-                using (SqlConnection conn = GetConnection()) // Reuse GetConnection method
+                using (SqlConnection conn = GetConnection()) 
                 {
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -48,7 +48,7 @@ namespace CollegeManagementSystem.Data
             }
             catch (Exception ex)
             {
-                // Handle exception (optional: log it)
+            
                 throw new Exception("Error inserting principal: " + ex.Message);
             }
         }
@@ -127,6 +127,52 @@ namespace CollegeManagementSystem.Data
                 Console.WriteLine(ex.Message);
                 return null;
             }
+        }
+
+        // edit principal profile
+        public bool UpdatePrincipal(Principal principal)
+        {
+            string query = @"UPDATE Principal 
+                     SET FullName = @FullName, 
+                         Email = @Email, 
+                         Phone = @Phone, 
+                         DOB = @DOB, 
+                         Gender = @Gender, 
+                         Address = @Address, 
+                         Joined = @Joined, 
+                         Experience = @Experience
+                     WHERE Username = @Username";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@FullName", principal.FullName);
+                        cmd.Parameters.AddWithValue("@Email", principal.Email);
+                        cmd.Parameters.AddWithValue("@Phone", principal.Phone);
+                        cmd.Parameters.AddWithValue("@DOB", principal.DOB);
+                        cmd.Parameters.AddWithValue("@Gender", principal.Gender);
+                        cmd.Parameters.AddWithValue("@Address", principal.Address);
+                        cmd.Parameters.AddWithValue("@Joined", principal.Joined);
+                        cmd.Parameters.AddWithValue("@Experience", principal.Experience);
+                        cmd.Parameters.AddWithValue("@Username", principal.Username);  
+
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex) {
+                throw new Exception("Error updating principal: " + ex.Message);
+
+            }
+
+
+
         }
 
 
@@ -303,7 +349,8 @@ namespace CollegeManagementSystem.Data
                     }
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 Console.WriteLine("Error loading subjects: " + ex.Message);
             }
             return subjects;

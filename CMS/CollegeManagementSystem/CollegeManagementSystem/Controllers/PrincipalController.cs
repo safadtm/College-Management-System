@@ -46,10 +46,12 @@ namespace CollegeManagementSystem.Controllers
             return databaseHelper.GetPrincipalByUsername(username);
         }
 
+        // edit principal profile
+        public bool UpdatePrincipalProfile(Principal principal)
+        {
+           return databaseHelper.UpdatePrincipal(principal);
+        }
 
-        
-        // add teacher
 
-        // fetch teachers
     }
 }

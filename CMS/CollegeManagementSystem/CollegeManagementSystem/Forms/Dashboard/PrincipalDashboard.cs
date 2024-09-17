@@ -64,7 +64,10 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void ediToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EditPrincipalProfileForm editPrincipalProfileForm = new EditPrincipalProfileForm();
+            EditPrincipalProfileForm editPrincipalProfileForm = new EditPrincipalProfileForm
+            {
+                Username = Username
+            };
             editPrincipalProfileForm.Show();
         }
 
