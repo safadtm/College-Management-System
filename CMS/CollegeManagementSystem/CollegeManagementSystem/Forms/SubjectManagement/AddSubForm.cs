@@ -76,8 +76,8 @@ namespace CollegeManagementSystem.Forms.SubjectManagement
         {
             // add new subject
             string subjectName = txtSubjectName.Text;
-            int departmentID = Convert.ToInt32(cmbDepartment.SelectedValue); // Assuming departments are loaded in combobox
-            int semesterID = Convert.ToInt32(cmbSemester.SelectedValue); // Assuming semesters are loaded in combobox
+            int departmentID = Convert.ToInt32(cmbDepartment.SelectedValue); 
+            int semesterID = Convert.ToInt32(cmbSemester.SelectedValue); 
 
             if (!string.IsNullOrWhiteSpace(subjectName) && departmentID > 0 && semesterID > 0)
             {

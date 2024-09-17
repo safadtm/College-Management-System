@@ -163,7 +163,7 @@ namespace CollegeManagementSystem.Data
         // Load departments from the database
         public List<Department> GetDepartments()
         {
-            string query = "SELECT DepartmentID, DepartmentName FROM Department";
+            string query = "SELECT DepartmentID, DeptName FROM Department";
             List<Department> departments = new List<Department>();
 
             try
@@ -179,7 +179,7 @@ namespace CollegeManagementSystem.Data
                             departments.Add(new Department
                             {
                                 DepartmentID = Convert.ToInt32(reader["DepartmentID"]),
-                                DepartmentName = reader["DepartmentName"].ToString()
+                                DepartmentName = reader["DeptName"].ToString()
                             });
                         }
                     }
@@ -197,7 +197,7 @@ namespace CollegeManagementSystem.Data
         // Load semesters from the database
         public List<Semester> GetSemesters()
         {
-            string query = "SELECT SemesterID, SemesterName FROM Semester";
+            string query = "SELECT SemesterID,SemName,StartDate,EndDate FROM Semester";
             List<Semester> semesters = new List<Semester>();
 
             try
@@ -223,7 +223,7 @@ namespace CollegeManagementSystem.Data
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error loading departments: " + ex.Message);
+                Console.WriteLine("Error loading semesters: " + ex.Message);
             }
 
             return semesters;
@@ -234,7 +234,7 @@ namespace CollegeManagementSystem.Data
         // Method to insert a subject
         public bool InsertSubject(string subjectName, int departmentID, int semesterID, int? teacherID)
         {
-            string query = "INSERT INTO Subjects (SubjectName, DepartmentID, SemesterID, TeacherID) " +
+            string query = "INSERT INTO Subject (SubName, DepartmentID, SemesterID, TeacherID) " +
                            "VALUES (@SubjectName, @DepartmentID, @SemesterID, @TeacherID)";
 
             try
