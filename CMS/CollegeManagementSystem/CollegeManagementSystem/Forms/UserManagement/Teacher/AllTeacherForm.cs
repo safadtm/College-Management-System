@@ -16,5 +16,10 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
         {
             InitializeComponent();
         }
+
+        private void AllTeacherForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

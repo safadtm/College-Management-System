@@ -26,7 +26,6 @@ namespace CollegeManagementSystem.Forms.Dashboard
             InitializeComponent();
         }
 
-        private PrincipalDashboard principalDashboard;
 
         private void PrincipalDashboard_Load(object sender, EventArgs e)
         {
@@ -50,6 +49,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             this.Hide();
             SplashScreenForm sp = new SplashScreenForm();
             sp.Show();
@@ -58,82 +58,91 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            PrincipalProfileForm principalProfileForm = new PrincipalProfileForm();
-            principalProfileForm.Username = this.Username;
-            principalProfileForm.ShowDialog();
+            using (PrincipalProfileForm principalProfileForm = new PrincipalProfileForm())
+            {
+                principalProfileForm.Username = this.Username;
+                principalProfileForm.ShowDialog();
+            }
         }
 
         private void ediToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditPrincipalProfileForm editPrincipalProfileForm = new EditPrincipalProfileForm
+            using (EditPrincipalProfileForm editPrincipalProfileForm = new EditPrincipalProfileForm
             {
-                Username = Username
-            };
-
-            this.Hide();
-
-            if (editPrincipalProfileForm.ShowDialog() == DialogResult.OK)
+                Username = Username 
+            })
             {
-                PrincipalController principalController = new PrincipalController();
-                principalController.GetPrincipalByUsername(Username);
-
+                if (editPrincipalProfileForm.ShowDialog() == DialogResult.OK)
+                {
+                    PrincipalController principalController = new PrincipalController();
+                    var updatedPrincipal = principalController.GetPrincipalByUsername(Username);
+                }
             }
-
-            this.Show();
 
         }
 
         private void addTeacherToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // add teacher page
-            this.Hide();
-            AddTeacherForm addTeacherForm = new AddTeacherForm();
-            addTeacherForm.Show();
+            // Add teacher page
+            using (AddTeacherForm addTeacherForm = new AddTeacherForm())
+            {
+                addTeacherForm.ShowDialog();
+            }
 
         }
 
         private void allTeachersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // all teacher page
-            AllTeacherForm allTeacherForm = new AllTeacherForm();
-            allTeacherForm.Show();
+            using (AllTeacherForm allTeacherForm = new AllTeacherForm())
+            {
+                allTeacherForm.ShowDialog();
+            }
         }
 
         private void viewStudentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // all students page without any conditions
-            AllStudentForm allStudentForm = new AllStudentForm();
-            allStudentForm.Show();
+            using (AllStudentForm allStudentForm = new AllStudentForm())
+            {
+                allStudentForm.ShowDialog();
+            }
         }
 
         private void addDepartmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // add department
-            this.Hide();
-            AddDeptForm addDeptForm = new AddDeptForm();
-            addDeptForm.Show();
+            using (AddDeptForm addDeptForm = new AddDeptForm())
+            {
+                addDeptForm.ShowDialog();
+            }
         }
 
         private void allDepartmentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // all departments
-            AllDeptForm allDeptForm = new AllDeptForm();
-            allDeptForm.Show();
+            using (AllDeptForm allDeptForm = new AllDeptForm())
+            {
+                allDeptForm.ShowDialog();
+            }
         }
 
         private void addCourseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // add subject
-            this.Hide();
-            AddSubForm addSubForm = new AddSubForm();
-            addSubForm.Show();
+            using (AddSubForm addSubForm = new AddSubForm())
+            {
+                addSubForm.ShowDialog();
+            }
         }
 
         private void allCoursesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // all subjects
-            AllSubForm allSubForm = new AllSubForm();
-            allSubForm.Show();
+            using (AllSubForm allSubForm = new AllSubForm())
+            {
+                allSubForm.ShowDialog();
+            }
         }
     }
 }

@@ -38,6 +38,7 @@
             ClientSize = new Size(800, 450);
             Name = "AllTeacherForm";
             Text = "AllTeacherForm";
+            Load += AllTeacherForm_Load;
             ResumeLayout(false);
         }
 

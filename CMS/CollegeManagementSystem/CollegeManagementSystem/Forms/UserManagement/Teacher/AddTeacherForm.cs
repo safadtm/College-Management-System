@@ -76,10 +76,8 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("New Teacher Added");
-            this.Hide();
-            PrincipalDashboard principalDashboard = new PrincipalDashboard();
-            principalDashboard.Show();
-
+            this.DialogResult = DialogResult.OK; 
+            this.Close();
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)

@@ -32,9 +32,8 @@ namespace CollegeManagementSystem.Forms.DepartmentMangement
                 if (isSuccess)
                 {
                     MessageBox.Show("Department added successfully.");
-                    this.Hide();
-                    PrincipalDashboard principalDashboard = new PrincipalDashboard();
-                    principalDashboard.Show();
+                    this.DialogResult = DialogResult.OK; // Close the form with OK result
+                    this.Close();
                 }
                 else
                 {

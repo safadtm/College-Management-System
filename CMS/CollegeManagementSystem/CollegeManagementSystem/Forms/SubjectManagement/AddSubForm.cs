@@ -87,9 +87,8 @@ namespace CollegeManagementSystem.Forms.SubjectManagement
                 if (isSuccess)
                 {
                     MessageBox.Show("Subject added successfully.");
-                    this.Hide();
-                    PrincipalDashboard principalDashboard = new PrincipalDashboard();
-                    principalDashboard.Show();
+                    this.DialogResult = DialogResult.OK; // Close the form with OK result
+                    this.Close();
                 }
                 else
                 {
