@@ -15,7 +15,7 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
 {
     public partial class AddTeacherForm : Form
     {
-        private bool _isInitialLoad = true;
+        
         public AddTeacherForm()
         {
             InitializeComponent();
@@ -45,7 +45,8 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
                 CheckBox semesterCheckBox = new CheckBox
                 {
                     Text = semester.SemesterName,
-                    AutoSize = true
+                    AutoSize = true,
+                    Tag = semester.SemesterID
                 };
 
                 // Add the CheckBox to the TableLayoutPanel
@@ -96,26 +97,43 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
         }
 
         // Event when a semester checkbox is changed
+        List<int> selectedSemesterIds = new List<int>();
         private void SemesterCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            // Get the checkbox that was clicked
+            CheckBox semesterCheckBox = sender as CheckBox;
+
+            if (semesterCheckBox != null)
+            {
+                // Retrieve the semester ID stored in the Tag property of the checkbox
+                int semesterId = (int)semesterCheckBox.Tag;
+
+                if (semesterCheckBox.Checked)
+                {
+                    // Add the semester ID if it's selected
+                    if (!selectedSemesterIds.Contains(semesterId))
+                    {
+                        selectedSemesterIds.Add(semesterId);
+                    }
+                }
+                else
+                {
+                    // Remove the semester ID if it's deselected
+                    selectedSemesterIds.Remove(semesterId);
+                }
+            }
             PopulateSubjectsIfApplicable();
         }
 
         // Check if department is selected and any semester checkbox is checked
         private void PopulateSubjectsIfApplicable()
         {
-            if (_isInitialLoad)
-            {
-                // Don't perform the subject population check on initial load
-                return;
-            }
-
-            if (cmbDepartment.SelectedItem != null && IsAnySemesterChecked())
+           if (cmbDepartment.SelectedItem != null && selectedSemesterIds.Any())
             {
                 // Department and at least one semester is selected, so populate subjects
                 int departmentId = (int)cmbDepartment.SelectedValue;
-                List<int> selectedSemesterIds = GetSelectedSemesterIds();
                 PopulateSubjects(departmentId, selectedSemesterIds);
+               
             }
             else
             {
@@ -129,40 +147,8 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
             }
         }
 
-        // Check if any semester checkbox is checked
-        private bool IsAnySemesterChecked()
-        {
-            foreach (Control control in tableLayoutPanelSemesters.Controls)
-            {
-                if (control is CheckBox checkBox && checkBox.Checked)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        // Get the selected semester IDs
-        private List<int> GetSelectedSemesterIds()
-        {
-            List<int> selectedSemesters = new List<int>();
-
-            foreach (Control control in tableLayoutPanelSemesters.Controls)
-            {
-                if (control is CheckBox checkBox && checkBox.Checked)
-                {
-                    Semester selectedSemester = checkBox.Tag as Semester;  // Assuming each CheckBox has a Semester object as Tag
-                    if (selectedSemester != null)
-                    {
-                        selectedSemesters.Add(selectedSemester.SemesterID);
-                    }
-                }
-            }
-
-            return selectedSemesters;
-        }
-
-        // Populate subjects based on selected department and semesters
+       // Populate subjects based on selected department and semesters
+        
         private void PopulateSubjects(int departmentId, List<int> semesterIds)
         {
             tableLayoutPanelSubjects.Controls.Clear();
@@ -204,6 +190,7 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
                     currentRow++;
                 }
             }
+          
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -227,8 +214,7 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
         {
             LoadDepartments();
             PopulateSemesters();
-            _isInitialLoad = false;
-            
+          
         }
 
         private void sem1_SelectedIndexChanged(object sender, EventArgs e)

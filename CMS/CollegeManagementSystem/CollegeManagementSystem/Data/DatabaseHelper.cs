@@ -362,13 +362,18 @@ namespace CollegeManagementSystem.Data
         {
             // Create the base query
             string query = @"
-    SELECT s.SubjectID, s.SubName, d.DeptName, sem.SemName, t.FullName
-    FROM Subject s
-    LEFT JOIN Department d ON s.DepartmentID = d.DepartmentID
-    LEFT JOIN Semester sem ON s.SemesterID = sem.SemesterID
-    LEFT JOIN Teacher t ON s.TeacherID = t.TeacherID
-    WHERE s.DepartmentID = @DepartmentID
-    AND s.SemesterID IN (" + string.Join(",", semesterIds.Select((id, index) => "@SemesterID" + index)) + ")";
+SELECT s.SubjectID, s.SubName, d.DeptName, sem.SemName, t.FullName
+FROM Subject s
+LEFT JOIN Department d ON s.DepartmentID = d.DepartmentID
+LEFT JOIN Semester sem ON s.SemesterID = sem.SemesterID
+LEFT JOIN Teacher t ON s.TeacherID = t.TeacherID
+WHERE s.DepartmentID = @DepartmentID";
+
+            // Check if semesterIds is not empty
+            if (semesterIds != null && semesterIds.Count > 0)
+            {
+                query += " AND s.SemesterID IN (" + string.Join(",", semesterIds.Select((id, index) => "@SemesterID" + index)) + ")";
+            }
 
             List<Subject> subjects = new List<Subject>();
 
@@ -381,13 +386,22 @@ namespace CollegeManagementSystem.Data
                     // Add DepartmentID parameter
                     cmd.Parameters.AddWithValue("@DepartmentID", departmentId);
 
-                    // Add parameters for each semester ID
-                    for (int i = 0; i < semesterIds.Count; i++)
+                    // Add parameters for each semester ID if semesterIds is not empty
+                    if (semesterIds != null && semesterIds.Count > 0)
                     {
-                        cmd.Parameters.AddWithValue("@SemesterID" + i, semesterIds[i]);
+                        for (int i = 0; i < semesterIds.Count; i++)
+                        {
+                            cmd.Parameters.AddWithValue("@SemesterID" + i, semesterIds[i]);
+                        }
+                    }
+                    else
+                    {
+                        // If no semester selected, throw a meaningful message or handle it
+                        MessageBox.Show("Please select at least one semester.");
+                        return null;
                     }
 
-                    // Log the final query and parameters
+                    // Log the final query and parameters (for debugging purposes)
                     Console.WriteLine("Executing SQL Query: " + cmd.CommandText);
                     foreach (SqlParameter param in cmd.Parameters)
                     {
