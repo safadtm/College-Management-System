@@ -56,18 +56,8 @@
             label14 = new Label();
             button2 = new Button();
             cmbDepartment = new ComboBox();
-            sem1 = new CheckedListBox();
-            sem2 = new CheckedListBox();
-            sem3 = new CheckedListBox();
-            sem4 = new CheckedListBox();
-            sem5 = new CheckedListBox();
-            sem6 = new CheckedListBox();
-            checkedListBox7 = new CheckedListBox();
-            checkedListBox8 = new CheckedListBox();
-            checkedListBox9 = new CheckedListBox();
-            checkedListBox10 = new CheckedListBox();
-            checkedListBox11 = new CheckedListBox();
-            checkedListBox12 = new CheckedListBox();
+            tableLayoutPanelSemesters = new TableLayoutPanel();
+            tableLayoutPanelSubjects = new TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -363,102 +353,33 @@
             cmbDepartment.Size = new Size(172, 29);
             cmbDepartment.TabIndex = 72;
             // 
-            // sem1
+            // tableLayoutPanelSemesters
             // 
-            sem1.FormattingEnabled = true;
-            sem1.Location = new Point(516, 163);
-            sem1.Name = "sem1";
-            sem1.Size = new Size(137, 28);
-            sem1.TabIndex = 73;
-            sem1.SelectedIndexChanged += sem1_SelectedIndexChanged;
+            tableLayoutPanelSemesters.AutoSize = true;
+            tableLayoutPanelSemesters.ColumnCount = 2;
+            tableLayoutPanelSemesters.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanelSemesters.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanelSemesters.Location = new Point(519, 158);
+            tableLayoutPanelSemesters.Name = "tableLayoutPanelSemesters";
+            tableLayoutPanelSemesters.RowCount = 1;
+            tableLayoutPanelSemesters.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanelSemesters.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanelSemesters.Size = new Size(169, 30);
+            tableLayoutPanelSemesters.TabIndex = 85;
             // 
-            // sem2
+            // tableLayoutPanelSubjects
             // 
-            sem2.FormattingEnabled = true;
-            sem2.Location = new Point(659, 163);
-            sem2.Name = "sem2";
-            sem2.Size = new Size(137, 28);
-            sem2.TabIndex = 74;
-            // 
-            // sem3
-            // 
-            sem3.FormattingEnabled = true;
-            sem3.Location = new Point(516, 197);
-            sem3.Name = "sem3";
-            sem3.Size = new Size(137, 28);
-            sem3.TabIndex = 75;
-            // 
-            // sem4
-            // 
-            sem4.FormattingEnabled = true;
-            sem4.Location = new Point(659, 197);
-            sem4.Name = "sem4";
-            sem4.Size = new Size(137, 28);
-            sem4.TabIndex = 76;
-            // 
-            // sem5
-            // 
-            sem5.FormattingEnabled = true;
-            sem5.Location = new Point(516, 231);
-            sem5.Name = "sem5";
-            sem5.Size = new Size(137, 28);
-            sem5.TabIndex = 77;
-            // 
-            // sem6
-            // 
-            sem6.FormattingEnabled = true;
-            sem6.Location = new Point(659, 231);
-            sem6.Name = "sem6";
-            sem6.Size = new Size(137, 28);
-            sem6.TabIndex = 78;
-            // 
-            // checkedListBox7
-            // 
-            checkedListBox7.FormattingEnabled = true;
-            checkedListBox7.Location = new Point(659, 346);
-            checkedListBox7.Name = "checkedListBox7";
-            checkedListBox7.Size = new Size(137, 28);
-            checkedListBox7.TabIndex = 84;
-            // 
-            // checkedListBox8
-            // 
-            checkedListBox8.FormattingEnabled = true;
-            checkedListBox8.Location = new Point(516, 347);
-            checkedListBox8.Name = "checkedListBox8";
-            checkedListBox8.Size = new Size(137, 28);
-            checkedListBox8.TabIndex = 83;
-            // 
-            // checkedListBox9
-            // 
-            checkedListBox9.FormattingEnabled = true;
-            checkedListBox9.Location = new Point(659, 312);
-            checkedListBox9.Name = "checkedListBox9";
-            checkedListBox9.Size = new Size(137, 28);
-            checkedListBox9.TabIndex = 82;
-            // 
-            // checkedListBox10
-            // 
-            checkedListBox10.FormattingEnabled = true;
-            checkedListBox10.Location = new Point(516, 312);
-            checkedListBox10.Name = "checkedListBox10";
-            checkedListBox10.Size = new Size(137, 28);
-            checkedListBox10.TabIndex = 81;
-            // 
-            // checkedListBox11
-            // 
-            checkedListBox11.FormattingEnabled = true;
-            checkedListBox11.Location = new Point(659, 278);
-            checkedListBox11.Name = "checkedListBox11";
-            checkedListBox11.Size = new Size(137, 28);
-            checkedListBox11.TabIndex = 80;
-            // 
-            // checkedListBox12
-            // 
-            checkedListBox12.FormattingEnabled = true;
-            checkedListBox12.Location = new Point(516, 278);
-            checkedListBox12.Name = "checkedListBox12";
-            checkedListBox12.Size = new Size(137, 28);
-            checkedListBox12.TabIndex = 79;
+            tableLayoutPanelSubjects.AutoSize = true;
+            tableLayoutPanelSubjects.ColumnCount = 2;
+            tableLayoutPanelSubjects.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanelSubjects.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanelSubjects.Location = new Point(519, 278);
+            tableLayoutPanelSubjects.Name = "tableLayoutPanelSubjects";
+            tableLayoutPanelSubjects.RowCount = 2;
+            tableLayoutPanelSubjects.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanelSubjects.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanelSubjects.Size = new Size(168, 39);
+            tableLayoutPanelSubjects.TabIndex = 86;
             // 
             // AddTeacherForm
             // 
@@ -466,18 +387,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(1061, 630);
-            Controls.Add(checkedListBox7);
-            Controls.Add(checkedListBox8);
-            Controls.Add(checkedListBox9);
-            Controls.Add(checkedListBox10);
-            Controls.Add(checkedListBox11);
-            Controls.Add(checkedListBox12);
-            Controls.Add(sem6);
-            Controls.Add(sem5);
-            Controls.Add(sem4);
-            Controls.Add(sem3);
-            Controls.Add(sem2);
-            Controls.Add(sem1);
+            Controls.Add(tableLayoutPanelSubjects);
+            Controls.Add(tableLayoutPanelSemesters);
             Controls.Add(cmbDepartment);
             Controls.Add(button2);
             Controls.Add(label14);
@@ -542,17 +453,7 @@
         private Label label14;
         private Button button2;
         private ComboBox cmbDepartment;
-        private CheckedListBox sem1;
-        private CheckedListBox sem2;
-        private CheckedListBox sem3;
-        private CheckedListBox sem4;
-        private CheckedListBox sem5;
-        private CheckedListBox sem6;
-        private CheckedListBox checkedListBox7;
-        private CheckedListBox checkedListBox8;
-        private CheckedListBox checkedListBox9;
-        private CheckedListBox checkedListBox10;
-        private CheckedListBox checkedListBox11;
-        private CheckedListBox checkedListBox12;
+        private TableLayoutPanel tableLayoutPanelSemesters;
+        private TableLayoutPanel tableLayoutPanelSubjects;
     }
 }

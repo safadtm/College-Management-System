@@ -319,11 +319,11 @@ namespace CollegeManagementSystem.Data
         public List<Subject> GetSubjects()
         {
             string query = @"
-        SELECT s.SubjectID, s.SubName, d.DeptName, t.FullName 
+        SELECT s.SubjectID, s.SubName, d.DeptName, sem.SemName, t.FullName
         FROM Subject s
         LEFT JOIN Department d ON s.DepartmentID = d.DepartmentID
+        LEFT JOIN Semester sem ON s.SemesterID = sem.SemesterID
         LEFT JOIN Teacher t ON s.TeacherID = t.TeacherID";
-
 
             List<Subject> subjects = new List<Subject>();
 
@@ -343,7 +343,8 @@ namespace CollegeManagementSystem.Data
                                 SubjectID = Convert.ToInt32(reader["SubjectID"]),
                                 SubjectName = reader["SubName"].ToString(),
                                 DepartmentName = reader["DeptName"].ToString(),
-                                TeacherName = reader["FullName"] != DBNull.Value ? reader["TeacherName"].ToString() : "Not assigned"
+                                SemesterName = reader["SemName"].ToString(),
+                                TeacherName = reader["FullName"] != DBNull.Value ? reader["FullName"].ToString() : "Not assigned"
                             });
                         }
                     }
@@ -356,6 +357,67 @@ namespace CollegeManagementSystem.Data
             return subjects;
         }
 
+        // fetch subjects according to department and semesters
+        public List<Subject> GetSubjectsByDepartmentAndSemesters(int departmentId, List<int> semesterIds)
+        {
+            // Create the base query
+            string query = @"
+    SELECT s.SubjectID, s.SubName, d.DeptName, sem.SemName, t.FullName
+    FROM Subject s
+    LEFT JOIN Department d ON s.DepartmentID = d.DepartmentID
+    LEFT JOIN Semester sem ON s.SemesterID = sem.SemesterID
+    LEFT JOIN Teacher t ON s.TeacherID = t.TeacherID
+    WHERE s.DepartmentID = @DepartmentID
+    AND s.SemesterID IN (" + string.Join(",", semesterIds.Select((id, index) => "@SemesterID" + index)) + ")";
+
+            List<Subject> subjects = new List<Subject>();
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    // Add DepartmentID parameter
+                    cmd.Parameters.AddWithValue("@DepartmentID", departmentId);
+
+                    // Add parameters for each semester ID
+                    for (int i = 0; i < semesterIds.Count; i++)
+                    {
+                        cmd.Parameters.AddWithValue("@SemesterID" + i, semesterIds[i]);
+                    }
+
+                    // Log the final query and parameters
+                    Console.WriteLine("Executing SQL Query: " + cmd.CommandText);
+                    foreach (SqlParameter param in cmd.Parameters)
+                    {
+                        Console.WriteLine($"Parameter Name: {param.ParameterName}, Value: {param.Value}");
+                    }
+
+                    conn.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            subjects.Add(new Subject
+                            {
+                                SubjectID = Convert.ToInt32(reader["SubjectID"]),
+                                SubjectName = reader["SubName"].ToString(),
+                                DepartmentName = reader["DeptName"].ToString(),
+                                SemesterName = reader["SemName"].ToString(),
+                                TeacherName = reader["FullName"] != DBNull.Value ? reader["FullName"].ToString() : "Not assigned"
+                            });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading subjects: " + ex.Message);
+            }
+            return subjects;
+        }
 
         // principal add teacher
 
