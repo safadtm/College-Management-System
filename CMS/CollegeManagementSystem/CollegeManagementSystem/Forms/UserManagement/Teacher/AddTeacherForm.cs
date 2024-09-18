@@ -1,6 +1,7 @@
 ﻿using CollegeManagementSystem.Controllers;
 using CollegeManagementSystem.Forms.Dashboard;
 using CollegeManagementSystem.Model;
+using CollegeManagementSystem.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -196,6 +197,12 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
         private void button2_Click(object sender, EventArgs e)
         {
             // generate username and password button
+            var (username, password) = CredentialGenerator.GenerateCredentials("TCH");
+            txtUsername.Text= username;
+            txtPassword.Text= password;
+
+            txtUsername.ReadOnly = true;
+            txtPassword.ReadOnly = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
