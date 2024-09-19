@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CollegeManagementSystem.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,9 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
 
         private void AllTeacherForm_Load(object sender, EventArgs e)
         {
+           
+            TeacherController teacherController = new TeacherController();
+         teacherController.LoadTeachersIntoDataGridView(dataGridViewTeachers);
 
         }
     }

@@ -33,7 +33,45 @@ namespace CollegeManagementSystem.Controllers
             return databaseHelper.InsertTeacher(teacher);
         }
 
-        
+        // Get All Teachers With Details
+        public List<TeacherDetails> GetAllTeachersWithDetails()
+        {
+            return databaseHelper.GetTeachersWithDetails();
+        }
+
+        // All teachers into datagrid view
+        public void LoadTeachersIntoDataGridView(DataGridView dataGridView)
+        {
+            List<TeacherDetails> teachers = GetAllTeachersWithDetails();
+
+            if (teachers != null && teachers.Any())
+            {
+                dataGridView.DataSource = teachers;
+                dataGridView.Columns["TeacherID"].HeaderText = "SI.NO";
+                dataGridView.Columns["TeacherName"].HeaderText = "Name";
+                dataGridView.Columns["DepartmentName"].HeaderText = "Department";
+                dataGridView.Columns["Subjects"].HeaderText = "Subjects";
+                dataGridView.Columns["Semesters"].HeaderText = "Semesters";
+                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+
+                int totalColumnWidth = dataGridView.Columns.Cast<DataGridViewColumn>().Sum(col => col.Width);
+                dataGridView.Width = totalColumnWidth + dataGridView.Padding.Left + dataGridView.Padding.Right;
+
+                int totalHeight = dataGridView.ColumnHeadersHeight;
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    totalHeight += row.Height;
+                }
+                dataGridView.Height = totalHeight + dataGridView.Rows.Count;
+                dataGridView.ScrollBars = ScrollBars.None;
+            }
+            else
+            {
+                MessageBox.Show("No teachers found.");
+            }
+        }
 
     }
 }

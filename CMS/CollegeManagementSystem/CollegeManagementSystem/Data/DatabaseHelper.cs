@@ -24,7 +24,7 @@ namespace CollegeManagementSystem.Data
 
             try
             {
-                using (SqlConnection conn = GetConnection()) 
+                using (SqlConnection conn = GetConnection())
                 {
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -48,7 +48,7 @@ namespace CollegeManagementSystem.Data
             }
             catch (Exception ex)
             {
-            
+
                 throw new Exception("Error inserting principal: " + ex.Message);
             }
         }
@@ -157,7 +157,7 @@ namespace CollegeManagementSystem.Data
                         cmd.Parameters.AddWithValue("@Address", principal.Address);
                         cmd.Parameters.AddWithValue("@Joined", principal.Joined);
                         cmd.Parameters.AddWithValue("@Experience", principal.Experience);
-                        cmd.Parameters.AddWithValue("@Username", principal.Username);  
+                        cmd.Parameters.AddWithValue("@Username", principal.Username);
 
                         conn.Open();
                         int rowsAffected = cmd.ExecuteNonQuery();
@@ -166,7 +166,8 @@ namespace CollegeManagementSystem.Data
                     }
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 throw new Exception("Error updating principal: " + ex.Message);
 
             }
@@ -333,12 +334,12 @@ namespace CollegeManagementSystem.Data
                             cmd.Parameters.AddWithValue("@TeacherID", teacherID);
                             cmd.Parameters.AddWithValue("@SubjectID", subjectID);
 
-                            
+
                             cmd.ExecuteNonQuery();
                         }
                     }
 
-                    return true; 
+                    return true;
                 }
             }
             catch (Exception ex)
@@ -391,7 +392,7 @@ namespace CollegeManagementSystem.Data
             return subjects;
         }
 
-        
+
 
         // fetch subjects according to department and semesters
         public List<Subject> GetSubjectsByDepartmentAndSemesters(int departmentId, List<int> semesterIds)
@@ -490,13 +491,13 @@ WHERE s.DepartmentID = @DepartmentID";
                         cmd.Parameters.AddWithValue("@Gender", teacher.Gender);
                         cmd.Parameters.AddWithValue("@Address", teacher.Address);
                         cmd.Parameters.AddWithValue("@Joined", teacher.Joined);
-                        cmd.Parameters.AddWithValue("@DepartmentID", teacher.DepartmentID); 
+                        cmd.Parameters.AddWithValue("@DepartmentID", teacher.DepartmentID);
                         cmd.Parameters.AddWithValue("@Username", teacher.Username);
                         cmd.Parameters.AddWithValue("@Password", teacher.Password);
 
 
                         conn.Open();
-                        int teacherID = (int)cmd.ExecuteScalar(); 
+                        int teacherID = (int)cmd.ExecuteScalar();
 
                         return teacherID;
                     }
@@ -512,5 +513,55 @@ WHERE s.DepartmentID = @DepartmentID";
         // Validate teachers's login credentials
 
         // fetch teacher
+        // All Teachers With Details
+        public List<TeacherDetails> GetTeachersWithDetails()
+        {
+            string query = @"
+                SELECT DISTINCT
+                t.TeacherID, 
+                t.FullName AS TeacherName,
+                d.DeptName AS DepartmentName,
+                STRING_AGG(s.SubName, ', ') AS Subjects,
+                STRING_AGG(sem.SemName, ', ') AS Semesters
+                FROM Teacher t
+                LEFT JOIN Department d ON t.DepartmentID = d.DepartmentID
+                LEFT JOIN Subject s ON t.TeacherID = s.TeacherID
+                LEFT JOIN Semester sem ON s.SemesterID = sem.SemesterID
+                GROUP BY t.TeacherID, t.FullName, d.DeptName
+                ORDER BY t.TeacherID;
+                ";
+
+            List<TeacherDetails> teacherDetailsList = new List<TeacherDetails>();
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            teacherDetailsList.Add(new TeacherDetails
+                            {
+                                TeacherID = Convert.ToInt32(reader["TeacherID"]),
+                                TeacherName = reader["TeacherName"].ToString(),
+                                DepartmentName = reader["DepartmentName"].ToString(),
+                                Subjects = reader["Subjects"].ToString(),
+                                Semesters = reader["Semesters"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading teachers: " + ex.Message);
+            }
+
+            return teacherDetailsList;
+        }
     }
 }
+
