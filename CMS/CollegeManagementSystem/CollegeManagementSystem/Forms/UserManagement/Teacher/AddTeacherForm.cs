@@ -204,6 +204,7 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
 
             txtUsername.ReadOnly = true;
             txtPassword.ReadOnly = true;
+            button2.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)

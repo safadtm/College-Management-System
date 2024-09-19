@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CollegeManagementSystem.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,19 +8,25 @@ using System.Threading.Tasks;
 namespace CollegeManagementSystem.Utilities
 {
     public class CredentialGenerator
-    {
-        private static int _lastUsedNumber = 1000;
-        private static string _shortName = "MPLY";
+    {   
+        private static int _lastTeacherNumber = 1000;  // Separate counter for teachers
+        private static int _lastStudentNumber = 1000;  // Separate counter for students
+        private static string _shortName = "MPLY";    // College short name
 
         public static (string Username, string Password) GenerateCredentials(string userType)
         {
-            _lastUsedNumber++; 
+            DatabaseHelper databaseHelper = new DatabaseHelper();
+            int lastUsedNumber = databaseHelper.GetLastUsedNumber(userType);
 
-            string username = $"{_shortName.ToUpper()}{userType.ToUpper()}{_lastUsedNumber}";
-            string password = username; 
 
-          
+            lastUsedNumber++;  // Increment the last used number
+            databaseHelper.UpdateLastUsedNumber(userType, lastUsedNumber);  
+
+            string username = $"{_shortName.ToUpper()}{userType.ToUpper()}{lastUsedNumber}";
+            string password = username;
+
             return (username, password);
         }
     }
+
 }

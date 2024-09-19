@@ -33,6 +33,12 @@ namespace CollegeManagementSystem.Controllers
             return databaseHelper.InsertTeacher(teacher);
         }
 
+        // principal login controller
+        public bool ValidateTeacherLogin(string username, string password)
+        {
+            return databaseHelper.ValidateTeacherCredentials(username, password);
+        }
+
         // Get All Teachers With Details
         public List<TeacherDetails> GetAllTeachersWithDetails()
         {

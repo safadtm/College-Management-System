@@ -511,6 +511,34 @@ WHERE s.DepartmentID = @DepartmentID";
         }
 
         // Validate teachers's login credentials
+        // Validate principal's login credentials
+        public bool ValidateTeacherCredentials(string username, string password)
+        {
+            string query = @"SELECT COUNT(*) FROM Teacher WHERE Username = @Username AND Password = @Password";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection()) 
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        cmd.Parameters.AddWithValue("@Password", password); 
+
+                        conn.Open();
+                        int count = (int)cmd.ExecuteScalar();
+
+                        return count > 0; 
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
 
         // fetch teacher
         // All Teachers With Details
@@ -561,6 +589,40 @@ WHERE s.DepartmentID = @DepartmentID";
             }
 
             return teacherDetailsList;
+        }
+
+
+
+        // Fetch the last used number from the database
+        public int GetLastUsedNumber(string userType)
+        {
+            using (SqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                string query = "SELECT LastUsedNumber FROM LastUsedNumbers WHERE UserType = @UserType";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserType", userType);
+                    object result = cmd.ExecuteScalar();
+                    return result != null ? Convert.ToInt32(result) : 1000;  
+                }
+            }
+        }
+
+        // Update the last used number in the database
+        public void UpdateLastUsedNumber(string userType, int lastUsedNumber)
+        {
+            using (SqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                string query = "UPDATE LastUsedNumbers SET LastUsedNumber = @LastUsedNumber WHERE UserType = @UserType";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@LastUsedNumber", lastUsedNumber);
+                    cmd.Parameters.AddWithValue("@UserType", userType);
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
     }
 }
