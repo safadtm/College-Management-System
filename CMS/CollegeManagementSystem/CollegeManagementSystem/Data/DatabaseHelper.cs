@@ -313,6 +313,40 @@ namespace CollegeManagementSystem.Data
             }
         }
 
+        // update subject table for teacherID s
+        public bool UpdateSubjectsForTeacher(int teacherID, List<int> subjectIDs)
+        {
+            // Construct the query for updating subjects
+            string query = "UPDATE Subject SET TeacherID = @TeacherID WHERE SubjectID = @SubjectID";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    conn.Open();
+
+                    // Iterate over the list of subject IDs and update the TeacherID for each
+                    foreach (var subjectID in subjectIDs)
+                    {
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@TeacherID", teacherID);
+                            cmd.Parameters.AddWithValue("@SubjectID", subjectID);
+
+                            
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    return true; 
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error updating subjects with TeacherID: " + ex.Message);
+                return false;
+            }
+        }
 
         // fetch subject 
 
@@ -356,6 +390,8 @@ namespace CollegeManagementSystem.Data
             }
             return subjects;
         }
+
+        
 
         // fetch subjects according to department and semesters
         public List<Subject> GetSubjectsByDepartmentAndSemesters(int departmentId, List<int> semesterIds)
@@ -434,6 +470,46 @@ WHERE s.DepartmentID = @DepartmentID";
         }
 
         // principal add teacher
+        // Insert a new teacher
+        public int InsertTeacher(Teacher teacher)
+        {
+            string query = @"INSERT INTO Teacher (FullName, Email, Phone, DOB, Gender, Address, Joined, DepartmentID, Username, Password)
+                    OUTPUT INSERTED.TeacherID
+                     VALUES (@FullName, @Email, @Phone, @DOB, @Gender, @Address, @Joined, @DepartmentID, @Username, @Password)";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@FullName", teacher.FullName);
+                        cmd.Parameters.AddWithValue("@Email", teacher.Email);
+                        cmd.Parameters.AddWithValue("@Phone", teacher.Phone);
+                        cmd.Parameters.AddWithValue("@DOB", teacher.DOB);
+                        cmd.Parameters.AddWithValue("@Gender", teacher.Gender);
+                        cmd.Parameters.AddWithValue("@Address", teacher.Address);
+                        cmd.Parameters.AddWithValue("@Joined", teacher.Joined);
+                        cmd.Parameters.AddWithValue("@DepartmentID", teacher.DepartmentID); 
+                        cmd.Parameters.AddWithValue("@Username", teacher.Username);
+                        cmd.Parameters.AddWithValue("@Password", teacher.Password);
+
+
+                        conn.Open();
+                        int teacherID = (int)cmd.ExecuteScalar(); 
+
+                        return teacherID;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error inserting teacher: " + ex.Message);
+            }
+        }
+
+        // Validate teachers's login credentials
 
         // fetch teacher
     }

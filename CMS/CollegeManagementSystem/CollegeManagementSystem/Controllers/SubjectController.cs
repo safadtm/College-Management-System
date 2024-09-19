@@ -66,5 +66,13 @@ namespace CollegeManagementSystem.Controllers
             return databaseHelper.GetSubjectsByDepartmentAndSemesters(departmentId, semesterIds);
 
         }
+
+        // update subject table for teacherID s
+        public bool UpdateSubjectsForTeacher(int teacherID, List<int> subjectIDs)
+        {
+            return databaseHelper.UpdateSubjectsForTeacher(teacherID, subjectIDs);
+        }
+
+
     }
 }

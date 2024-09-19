@@ -1,5 +1,6 @@
 ﻿using CollegeManagementSystem.Controllers;
 using CollegeManagementSystem.Forms.Dashboard;
+using CollegeManagementSystem.Forms.LoginForms;
 using CollegeManagementSystem.Model;
 using CollegeManagementSystem.Utilities;
 using System;
@@ -207,9 +208,106 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("New Teacher Added");
-            this.DialogResult = DialogResult.OK; 
-            this.Close();
+
+
+            // Get data from form inputs
+            string fullName = txtFullName.Text;
+            string email = txtEmail.Text;
+            string phone = txtPhone.Text;
+            DateTime dob = dateTimePickerDOB.Value;
+            string formattedDOBDate = dob.ToString("yyyy-MM-dd");
+            string gender = radioButtonMale.Checked ? "Male" : "Female";
+            string address = txtAddress.Text;
+            DateTime joined = dateTimePickerJoined.Value;
+            string formattedJoinedDate = joined.ToString("yyyy-MM-dd");
+            int  deptID = (int)cmbDepartment.SelectedValue;
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+           
+
+            // Check if any fields are empty
+            if (string.IsNullOrWhiteSpace(fullName) ||
+                string.IsNullOrWhiteSpace(email) ||
+                string.IsNullOrWhiteSpace(phone) ||
+                string.IsNullOrWhiteSpace(address) ||
+                deptID == 0 ||
+                string.IsNullOrWhiteSpace(username) ||
+                string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Please fill in all fields before proceeding.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (dob > DateTime.Today)
+            {
+                MessageBox.Show("Date of birth cannot be a future date.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (joined > DateTime.Today)
+            {
+                MessageBox.Show("Joined date cannot be a future date.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            if (!ValidationHelper.IsValidEmail(email))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Collect selected subjects
+            List<int> selectedSubjectIds = new List<int>();
+            foreach (CheckBox subjectCheckBox in tableLayoutPanelSubjects.Controls.OfType<CheckBox>())
+            {
+                if (subjectCheckBox.Checked)
+                {
+                    var subject = subjectCheckBox.Tag as Subject;
+                    if (subject != null)
+                    {
+                        selectedSubjectIds.Add(subject.SubjectID);
+                    }
+                }
+            }
+
+            // insert teacher into db 
+            // All checks passed, proceed with registration
+            TeacherController teacherController = new TeacherController();
+            int teacherID = teacherController.RegisterTeacher(fullName, email, phone, formattedDOBDate, gender, address, formattedJoinedDate, deptID, username, password);
+
+
+
+            if (teacherID > 0)
+            {
+                // Update the subjects with the new teacher's ID
+                if (selectedSubjectIds.Any()) // Check if any subjects were selected
+                {
+                    SubjectController subjectController = new SubjectController();
+                    bool updateSuccessful = subjectController.UpdateSubjectsForTeacher(teacherID, selectedSubjectIds);
+
+                    if (updateSuccessful)
+                    {
+                        MessageBox.Show("Teacher registered and subjects updated successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Teacher registered, but failed to update subjects.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Teacher registered successfully!");
+                }
+                
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Error registering teacher.");
+            }
+
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
