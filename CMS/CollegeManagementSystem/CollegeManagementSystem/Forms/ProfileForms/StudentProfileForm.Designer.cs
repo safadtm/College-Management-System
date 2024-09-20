@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentProfileForm));
-            label10 = new Label();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
@@ -42,16 +41,6 @@
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(16, 525);
-            label10.Name = "label10";
-            label10.Size = new Size(113, 25);
-            label10.TabIndex = 23;
-            label10.Text = "Experience :";
             // 
             // label9
             // 
@@ -159,7 +148,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(580, 587);
-            Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -179,8 +167,6 @@
         }
 
         #endregion
-
-        private Label label10;
         private Label label9;
         private Label label8;
         private Label label7;

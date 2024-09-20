@@ -2,6 +2,7 @@
 using CollegeManagementSystem.Forms.AttendanceManagement;
 using CollegeManagementSystem.Forms.GradeManagement;
 using CollegeManagementSystem.Forms.ProfileForms;
+using CollegeManagementSystem.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,10 +21,12 @@ namespace CollegeManagementSystem.Forms.Dashboard
         public string Username { get; set; }
         string attendenceType;
         string examType;
+        private StudentController studentController;
 
         public StudentDashboard()
         {
             InitializeComponent();
+            studentController = new StudentController();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -33,10 +36,12 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void StudentDashboard_Load(object sender, EventArgs e)
         {
+            Student student = studentController.GetStudentByUsername(Username);
+
             if (!string.IsNullOrEmpty(Username))
             {
 
-                label1.Text = $"Welcome, {Username}";
+                label1.Text = $"Welcome, {student.FullName}";
             }
             label2.Text = "Grades Overview : 54%";
             label3.Text = "Total Attendence : 90%";
@@ -53,12 +58,26 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            using (StudentProfileForm studentProfileForm = new StudentProfileForm())
+            {
+                studentProfileForm.Username = this.Username;
+                studentProfileForm.ShowDialog();
+            }
         }
 
         private void ediToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            using (EditStudentProfileForm editStudentProfileForm = new EditStudentProfileForm
+            {
+                Username = Username
+            })
+            {
+                if (editStudentProfileForm.ShowDialog() == DialogResult.OK)
+                {
+                    StudentController studentController = new StudentController();
+                    var updatedStudent = studentController.GetStudentByUsername(Username);
+                }
+            }
         }
 
         private void viewAttendenceToolStripMenuItem_Click(object sender, EventArgs e)

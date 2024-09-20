@@ -29,22 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditStudentProfileForm));
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
-            textBox8 = new TextBox();
-            label9 = new Label();
+            radioButtonFemale = new RadioButton();
+            radioButtonMale = new RadioButton();
+            dateTimePickerJoined = new DateTimePicker();
+            dateTimePickerDOB = new DateTimePicker();
             label8 = new Label();
-            textBox5 = new TextBox();
+            txtAddress = new TextBox();
             label6 = new Label();
             label7 = new Label();
-            textBox4 = new TextBox();
+            txtPhone = new TextBox();
             label4 = new Label();
             label5 = new Label();
             button1 = new Button();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtEmail = new TextBox();
+            txtFullName = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -52,66 +50,45 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // radioButton2
+            // radioButtonFemale
             // 
-            radioButton2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(241, 294);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(78, 25);
-            radioButton2.TabIndex = 86;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Female";
-            radioButton2.UseVisualStyleBackColor = true;
+            radioButtonFemale.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            radioButtonFemale.AutoSize = true;
+            radioButtonFemale.Location = new Point(241, 294);
+            radioButtonFemale.Name = "radioButtonFemale";
+            radioButtonFemale.Size = new Size(78, 25);
+            radioButtonFemale.TabIndex = 86;
+            radioButtonFemale.TabStop = true;
+            radioButtonFemale.Text = "Female";
+            radioButtonFemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButtonMale
             // 
-            radioButton1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(158, 294);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(62, 25);
-            radioButton1.TabIndex = 85;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Male";
-            radioButton1.UseVisualStyleBackColor = true;
+            radioButtonMale.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            radioButtonMale.AutoSize = true;
+            radioButtonMale.Location = new Point(158, 294);
+            radioButtonMale.Name = "radioButtonMale";
+            radioButtonMale.Size = new Size(62, 25);
+            radioButtonMale.TabIndex = 85;
+            radioButtonMale.TabStop = true;
+            radioButtonMale.Text = "Male";
+            radioButtonMale.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker2
+            // dateTimePickerJoined
             // 
-            dateTimePicker2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dateTimePicker2.Location = new Point(158, 389);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(200, 29);
-            dateTimePicker2.TabIndex = 84;
+            dateTimePickerJoined.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dateTimePickerJoined.Location = new Point(158, 389);
+            dateTimePickerJoined.Name = "dateTimePickerJoined";
+            dateTimePickerJoined.Size = new Size(200, 29);
+            dateTimePickerJoined.TabIndex = 84;
             // 
-            // dateTimePicker1
+            // dateTimePickerDOB
             // 
-            dateTimePicker1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dateTimePicker1.Location = new Point(158, 243);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 29);
-            dateTimePicker1.TabIndex = 83;
-            // 
-            // textBox8
-            // 
-            textBox8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox8.Location = new Point(158, 442);
-            textBox8.Margin = new Padding(2);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(205, 29);
-            textBox8.TabIndex = 82;
-            // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(46, 447);
-            label9.Margin = new Padding(2, 0, 2, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(94, 21);
-            label9.TabIndex = 81;
-            label9.Text = "Experience";
+            dateTimePickerDOB.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dateTimePickerDOB.Location = new Point(158, 243);
+            dateTimePickerDOB.Name = "dateTimePickerDOB";
+            dateTimePickerDOB.Size = new Size(200, 29);
+            dateTimePickerDOB.TabIndex = 83;
             // 
             // label8
             // 
@@ -125,14 +102,14 @@
             label8.TabIndex = 80;
             label8.Text = "Joined";
             // 
-            // textBox5
+            // txtAddress
             // 
-            textBox5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox5.Location = new Point(158, 336);
-            textBox5.Margin = new Padding(2);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(205, 29);
-            textBox5.TabIndex = 79;
+            txtAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtAddress.Location = new Point(158, 336);
+            txtAddress.Margin = new Padding(2);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(205, 29);
+            txtAddress.TabIndex = 79;
             // 
             // label6
             // 
@@ -158,14 +135,14 @@
             label7.TabIndex = 77;
             label7.Text = "Gender";
             // 
-            // textBox4
+            // txtPhone
             // 
-            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox4.Location = new Point(158, 197);
-            textBox4.Margin = new Padding(2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(205, 29);
-            textBox4.TabIndex = 76;
+            txtPhone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtPhone.Location = new Point(158, 197);
+            txtPhone.Margin = new Padding(2);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(205, 29);
+            txtPhone.TabIndex = 76;
             // 
             // label4
             // 
@@ -195,7 +172,7 @@
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button1.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(203, 509);
+            button1.Location = new Point(204, 466);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(95, 56);
@@ -204,23 +181,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Location = new Point(158, 153);
-            textBox2.Margin = new Padding(2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(205, 29);
-            textBox2.TabIndex = 72;
+            txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtEmail.Location = new Point(158, 153);
+            txtEmail.Margin = new Padding(2);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(205, 29);
+            txtEmail.TabIndex = 72;
             // 
-            // textBox1
+            // txtFullName
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(158, 103);
-            textBox1.Margin = new Padding(2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(205, 29);
-            textBox1.TabIndex = 71;
+            txtFullName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtFullName.Location = new Point(158, 103);
+            txtFullName.Margin = new Padding(2);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(205, 29);
+            txtFullName.TabIndex = 71;
             // 
             // label3
             // 
@@ -276,28 +253,27 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(800, 645);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox8);
-            Controls.Add(label9);
+            Controls.Add(radioButtonFemale);
+            Controls.Add(radioButtonMale);
+            Controls.Add(dateTimePickerJoined);
+            Controls.Add(dateTimePickerDOB);
             Controls.Add(label8);
-            Controls.Add(textBox5);
+            Controls.Add(txtAddress);
             Controls.Add(label6);
             Controls.Add(label7);
-            Controls.Add(textBox4);
+            Controls.Add(txtPhone);
             Controls.Add(label4);
             Controls.Add(label5);
             Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtEmail);
+            Controls.Add(txtFullName);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Name = "EditStudentProfileForm";
             Text = "Edit Student Profile";
+            Load += EditStudentProfileForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -305,22 +281,20 @@
 
         #endregion
 
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox8;
-        private Label label9;
+        private RadioButton radioButtonFemale;
+        private RadioButton radioButtonMale;
+        private DateTimePicker dateTimePickerJoined;
+        private DateTimePicker dateTimePickerDOB;
         private Label label8;
-        private TextBox textBox5;
+        private TextBox txtAddress;
         private Label label6;
         private Label label7;
-        private TextBox textBox4;
+        private TextBox txtPhone;
         private Label label4;
         private Label label5;
         private Button button1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtEmail;
+        private TextBox txtFullName;
         private Label label3;
         private Label label2;
         private Label label1;
