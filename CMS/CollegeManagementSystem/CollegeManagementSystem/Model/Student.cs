@@ -16,7 +16,7 @@ namespace CollegeManagementSystem.Model
         public string Gender { get; set; }
         public string Address { get; set; }
         public string Joined { get; set; }
-        public string Experience { get; set; }
+        public int DepartmentID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
     }

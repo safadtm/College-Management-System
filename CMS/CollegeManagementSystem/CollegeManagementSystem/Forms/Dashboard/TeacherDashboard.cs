@@ -4,6 +4,8 @@ using CollegeManagementSystem.Forms.GradeManagement;
 using CollegeManagementSystem.Forms.ProfileForms;
 using CollegeManagementSystem.Forms.TimeTableManagement;
 using CollegeManagementSystem.Forms.UserManagement.Student;
+using CollegeManagementSystem.Forms.UserManagement.Teacher;
+using CollegeManagementSystem.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,10 +22,13 @@ namespace CollegeManagementSystem.Forms.Dashboard
     {
         // Property to store the username
         public string Username { get; set; }
+        private TeacherController teacherController;
+        public int deptID;
 
         public TeacherDashboard()
         {
             InitializeComponent();
+            teacherController = new TeacherController();
         }
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -33,10 +38,14 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void TeacherDashboard_Load(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(Username))
+            Teacher teacher = teacherController.GetTeacherByUsername(Username);
+            deptID = teacher.DepartmentID;
+
+
+            if (!string.IsNullOrEmpty(teacher.FullName))
             {
 
-                label1.Text = $"Welcome, {Username}";
+                label1.Text = $"Welcome, {teacher.FullName}";
             }
             label2.Text = "Total Students : 10";
             label3.Text = "Upcoming Classes : 9";
@@ -79,9 +88,14 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void addTeacherToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // add student
-            this.Hide();
-            AddStudentForm addStudentForm = new AddStudentForm();
-            addStudentForm.Show();
+            using (AddStudentForm addStudentForm = new AddStudentForm()
+            {
+                DeptID=deptID
+            })
+            {
+                addStudentForm.ShowDialog();
+            }
+            
         }
 
         private void allTeachersToolStripMenuItem_Click(object sender, EventArgs e)

@@ -31,8 +31,8 @@
             menuStrip1 = new MenuStrip();
             homeToolStripMenuItem = new ToolStripMenuItem();
             manageTeachersToolStripMenuItem = new ToolStripMenuItem();
-            addTeacherToolStripMenuItem = new ToolStripMenuItem();
-            allTeachersToolStripMenuItem = new ToolStripMenuItem();
+            addStudentToolStripMenuItem = new ToolStripMenuItem();
+            allStudentsToolStripMenuItem = new ToolStripMenuItem();
             manageDepartmentsToolStripMenuItem = new ToolStripMenuItem();
             addDepartmentToolStripMenuItem = new ToolStripMenuItem();
             allDepartmentsToolStripMenuItem = new ToolStripMenuItem();
@@ -79,24 +79,24 @@
             // 
             // manageTeachersToolStripMenuItem
             // 
-            manageTeachersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addTeacherToolStripMenuItem, allTeachersToolStripMenuItem });
+            manageTeachersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addStudentToolStripMenuItem, allStudentsToolStripMenuItem });
             manageTeachersToolStripMenuItem.Name = "manageTeachersToolStripMenuItem";
             manageTeachersToolStripMenuItem.Size = new Size(82, 25);
             manageTeachersToolStripMenuItem.Text = "Students";
             // 
-            // addTeacherToolStripMenuItem
+            // addStudentToolStripMenuItem
             // 
-            addTeacherToolStripMenuItem.Name = "addTeacherToolStripMenuItem";
-            addTeacherToolStripMenuItem.Size = new Size(165, 26);
-            addTeacherToolStripMenuItem.Text = "Add Student";
-            addTeacherToolStripMenuItem.Click += addTeacherToolStripMenuItem_Click;
+            addStudentToolStripMenuItem.Name = "addStudentToolStripMenuItem";
+            addStudentToolStripMenuItem.Size = new Size(180, 26);
+            addStudentToolStripMenuItem.Text = "Add Student";
+            addStudentToolStripMenuItem.Click += addTeacherToolStripMenuItem_Click;
             // 
-            // allTeachersToolStripMenuItem
+            // allStudentsToolStripMenuItem
             // 
-            allTeachersToolStripMenuItem.Name = "allTeachersToolStripMenuItem";
-            allTeachersToolStripMenuItem.Size = new Size(165, 26);
-            allTeachersToolStripMenuItem.Text = "All Students";
-            allTeachersToolStripMenuItem.Click += allTeachersToolStripMenuItem_Click;
+            allStudentsToolStripMenuItem.Name = "allStudentsToolStripMenuItem";
+            allStudentsToolStripMenuItem.Size = new Size(180, 26);
+            allStudentsToolStripMenuItem.Text = "All Students";
+            allStudentsToolStripMenuItem.Click += allTeachersToolStripMenuItem_Click;
             // 
             // manageDepartmentsToolStripMenuItem
             // 
@@ -298,8 +298,8 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem homeToolStripMenuItem;
         private ToolStripMenuItem manageTeachersToolStripMenuItem;
-        private ToolStripMenuItem addTeacherToolStripMenuItem;
-        private ToolStripMenuItem allTeachersToolStripMenuItem;
+        private ToolStripMenuItem addStudentToolStripMenuItem;
+        private ToolStripMenuItem allStudentsToolStripMenuItem;
         private ToolStripMenuItem manageDepartmentsToolStripMenuItem;
         private ToolStripMenuItem addDepartmentToolStripMenuItem;
         private ToolStripMenuItem allDepartmentsToolStripMenuItem;

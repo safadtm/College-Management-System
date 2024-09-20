@@ -508,7 +508,7 @@ WHERE s.DepartmentID = @DepartmentID";
         }
 
         // Validate teachers's login credentials
-        // Validate principal's login credentials
+       
         public bool ValidateTeacherCredentials(string username, string password)
         {
             string query = @"SELECT COUNT(*) FROM Teacher WHERE Username = @Username AND Password = @Password";
@@ -682,6 +682,221 @@ WHERE s.DepartmentID = @DepartmentID";
             }
         }
 
+        /// STUDENT SECTION 
+         // teacher add student
+        // Insert a new student
+        public bool InsertStudent(Student student)
+        {
+            string query = @"INSERT INTO Student (FullName, Email, Phone, DOB, Gender, Address, Joined, DepartmentID, Username, Password)
+                    
+                     VALUES (@FullName, @Email, @Phone, @DOB, @Gender, @Address, @Joined, @DepartmentID, @Username, @Password)";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@FullName", student.FullName);
+                        cmd.Parameters.AddWithValue("@Email", student.Email);
+                        cmd.Parameters.AddWithValue("@Phone", student.Phone);
+                        cmd.Parameters.AddWithValue("@DOB", student.DOB);
+                        cmd.Parameters.AddWithValue("@Gender", student.Gender);
+                        cmd.Parameters.AddWithValue("@Address", student.Address);
+                        cmd.Parameters.AddWithValue("@Joined", student.Joined);
+                        cmd.Parameters.AddWithValue("@DepartmentID", student.DepartmentID);
+                        cmd.Parameters.AddWithValue("@Username", student.Username);
+                        cmd.Parameters.AddWithValue("@Password", student.Password);
+
+
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error inserting student: " + ex.Message);
+            }
+        }
+
+        // Validate students's login credentials
+       
+        public bool ValidateStudentCredentials(string username, string password)
+        {
+            string query = @"SELECT COUNT(*) FROM Student WHERE Username = @Username AND Password = @Password";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        cmd.Parameters.AddWithValue("@Password", password);
+
+                        conn.Open();
+                        int count = (int)cmd.ExecuteScalar();
+
+                        return count > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+        // fetch student
+        // All Students With Details
+        public List<StudentDetails> GetStudentsWithDetails()
+        {
+            string query = @"
+                SELECT DISTINCT
+                t.TeacherID, 
+                t.FullName AS TeacherName,
+                d.DeptName AS DepartmentName,
+                STRING_AGG(s.SubName, ', ') AS Subjects,
+                STRING_AGG(sem.SemName, ', ') AS Semesters
+                FROM Teacher t
+                LEFT JOIN Department d ON t.DepartmentID = d.DepartmentID
+                LEFT JOIN Subject s ON t.TeacherID = s.TeacherID
+                LEFT JOIN Semester sem ON s.SemesterID = sem.SemesterID
+                GROUP BY t.TeacherID, t.FullName, d.DeptName
+                ORDER BY t.TeacherID;
+                ";
+
+            List<StudentDetails> studentDetails = new List<StudentDetails>();
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            studentDetails.Add(new StudentDetails
+                            {
+                                StudentID = Convert.ToInt32(reader["StudentID"]),
+                                StudentUserID = reader["StudentUserID"].ToString(),
+                                StudentName = reader["StudentName"].ToString(),
+                                DepartmentName = reader["DepartmentName"].ToString(),
+                               
+                            });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading students: " + ex.Message);
+            }
+
+            return studentDetails;
+        }
+
+
+        // Fetch teacher details by username
+        public Student GetStudentByUsername(string username)
+        {
+            string query = @"SELECT FullName, Email, Phone, DOB, Gender, Address, Joined 
+                             FROM Student WHERE Username = @Username";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+
+                        conn.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            Student student = null;
+
+                            if (reader.Read())
+                            {
+
+                                student = new Student
+                                {
+                                    FullName = reader["FullName"].ToString(),
+                                    Email = reader["Email"].ToString(),
+                                    Phone = reader["Phone"].ToString(),
+                                    DOB = reader["DOB"].ToString(),
+                                    Gender = reader["Gender"].ToString(),
+                                    Address = reader["Address"].ToString(),
+                                    Joined = reader["Joined"].ToString(),
+                                };
+                            }
+                            return student;
+                        }
+                    }
+                }
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+
+        // edit student profile
+        public bool UpdateStudent(Student student)
+        {
+            string query = @"UPDATE Student 
+                     SET FullName = @FullName, 
+                         Email = @Email, 
+                         Phone = @Phone, 
+                         DOB = @DOB, 
+                         Gender = @Gender, 
+                         Address = @Address, 
+                         Joined = @Joined 
+                     WHERE Username = @Username";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@FullName", student.FullName);
+                        cmd.Parameters.AddWithValue("@Email", student.Email);
+                        cmd.Parameters.AddWithValue("@Phone", student.Phone);
+                        cmd.Parameters.AddWithValue("@DOB", student.DOB);
+                        cmd.Parameters.AddWithValue("@Gender", student.Gender);
+                        cmd.Parameters.AddWithValue("@Address", student.Address);
+                        cmd.Parameters.AddWithValue("@Joined", student.Joined);
+                        cmd.Parameters.AddWithValue("@Username", student.Username);
+
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error updating student: " + ex.Message);
+
+            }
+        }
 
         // Fetch the last used number from the database
         public int GetLastUsedNumber(string userType)

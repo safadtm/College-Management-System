@@ -1,4 +1,5 @@
 ﻿using CollegeManagementSystem.Data;
+using CollegeManagementSystem.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,83 @@ namespace CollegeManagementSystem.Controllers
     {
         DatabaseHelper databaseHelper = new DatabaseHelper();
 
+        // Student Inserting Controller 
+        public int RegisterStudent(string fullName, string email, string phone, string dob, string gender, string address, string joined, int deptID, string username, string password)
+        {
+            Student student = new Student
+            {
+                FullName = fullName,
+                Email = email,
+                Phone = phone,
+                DOB = dob,
+                Gender = gender,
+                Address = address,
+                Joined = joined,
+                DepartmentID = deptID,
+                Username = username,
+                Password = password
+            };
+
+
+            return databaseHelper.InsertStudent(student);
+        }
+
+        // student login controller
+        public bool ValidateStudentLogin(string username, string password)
+        {
+            return databaseHelper.ValidateStudentCredentials(username, password);
+        }
+
+        // Get All Students With Details
+        public List<StudentDetails> GetAllStudentsWithDetails()
+        {
+            return databaseHelper.GetStudentsWithDetails();
+        }
+
+        // All teachers into datagrid view
+        public void LoadStudentsIntoDataGridView(DataGridView dataGridView)
+        {
+            List<StudentDetails> students = GetAllStudentsWithDetails();
+
+            if (students != null && students.Any())
+            {
+                dataGridView.DataSource = students;
+                dataGridView.Columns["StudentID"].HeaderText = "SI.NO";
+                dataGridView.Columns["StudentUserID"].HeaderText = "Admission ID";
+                dataGridView.Columns["StudentName"].HeaderText = "Name";
+                dataGridView.Columns["DepartmentName"].HeaderText = "Department";
+                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+
+                int totalColumnWidth = dataGridView.Columns.Cast<DataGridViewColumn>().Sum(col => col.Width);
+                dataGridView.Width = totalColumnWidth + dataGridView.Padding.Left + dataGridView.Padding.Right;
+
+                int totalHeight = dataGridView.ColumnHeadersHeight;
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    totalHeight += row.Height;
+                }
+                dataGridView.Height = totalHeight + dataGridView.Rows.Count;
+                dataGridView.ScrollBars = ScrollBars.None;
+            }
+            else
+            {
+                MessageBox.Show("No students found.");
+            }
+        }
+
+        // student profile fetching
+
+        public Teacher GetStudentByUsername(string username)
+        {
+            return databaseHelper.GetStudentByUsername(username);
+        }
+
+        // edit teacher profile
+        public bool UpdateStudentProfile(Student student)
+        {
+            return databaseHelper.UpdateStudent(student);
+        }
     }
 }
