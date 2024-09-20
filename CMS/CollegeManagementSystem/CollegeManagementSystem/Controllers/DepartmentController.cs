@@ -53,6 +53,11 @@ namespace CollegeManagementSystem.Controllers
             }
         }
 
+        public string GetDepartmentName(int departmentId)
+        {
+            return databaseHelper.GetDepartmentNameById(departmentId);
+        }
+
 
     }
 }

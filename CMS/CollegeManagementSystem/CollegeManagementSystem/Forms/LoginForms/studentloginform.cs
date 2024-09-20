@@ -1,4 +1,5 @@
-﻿using CollegeManagementSystem.Forms.Dashboard;
+﻿using CollegeManagementSystem.Controllers;
+using CollegeManagementSystem.Forms.Dashboard;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,11 +23,11 @@ namespace CollegeManagementSystem.Forms.LoginForms
         {
             if (checkBox1.Checked)
             {
-                textBox2.UseSystemPasswordChar = false; // Shows password
+                txtPassword.UseSystemPasswordChar = false; // Shows password
             }
             else
             {
-                textBox2.UseSystemPasswordChar = true; // Hides password
+                txtPassword.UseSystemPasswordChar = true; // Hides password
             }
         }
 
@@ -37,15 +38,26 @@ namespace CollegeManagementSystem.Forms.LoginForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = textBox1.Text;
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
 
-            this.Hide();
-            StudentDashboard studentDashboard = new StudentDashboard
+            StudentController studentController = new StudentController();
+            bool isValid = studentController.ValidateStudentLogin(username, password);
+
+
+            if (isValid)
             {
-                Username = username
-            };
-
-            studentDashboard.Show();
+                this.Hide();
+                StudentDashboard studentDashboard = new StudentDashboard
+                {
+                    Username = username
+                };
+                studentDashboard.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password.");
+            }
         }
     }
 }

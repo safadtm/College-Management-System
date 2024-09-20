@@ -1,6 +1,6 @@
 ﻿namespace CollegeManagementSystem.Forms.UserManagement.Student
 {
-    partial class AllStudentForm
+    partial class AllStudentsByDepartment
     {
         /// <summary>
         /// Required designer variable.
@@ -37,31 +37,31 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Emoji", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(216, 37);
+            label1.Location = new Point(207, 50);
             label1.Name = "label1";
-            label1.Size = new Size(301, 30);
-            label1.TabIndex = 3;
-            label1.Text = "All students in your college";
+            label1.Size = new Size(348, 30);
+            label1.TabIndex = 5;
+            label1.Text = "All students in your department";
             // 
             // dataGridViewStudents
             // 
             dataGridViewStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewStudents.Location = new Point(73, 97);
+            dataGridViewStudents.Location = new Point(64, 110);
             dataGridViewStudents.Name = "dataGridViewStudents";
             dataGridViewStudents.Size = new Size(637, 280);
-            dataGridViewStudents.TabIndex = 2;
+            dataGridViewStudents.TabIndex = 4;
             // 
-            // AllStudentForm
+            // AllStudentsByDepartment
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
-            ClientSize = new Size(800, 514);
+            ClientSize = new Size(800, 553);
             Controls.Add(label1);
             Controls.Add(dataGridViewStudents);
-            Name = "AllStudentForm";
-            Text = "AllStudentForm";
-            Load += AllStudentForm_Load;
+            Name = "AllStudentsByDepartment";
+            Text = "AllStudentsByDepartment";
+            Load += AllStudentsByDepartment_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewStudents).EndInit();
             ResumeLayout(false);
             PerformLayout();

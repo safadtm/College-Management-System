@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStudentForm));
-            tableLayoutPanelSemesters = new TableLayoutPanel();
-            cmbDepartment = new ComboBox();
             button2 = new Button();
-            label13 = new Label();
             radioButtonFemale = new RadioButton();
             radioButtonMale = new RadioButton();
             dateTimePickerJoined = new DateTimePicker();
@@ -56,55 +53,22 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            txtDept = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // tableLayoutPanelSemesters
-            // 
-            tableLayoutPanelSemesters.AutoSize = true;
-            tableLayoutPanelSemesters.ColumnCount = 2;
-            tableLayoutPanelSemesters.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanelSemesters.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanelSemesters.Location = new Point(506, 148);
-            tableLayoutPanelSemesters.Name = "tableLayoutPanelSemesters";
-            tableLayoutPanelSemesters.RowCount = 1;
-            tableLayoutPanelSemesters.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanelSemesters.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanelSemesters.Size = new Size(169, 30);
-            tableLayoutPanelSemesters.TabIndex = 114;
-            // 
-            // cmbDepartment
-            // 
-            cmbDepartment.FormattingEnabled = true;
-            cmbDepartment.Location = new Point(503, 107);
-            cmbDepartment.Name = "cmbDepartment";
-            cmbDepartment.Size = new Size(172, 29);
-            cmbDepartment.TabIndex = 113;
             // 
             // button2
             // 
             button2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button2.Font = new Font("Segoe UI Emoji", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(503, 288);
+            button2.Location = new Point(503, 185);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(217, 52);
+            button2.Size = new Size(172, 52);
             button2.TabIndex = 112;
             button2.Text = "Generate Username and Password";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
-            // 
-            // label13
-            // 
-            label13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(391, 156);
-            label13.Margin = new Padding(2, 0, 2, 0);
-            label13.Name = "label13";
-            label13.Size = new Size(83, 21);
-            label13.TabIndex = 110;
-            label13.Text = "Semester";
             // 
             // radioButtonFemale
             // 
@@ -145,7 +109,7 @@
             // txtPassword
             // 
             txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtPassword.Location = new Point(503, 394);
+            txtPassword.Location = new Point(503, 308);
             txtPassword.Margin = new Padding(2);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(172, 29);
@@ -156,7 +120,7 @@
             label11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.Location = new Point(391, 399);
+            label11.Location = new Point(391, 313);
             label11.Margin = new Padding(2, 0, 2, 0);
             label11.Name = "label11";
             label11.Size = new Size(85, 21);
@@ -166,7 +130,7 @@
             // txtUsername
             // 
             txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtUsername.Location = new Point(503, 349);
+            txtUsername.Location = new Point(503, 263);
             txtUsername.Margin = new Padding(2);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(172, 29);
@@ -177,7 +141,7 @@
             label10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(391, 354);
+            label10.Location = new Point(391, 268);
             label10.Margin = new Padding(2, 0, 2, 0);
             label10.Name = "label10";
             label10.Size = new Size(89, 21);
@@ -278,7 +242,7 @@
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button1.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(536, 452);
+            button1.Location = new Point(536, 366);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(89, 51);
@@ -353,16 +317,23 @@
             pictureBox1.TabIndex = 87;
             pictureBox1.TabStop = false;
             // 
+            // txtDept
+            // 
+            txtDept.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtDept.Location = new Point(503, 103);
+            txtDept.Margin = new Padding(2);
+            txtDept.Name = "txtDept";
+            txtDept.Size = new Size(172, 29);
+            txtDept.TabIndex = 113;
+            // 
             // AddStudentForm
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(881, 641);
-            Controls.Add(tableLayoutPanelSemesters);
-            Controls.Add(cmbDepartment);
+            Controls.Add(txtDept);
             Controls.Add(button2);
-            Controls.Add(label13);
             Controls.Add(radioButtonFemale);
             Controls.Add(radioButtonMale);
             Controls.Add(dateTimePickerJoined);
@@ -388,16 +359,14 @@
             Controls.Add(pictureBox1);
             Name = "AddStudentForm";
             Text = "AddStudentForm";
+            Load += AddStudentForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private TableLayoutPanel tableLayoutPanelSemesters;
-        private ComboBox cmbDepartment;
         private Button button2;
-        private Label label13;
         private RadioButton radioButtonFemale;
         private RadioButton radioButtonMale;
         private DateTimePicker dateTimePickerJoined;
@@ -421,5 +390,6 @@
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
+        private TextBox txtDept;
     }
 }

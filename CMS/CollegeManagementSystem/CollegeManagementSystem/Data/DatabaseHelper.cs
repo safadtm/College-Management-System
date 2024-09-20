@@ -237,6 +237,29 @@ namespace CollegeManagementSystem.Data
             return departments;
         }
 
+        // Method to fetch department name by ID
+        public string GetDepartmentNameById(int departmentId)
+        {
+            string departmentName = string.Empty;
+            string query = "SELECT DeptName FROM Department WHERE DepartmentID = @DepartmentID";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, conn);
+                command.Parameters.AddWithValue("@DepartmentID", departmentId);
+                conn.Open();
+                object result = command.ExecuteScalar();
+
+                if (result != null)
+                {
+                    departmentName = result.ToString();
+                }
+            }
+
+            return departmentName;
+        }
+
+
         // fetch semester
         // Load semesters from the database
         public List<Semester> GetSemesters()
@@ -592,7 +615,7 @@ WHERE s.DepartmentID = @DepartmentID";
         // Fetch teacher details by username
         public Teacher GetTeacherByUsername(string username)
         {
-            string query = @"SELECT FullName, Email, Phone, DOB, Gender, Address, Joined 
+            string query = @"SELECT FullName, Email, Phone, DOB, Gender, Address, Joined,DepartmentID
                              FROM Teacher WHERE Username = @Username";
 
             try
@@ -620,6 +643,7 @@ WHERE s.DepartmentID = @DepartmentID";
                                     Gender = reader["Gender"].ToString(),
                                     Address = reader["Address"].ToString(),
                                     Joined = reader["Joined"].ToString(),
+                                    DepartmentID= Convert.ToInt32(reader["DepartmentID"])
                                 };
                             }
                             return teacher;
@@ -758,19 +782,15 @@ WHERE s.DepartmentID = @DepartmentID";
         public List<StudentDetails> GetStudentsWithDetails()
         {
             string query = @"
-                SELECT DISTINCT
-                t.TeacherID, 
-                t.FullName AS TeacherName,
-                d.DeptName AS DepartmentName,
-                STRING_AGG(s.SubName, ', ') AS Subjects,
-                STRING_AGG(sem.SemName, ', ') AS Semesters
-                FROM Teacher t
-                LEFT JOIN Department d ON t.DepartmentID = d.DepartmentID
-                LEFT JOIN Subject s ON t.TeacherID = s.TeacherID
-                LEFT JOIN Semester sem ON s.SemesterID = sem.SemesterID
-                GROUP BY t.TeacherID, t.FullName, d.DeptName
-                ORDER BY t.TeacherID;
-                ";
+        SELECT 
+            st.StudentID, 
+            st.Username, 
+            st.FullName AS StudentName, 
+            d.DeptName AS DepartmentName
+        FROM Student st
+        LEFT JOIN Department d ON st.DepartmentID = d.DepartmentID
+        ORDER BY st.StudentID;
+        ";
 
             List<StudentDetails> studentDetails = new List<StudentDetails>();
 
@@ -787,7 +807,7 @@ WHERE s.DepartmentID = @DepartmentID";
                             studentDetails.Add(new StudentDetails
                             {
                                 StudentID = Convert.ToInt32(reader["StudentID"]),
-                                StudentUserID = reader["StudentUserID"].ToString(),
+                                StudentUserID = reader["Username"].ToString(),
                                 StudentName = reader["StudentName"].ToString(),
                                 DepartmentName = reader["DepartmentName"].ToString(),
                                
@@ -804,8 +824,55 @@ WHERE s.DepartmentID = @DepartmentID";
             return studentDetails;
         }
 
+        // fetch students of the particular department
+        public List<StudentDetails> GetStudentsByDepartment(int departmentId)
+        {
+            string query = @"
+        SELECT 
+            st.StudentID, 
+            st.Username, 
+            st.FullName AS StudentName, 
+            d.DeptName AS DepartmentName
+        FROM Student st
+        LEFT JOIN Department d ON st.DepartmentID = d.DepartmentID
+        WHERE st.DepartmentID = @DepartmentID
+        ORDER BY st.StudentID;
+        ";
 
-        // Fetch teacher details by username
+            List<StudentDetails> studentDetails = new List<StudentDetails>();
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@DepartmentID", departmentId); // Pass the department ID
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            studentDetails.Add(new StudentDetails
+                            {
+                                StudentID = Convert.ToInt32(reader["StudentID"]),
+                                StudentUserID = reader["Username"].ToString(),
+                                StudentName = reader["StudentName"].ToString(),
+                                DepartmentName = reader["DepartmentName"].ToString(),
+                            });
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading students: " + ex.Message);
+            }
+
+            return studentDetails;
+        }
+
+
+        // Fetch student details by username
         public Student GetStudentByUsername(string username)
         {
             string query = @"SELECT FullName, Email, Phone, DOB, Gender, Address, Joined 
@@ -929,6 +996,8 @@ WHERE s.DepartmentID = @DepartmentID";
                 }
             }
         }
+
+        
     }
 }
 

@@ -15,10 +15,13 @@ namespace CollegeManagementSystem.Forms.UserManagement.Student
 {
     public partial class AddStudentForm : Form
     {
+        DepartmentController departmentController;
         public int DeptID { get; set; }
         public AddStudentForm()
         {
             InitializeComponent();
+            departmentController = new DepartmentController();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -85,13 +88,13 @@ namespace CollegeManagementSystem.Forms.UserManagement.Student
             // insert student into db 
             // All checks passed, proceed with registration
             StudentController studentController = new StudentController();
-            int studentID = studentController.RegisterStudent(fullName, email, phone, formattedDOBDate, gender, address, formattedJoinedDate, deptID, username, password);
+            bool isSuccess = studentController.RegisterStudent(fullName, email, phone, formattedDOBDate, gender, address, formattedJoinedDate, deptID, username, password);
 
 
 
-            if (studentID > 0)
+            if (isSuccess)
             {
-              
+
                 MessageBox.Show("Student registered successfully!");
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -100,6 +103,14 @@ namespace CollegeManagementSystem.Forms.UserManagement.Student
             {
                 MessageBox.Show("Error registering student.");
             }
+        }
+
+        private void AddStudentForm_Load(object sender, EventArgs e)
+        {
+             string departmentName = departmentController.GetDepartmentName(DeptID);
+            
+            txtDept.Text = departmentName;
+            txtDept.ReadOnly = true;
         }
     }
 }

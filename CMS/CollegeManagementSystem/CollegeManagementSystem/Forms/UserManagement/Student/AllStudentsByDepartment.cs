@@ -11,17 +11,18 @@ using System.Windows.Forms;
 
 namespace CollegeManagementSystem.Forms.UserManagement.Student
 {
-    public partial class AllStudentForm : Form
+    public partial class AllStudentsByDepartment : Form
     {
-        public AllStudentForm()
+        public int DeptID { get; set; }
+        public AllStudentsByDepartment()
         {
             InitializeComponent();
         }
 
-        private void AllStudentForm_Load(object sender, EventArgs e)
+        private void AllStudentsByDepartment_Load(object sender, EventArgs e)
         {
             StudentController studentController = new StudentController();
-            studentController.LoadStudentsIntoDataGridView(dataGridViewStudents);
+            studentController.LoadStudentsByDepartmentIntoDataGridView(dataGridViewStudents, DeptID);
 
         }
     }

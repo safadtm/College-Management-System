@@ -13,7 +13,7 @@ namespace CollegeManagementSystem.Controllers
         DatabaseHelper databaseHelper = new DatabaseHelper();
 
         // Student Inserting Controller 
-        public int RegisterStudent(string fullName, string email, string phone, string dob, string gender, string address, string joined, int deptID, string username, string password)
+        public bool RegisterStudent(string fullName, string email, string phone, string dob, string gender, string address, string joined, int deptID, string username, string password)
         {
             Student student = new Student
             {
@@ -44,6 +44,12 @@ namespace CollegeManagementSystem.Controllers
         {
             return databaseHelper.GetStudentsWithDetails();
         }
+        
+        public List<StudentDetails> GetDepartmentWiseStudentsWithDetails(int departmentId)
+        {
+            return databaseHelper.GetStudentsByDepartment(departmentId);
+        }
+
 
         // All teachers into datagrid view
         public void LoadStudentsIntoDataGridView(DataGridView dataGridView)
@@ -78,14 +84,48 @@ namespace CollegeManagementSystem.Controllers
             }
         }
 
+        // department wise students into data grid view
+        // All teachers into datagrid view
+        public void LoadStudentsByDepartmentIntoDataGridView(DataGridView dataGridView,int departmentID)
+        {
+            List<StudentDetails> students = GetDepartmentWiseStudentsWithDetails(departmentID);
+
+            if (students != null && students.Any())
+            {
+                dataGridView.DataSource = students;
+                dataGridView.Columns["StudentID"].HeaderText = "SI.NO";
+                dataGridView.Columns["StudentUserID"].HeaderText = "Admission ID";
+                dataGridView.Columns["StudentName"].HeaderText = "Name";
+                dataGridView.Columns["DepartmentName"].HeaderText = "Department";
+                dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+
+                int totalColumnWidth = dataGridView.Columns.Cast<DataGridViewColumn>().Sum(col => col.Width);
+                dataGridView.Width = totalColumnWidth + dataGridView.Padding.Left + dataGridView.Padding.Right;
+
+                int totalHeight = dataGridView.ColumnHeadersHeight;
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    totalHeight += row.Height;
+                }
+                dataGridView.Height = totalHeight + dataGridView.Rows.Count;
+                dataGridView.ScrollBars = ScrollBars.None;
+            }
+            else
+            {
+                MessageBox.Show("No students found.");
+            }
+        }
+
         // student profile fetching
 
-        public Teacher GetStudentByUsername(string username)
+        public Student GetStudentByUsername(string username)
         {
             return databaseHelper.GetStudentByUsername(username);
         }
 
-        // edit teacher profile
+        // edit student profile
         public bool UpdateStudentProfile(Student student)
         {
             return databaseHelper.UpdateStudent(student);
