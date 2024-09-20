@@ -1,4 +1,5 @@
-﻿using CollegeManagementSystem.Forms.AttendanceManagement;
+﻿using CollegeManagementSystem.Controllers;
+using CollegeManagementSystem.Forms.AttendanceManagement;
 using CollegeManagementSystem.Forms.GradeManagement;
 using CollegeManagementSystem.Forms.ProfileForms;
 using System;
@@ -52,16 +53,12 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StudentProfileForm studentProfileForm = new StudentProfileForm();
-            studentProfileForm.Show();
+            
         }
 
         private void ediToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            EditStudentProfileForm editStudentProfileForm = new EditStudentProfileForm();
-            editStudentProfileForm.Show();
         }
 
         private void viewAttendenceToolStripMenuItem_Click(object sender, EventArgs e)

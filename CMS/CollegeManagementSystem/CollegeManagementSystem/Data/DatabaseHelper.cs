@@ -123,7 +123,7 @@ namespace CollegeManagementSystem.Data
             }
             catch (Exception ex)
             {
-                // Handle exception (optional: log it)
+                
                 Console.WriteLine(ex.Message);
                 return null;
             }
@@ -171,9 +171,6 @@ namespace CollegeManagementSystem.Data
                 throw new Exception("Error updating principal: " + ex.Message);
 
             }
-
-
-
         }
 
 
@@ -591,6 +588,99 @@ WHERE s.DepartmentID = @DepartmentID";
             return teacherDetailsList;
         }
 
+        
+        // Fetch teacher details by username
+        public Teacher GetTeacherByUsername(string username)
+        {
+            string query = @"SELECT FullName, Email, Phone, DOB, Gender, Address, Joined 
+                             FROM Teacher WHERE Username = @Username";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection()) 
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+
+                        conn.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            Teacher teacher = null;
+
+                            if (reader.Read())
+                            {
+                                
+                                teacher = new Teacher
+                                {
+                                    FullName = reader["FullName"].ToString(),
+                                    Email = reader["Email"].ToString(),
+                                    Phone = reader["Phone"].ToString(),
+                                    DOB = reader["DOB"].ToString(),
+                                    Gender = reader["Gender"].ToString(),
+                                    Address = reader["Address"].ToString(),
+                                    Joined = reader["Joined"].ToString(),
+                                };
+                            }
+                            return teacher;
+                        }
+                    }
+                }
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+
+        // edit teacher profile
+        public bool UpdateTeacher(Teacher teacher)
+        {
+            string query = @"UPDATE Teacher 
+                     SET FullName = @FullName, 
+                         Email = @Email, 
+                         Phone = @Phone, 
+                         DOB = @DOB, 
+                         Gender = @Gender, 
+                         Address = @Address, 
+                         Joined = @Joined 
+                     WHERE Username = @Username";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@FullName", teacher.FullName);
+                        cmd.Parameters.AddWithValue("@Email", teacher.Email);
+                        cmd.Parameters.AddWithValue("@Phone", teacher.Phone);
+                        cmd.Parameters.AddWithValue("@DOB", teacher.DOB);
+                        cmd.Parameters.AddWithValue("@Gender", teacher.Gender);
+                        cmd.Parameters.AddWithValue("@Address", teacher.Address);
+                        cmd.Parameters.AddWithValue("@Joined", teacher.Joined);
+                        cmd.Parameters.AddWithValue("@Username", teacher.Username);
+
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error updating teacher: " + ex.Message);
+
+            }
+        }
 
 
         // Fetch the last used number from the database

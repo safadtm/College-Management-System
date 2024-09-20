@@ -79,5 +79,18 @@ namespace CollegeManagementSystem.Controllers
             }
         }
 
+        // teacher profile fetching
+
+        public Teacher GetTeacherByUsername(string username)
+        {
+            return databaseHelper.GetTeacherByUsername(username);
+        }
+
+        // edit teacher profile
+        public bool UpdateTeacherProfile(Teacher teacher)
+        {
+            return databaseHelper.UpdateTeacher(teacher);
+        }
+
     }
 }

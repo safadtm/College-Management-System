@@ -1,4 +1,5 @@
-﻿using CollegeManagementSystem.Forms.AttendanceManagement;
+﻿using CollegeManagementSystem.Controllers;
+using CollegeManagementSystem.Forms.AttendanceManagement;
 using CollegeManagementSystem.Forms.GradeManagement;
 using CollegeManagementSystem.Forms.ProfileForms;
 using CollegeManagementSystem.Forms.TimeTableManagement;
@@ -52,16 +53,27 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TeacherProfileForm teacherProfileForm = new TeacherProfileForm();
-            teacherProfileForm.Show();
+            using (TeacherProfileForm teacherProfileForm = new TeacherProfileForm())
+            {
+                teacherProfileForm.Username = this.Username;
+                teacherProfileForm.ShowDialog();
+            }
         }
 
         private void ediToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            EditTeacherProfileForm editTeacherProfileForm = new EditTeacherProfileForm();
-            editTeacherProfileForm.Show();
+            using (EditTeacherProfileForm editTeacherProfileForm = new EditTeacherProfileForm
+            {
+                Username = Username
+            })
+            {
+                if (editTeacherProfileForm.ShowDialog() == DialogResult.OK)
+                {
+                    TeacherController teacherController = new TeacherController();
+                    var updatedTeacher = teacherController.GetTeacherByUsername(Username);
+                }
+            }
         }
 
         private void addTeacherToolStripMenuItem_Click(object sender, EventArgs e)
