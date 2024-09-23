@@ -133,11 +133,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void editAttendenceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // edit attendence by teachers class
-            using (EditAttendenceForm editAttendenceForm = new EditAttendenceForm())
-            {
-                editAttendenceForm.ShowDialog();
-            }
+            
         }
 
         private void addCourseToolStripMenuItem_Click(object sender, EventArgs e)

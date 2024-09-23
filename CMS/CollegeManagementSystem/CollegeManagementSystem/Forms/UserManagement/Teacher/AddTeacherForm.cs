@@ -21,50 +21,10 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
         public AddTeacherForm()
         {
             InitializeComponent();
+            cmbDepartment.SelectedIndexChanged += cmbDepartment_SelectedIndexChanged;
         }
 
-        // load semesters
-        private void PopulateSemesters()
-        {
-            // Clear previous controls
-            tableLayoutPanelSemesters.Controls.Clear();
-
-            // Fetch semesters from the database
-            SemesterController semesterController = new SemesterController();
-            List<Semester> semesters = semesterController.GetAllSemesters();
-
-            // Set column count to 2 (for two semesters side by side)
-            tableLayoutPanelSemesters.ColumnCount = 2;
-            tableLayoutPanelSemesters.RowCount = (semesters.Count + 1) / 2; // Adjust row count based on the number of semesters
-            tableLayoutPanelSemesters.AutoSize = true;
-
-            int currentColumn = 0;
-            int currentRow = 0;
-
-            // Add CheckBoxes dynamically to the TableLayoutPanel
-            foreach (var semester in semesters)
-            {
-                CheckBox semesterCheckBox = new CheckBox
-                {
-                    Text = semester.SemesterName,
-                    AutoSize = true,
-                    Tag = semester.SemesterID
-                };
-
-                // Add the CheckBox to the TableLayoutPanel
-                semesterCheckBox.CheckedChanged += SemesterCheckBox_CheckedChanged;
-                tableLayoutPanelSemesters.Controls.Add(semesterCheckBox, currentColumn, currentRow);
-
-                // Move to the next column, and if we reach the second column, move to the next row
-                currentColumn++;
-                if (currentColumn >= 2)
-                {
-                    currentColumn = 0;
-                    currentRow++;
-                }
-            }
-        }
-
+       
         // load departments
         private void LoadDepartments()
         {
@@ -94,47 +54,19 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
         // Event when the department is selected
         private void cmbDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Check if any semester is selected before populating subjects
-            PopulateSubjectsIfApplicable();
+           PopulateSubjectsIfApplicable();
         }
 
-        // Event when a semester checkbox is changed
-        List<int> selectedSemesterIds = new List<int>();
-        private void SemesterCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            // Get the checkbox that was clicked
-            CheckBox semesterCheckBox = sender as CheckBox;
-
-            if (semesterCheckBox != null)
-            {
-                // Retrieve the semester ID stored in the Tag property of the checkbox
-                int semesterId = (int)semesterCheckBox.Tag;
-
-                if (semesterCheckBox.Checked)
-                {
-                    // Add the semester ID if it's selected
-                    if (!selectedSemesterIds.Contains(semesterId))
-                    {
-                        selectedSemesterIds.Add(semesterId);
-                    }
-                }
-                else
-                {
-                    // Remove the semester ID if it's deselected
-                    selectedSemesterIds.Remove(semesterId);
-                }
-            }
-            PopulateSubjectsIfApplicable();
-        }
-
+      
         // Check if department is selected and any semester checkbox is checked
         private void PopulateSubjectsIfApplicable()
         {
-           if (cmbDepartment.SelectedItem != null && selectedSemesterIds.Any())
+           if (cmbDepartment.SelectedItem != null)
             {
-                // Department and at least one semester is selected, so populate subjects
-                int departmentId = (int)cmbDepartment.SelectedValue;
-                PopulateSubjects(departmentId, selectedSemesterIds);
+                // Department so populate subjects
+                var selectedDepartment = (Department)cmbDepartment.SelectedItem;
+                int departmentId = selectedDepartment.DepartmentID;
+                PopulateSubjects(departmentId);
                
             }
             else
@@ -142,7 +74,7 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
                 tableLayoutPanelSubjects.Controls.Clear();
                 Label noSelectionLabel = new Label
                 {
-                    Text = "Please select a department and at least one semester to view subjects.",
+                    Text = "Please select a department to view subjects.",
                     AutoSize = true
                 };
                 tableLayoutPanelSubjects.Controls.Add(noSelectionLabel);
@@ -151,13 +83,13 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
 
        // Populate subjects based on selected department and semesters
         
-        private void PopulateSubjects(int departmentId, List<int> semesterIds)
+        private void PopulateSubjects(int departmentId)
         {
             tableLayoutPanelSubjects.Controls.Clear();
 
             // Fetch subjects from the database based on department and selected semesters
             SubjectController subjectController = new SubjectController();
-            List<Subject> subjects = subjectController.GetSubjectsByDepartmentAndSemesters(departmentId, semesterIds);
+            List<Subject> subjects = subjectController.GetSubjectsByDepartment(departmentId);
 
             if (subjects == null || subjects.Count == 0)
             {
@@ -319,13 +251,10 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
         private void AddTeacherForm_Load(object sender, EventArgs e)
         {
             LoadDepartments();
-            PopulateSemesters();
+          
           
         }
 
-        private void sem1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

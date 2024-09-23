@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(teacherloginform));
-            linkLabel1 = new LinkLabel();
             button1 = new Button();
             checkBox1 = new CheckBox();
             txtPassword = new TextBox();
@@ -41,26 +40,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // linkLabel1
-            // 
-            linkLabel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            linkLabel1.AutoSize = true;
-            linkLabel1.LinkColor = Color.Blue;
-            linkLabel1.Location = new Point(394, 325);
-            linkLabel1.Margin = new Padding(2, 0, 2, 0);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(133, 21);
-            linkLabel1.TabIndex = 18;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Forgot Password?";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
-            // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button1.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Location = new Point(407, 269);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(105, 42);
             button1.TabIndex = 17;
@@ -73,7 +58,7 @@
             checkBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             checkBox1.AutoSize = true;
             checkBox1.Location = new Point(375, 232);
-            checkBox1.Margin = new Padding(2, 2, 2, 2);
+            checkBox1.Margin = new Padding(2);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(138, 25);
             checkBox1.TabIndex = 16;
@@ -85,7 +70,7 @@
             // 
             txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtPassword.Location = new Point(375, 202);
-            txtPassword.Margin = new Padding(2, 2, 2, 2);
+            txtPassword.Margin = new Padding(2);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(200, 29);
             txtPassword.TabIndex = 15;
@@ -94,7 +79,7 @@
             // 
             txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtUsername.Location = new Point(375, 152);
-            txtUsername.Margin = new Padding(2, 2, 2, 2);
+            txtUsername.Margin = new Padding(2);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(200, 29);
             txtUsername.TabIndex = 14;
@@ -140,7 +125,7 @@
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(214, 52);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(58, 75);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -153,7 +138,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(863, 443);
-            Controls.Add(linkLabel1);
             Controls.Add(button1);
             Controls.Add(checkBox1);
             Controls.Add(txtPassword);
@@ -162,7 +146,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "teacherloginform";
             Text = "teacherloginform";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -171,7 +155,6 @@
         }
 
         #endregion
-        private LinkLabel linkLabel1;
         private Button button1;
         private CheckBox checkBox1;
         private TextBox txtPassword;

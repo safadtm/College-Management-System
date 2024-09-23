@@ -4,9 +4,6 @@
     <Compile Update="Forms\AttendanceManagement\AddAttendenceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\AttendanceManagement\EditAttendenceForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Forms\AttendanceManagement\AllAttendenceForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,9 +14,9 @@ namespace CollegeManagementSystem.Controllers
         DatabaseHelper databaseHelper = new DatabaseHelper();
 
         // add subject
-        public bool AddSubject(string subjectName, int departmentID, int semesterID, int? teacherID = null)
+        public bool AddSubject(string subjectName, int departmentID, int? teacherID = null)
         {
-            return databaseHelper.InsertSubject(subjectName, departmentID, semesterID, teacherID);
+            return databaseHelper.InsertSubject(subjectName, departmentID, teacherID);
         }
 
         // load all subjects
@@ -36,7 +36,6 @@ namespace CollegeManagementSystem.Controllers
                 dataGridView.Columns["SubjectID"].HeaderText = "SI.NO";
                 dataGridView.Columns["SubjectName"].HeaderText = "Subject";
                 dataGridView.Columns["DepartmentName"].HeaderText = "Department";
-                dataGridView.Columns["SemesterName"].HeaderText = "Semester";
                 dataGridView.Columns["TeacherName"].HeaderText = "Teacher";
                 dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -61,9 +60,9 @@ namespace CollegeManagementSystem.Controllers
         }
 
         // load subject by department and semester
-        public List<Subject> GetSubjectsByDepartmentAndSemesters(int departmentId, List<int> semesterIds)
+        public List<Subject> GetSubjectsByDepartment(int departmentId)
         {
-            return databaseHelper.GetSubjectsByDepartmentAndSemesters(departmentId, semesterIds);
+            return databaseHelper.GetSubjectsByDepartment(departmentId);
 
         }
 

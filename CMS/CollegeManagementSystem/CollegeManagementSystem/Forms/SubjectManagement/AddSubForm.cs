@@ -45,44 +45,17 @@ namespace CollegeManagementSystem.Forms.SubjectManagement
             }
         }
 
-        // load semesters
-        private void LoadSemesters()
-        {
-            try
-            {
-                SemesterController semesterController = new SemesterController();
-                List<Semester> semesters = semesterController.GetAllSemesters();
-
-                if (semesters != null && semesters.Any())
-                {
-                    cmbSemester.DataSource = semesters;
-                    cmbSemester.DisplayMember = "SemesterName";
-                    cmbSemester.ValueMember = "SemesterID";
-                }
-                else
-                {
-                    MessageBox.Show("No semesters found.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading semesters: {ex.Message}");
-            }
-        }
-
-
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
             // add new subject
             string subjectName = txtSubjectName.Text;
             int departmentID = Convert.ToInt32(cmbDepartment.SelectedValue); 
-            int semesterID = Convert.ToInt32(cmbSemester.SelectedValue); 
-
-            if (!string.IsNullOrWhiteSpace(subjectName) && departmentID > 0 && semesterID > 0)
+            
+            if (!string.IsNullOrWhiteSpace(subjectName) && departmentID > 0 )
             {
                 SubjectController subjectController = new SubjectController();
-                bool isSuccess = subjectController.AddSubject(subjectName, departmentID, semesterID);
+                bool isSuccess = subjectController.AddSubject(subjectName, departmentID);
 
                 if (isSuccess)
                 {
@@ -105,7 +78,7 @@ namespace CollegeManagementSystem.Forms.SubjectManagement
         private void AddSubForm_Load(object sender, EventArgs e)
         {
             LoadDepartments();
-            LoadSemesters();
+           
         }
     }
 }

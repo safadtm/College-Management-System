@@ -12,8 +12,6 @@ namespace CollegeManagementSystem.Model
         public int SubjectID { get; set; }
         public string SubjectName { get; set; }
         public string DepartmentName { get; set; }
-        
-        public string SemesterName { get; set; }
         public string TeacherName { get; set; }
     }
 }

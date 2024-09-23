@@ -52,11 +52,9 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            label13 = new Label();
             label14 = new Label();
             button2 = new Button();
             cmbDepartment = new ComboBox();
-            tableLayoutPanelSemesters = new TableLayoutPanel();
             tableLayoutPanelSubjects = new TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -100,7 +98,7 @@
             // txtPassword
             // 
             txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtPassword.Location = new Point(516, 501);
+            txtPassword.Location = new Point(516, 394);
             txtPassword.Margin = new Padding(2);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(172, 29);
@@ -111,7 +109,7 @@
             label11.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.Location = new Point(404, 506);
+            label11.Location = new Point(404, 399);
             label11.Margin = new Padding(2, 0, 2, 0);
             label11.Name = "label11";
             label11.Size = new Size(85, 21);
@@ -121,7 +119,7 @@
             // txtUsername
             // 
             txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtUsername.Location = new Point(516, 456);
+            txtUsername.Location = new Point(516, 349);
             txtUsername.Margin = new Padding(2);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(172, 29);
@@ -132,7 +130,7 @@
             label10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(404, 461);
+            label10.Location = new Point(404, 354);
             label10.Margin = new Padding(2, 0, 2, 0);
             label10.Name = "label10";
             label10.Size = new Size(89, 21);
@@ -233,7 +231,7 @@
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button1.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(549, 559);
+            button1.Location = new Point(549, 452);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(89, 51);
@@ -308,24 +306,12 @@
             pictureBox1.TabIndex = 40;
             pictureBox1.TabStop = false;
             // 
-            // label13
-            // 
-            label13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(404, 166);
-            label13.Margin = new Padding(2, 0, 2, 0);
-            label13.Name = "label13";
-            label13.Size = new Size(83, 21);
-            label13.TabIndex = 67;
-            label13.Text = "Semester";
-            // 
             // label14
             // 
             label14.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(404, 278);
+            label14.Location = new Point(404, 171);
             label14.Margin = new Padding(2, 0, 2, 0);
             label14.Name = "label14";
             label14.Size = new Size(68, 21);
@@ -336,7 +322,7 @@
             // 
             button2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button2.Font = new Font("Segoe UI Emoji", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(516, 395);
+            button2.Location = new Point(516, 288);
             button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(217, 52);
@@ -353,27 +339,13 @@
             cmbDepartment.Size = new Size(172, 29);
             cmbDepartment.TabIndex = 72;
             // 
-            // tableLayoutPanelSemesters
-            // 
-            tableLayoutPanelSemesters.AutoSize = true;
-            tableLayoutPanelSemesters.ColumnCount = 2;
-            tableLayoutPanelSemesters.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanelSemesters.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanelSemesters.Location = new Point(519, 158);
-            tableLayoutPanelSemesters.Name = "tableLayoutPanelSemesters";
-            tableLayoutPanelSemesters.RowCount = 1;
-            tableLayoutPanelSemesters.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanelSemesters.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanelSemesters.Size = new Size(169, 30);
-            tableLayoutPanelSemesters.TabIndex = 85;
-            // 
             // tableLayoutPanelSubjects
             // 
             tableLayoutPanelSubjects.AutoSize = true;
             tableLayoutPanelSubjects.ColumnCount = 2;
             tableLayoutPanelSubjects.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanelSubjects.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanelSubjects.Location = new Point(519, 278);
+            tableLayoutPanelSubjects.Location = new Point(519, 171);
             tableLayoutPanelSubjects.Name = "tableLayoutPanelSubjects";
             tableLayoutPanelSubjects.RowCount = 2;
             tableLayoutPanelSubjects.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
@@ -388,11 +360,9 @@
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(1061, 630);
             Controls.Add(tableLayoutPanelSubjects);
-            Controls.Add(tableLayoutPanelSemesters);
             Controls.Add(cmbDepartment);
             Controls.Add(button2);
             Controls.Add(label14);
-            Controls.Add(label13);
             Controls.Add(radioButtonFemale);
             Controls.Add(radioButtonMale);
             Controls.Add(dateTimePickerJoined);
@@ -449,11 +419,9 @@
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
-        private Label label13;
         private Label label14;
         private Button button2;
         private ComboBox cmbDepartment;
-        private TableLayoutPanel tableLayoutPanelSemesters;
         private TableLayoutPanel tableLayoutPanelSubjects;
     }
 }

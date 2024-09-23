@@ -57,7 +57,6 @@ namespace CollegeManagementSystem.Controllers
                 dataGridView.Columns["TeacherName"].HeaderText = "Name";
                 dataGridView.Columns["DepartmentName"].HeaderText = "Department";
                 dataGridView.Columns["Subjects"].HeaderText = "Subjects";
-                dataGridView.Columns["Semesters"].HeaderText = "Semesters";
                 dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 

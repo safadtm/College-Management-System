@@ -260,49 +260,13 @@ namespace CollegeManagementSystem.Data
         }
 
 
-        // fetch semester
-        // Load semesters from the database
-        public List<Semester> GetSemesters()
-        {
-            string query = "SELECT SemesterID,SemName,StartDate,EndDate FROM Semester";
-            List<Semester> semesters = new List<Semester>();
-
-            try
-            {
-                using (SqlConnection conn = GetConnection())
-                {
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    conn.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            semesters.Add(new Semester
-                            {
-                                SemesterID = Convert.ToInt32(reader["SemesterID"]),
-                                SemesterName = reader["SemName"].ToString(),
-                                StartDate = reader["StartDate"].ToString(),
-                                EndDate = reader["EndDate"].ToString()
-                            });
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error loading semesters: " + ex.Message);
-            }
-
-            return semesters;
-        }
-
 
         // principal add subject
         // Method to insert a subject
-        public bool InsertSubject(string subjectName, int departmentID, int semesterID, int? teacherID)
+        public bool InsertSubject(string subjectName, int departmentID, int? teacherID)
         {
-            string query = "INSERT INTO Subject (SubName, DepartmentID, SemesterID, TeacherID) " +
-                           "VALUES (@SubjectName, @DepartmentID, @SemesterID, @TeacherID)";
+            string query = "INSERT INTO Subject (SubName, DepartmentID, TeacherID) " +
+                           "VALUES (@SubjectName, @DepartmentID, @TeacherID)";
 
             try
             {
@@ -312,7 +276,7 @@ namespace CollegeManagementSystem.Data
                     {
                         cmd.Parameters.AddWithValue("@SubjectName", subjectName);
                         cmd.Parameters.AddWithValue("@DepartmentID", departmentID);
-                        cmd.Parameters.AddWithValue("@SemesterID", semesterID);
+                       
 
                         // If teacherID is null, we handle it like this:
                         if (teacherID.HasValue)
@@ -374,10 +338,9 @@ namespace CollegeManagementSystem.Data
         public List<Subject> GetSubjects()
         {
             string query = @"
-        SELECT s.SubjectID, s.SubName, d.DeptName, sem.SemName, t.FullName
+        SELECT s.SubjectID, s.SubName, d.DeptName, t.FullName
         FROM Subject s
         LEFT JOIN Department d ON s.DepartmentID = d.DepartmentID
-        LEFT JOIN Semester sem ON s.SemesterID = sem.SemesterID
         LEFT JOIN Teacher t ON s.TeacherID = t.TeacherID";
 
             List<Subject> subjects = new List<Subject>();
@@ -398,7 +361,6 @@ namespace CollegeManagementSystem.Data
                                 SubjectID = Convert.ToInt32(reader["SubjectID"]),
                                 SubjectName = reader["SubName"].ToString(),
                                 DepartmentName = reader["DeptName"].ToString(),
-                                SemesterName = reader["SemName"].ToString(),
                                 TeacherName = reader["FullName"] != DBNull.Value ? reader["FullName"].ToString() : "Not assigned"
                             });
                         }
@@ -414,23 +376,17 @@ namespace CollegeManagementSystem.Data
 
 
 
-        // fetch subjects according to department and semesters
-        public List<Subject> GetSubjectsByDepartmentAndSemesters(int departmentId, List<int> semesterIds)
+        // fetch subjects according to department
+        public List<Subject> GetSubjectsByDepartment(int departmentId)
         {
             // Create the base query
             string query = @"
-SELECT s.SubjectID, s.SubName, d.DeptName, sem.SemName, t.FullName
+SELECT s.SubjectID, s.SubName, d.DeptName, t.FullName
 FROM Subject s
 LEFT JOIN Department d ON s.DepartmentID = d.DepartmentID
-LEFT JOIN Semester sem ON s.SemesterID = sem.SemesterID
 LEFT JOIN Teacher t ON s.TeacherID = t.TeacherID
 WHERE s.DepartmentID = @DepartmentID";
 
-            // Check if semesterIds is not empty
-            if (semesterIds != null && semesterIds.Count > 0)
-            {
-                query += " AND s.SemesterID IN (" + string.Join(",", semesterIds.Select((id, index) => "@SemesterID" + index)) + ")";
-            }
 
             List<Subject> subjects = new List<Subject>();
 
@@ -443,21 +399,7 @@ WHERE s.DepartmentID = @DepartmentID";
                     // Add DepartmentID parameter
                     cmd.Parameters.AddWithValue("@DepartmentID", departmentId);
 
-                    // Add parameters for each semester ID if semesterIds is not empty
-                    if (semesterIds != null && semesterIds.Count > 0)
-                    {
-                        for (int i = 0; i < semesterIds.Count; i++)
-                        {
-                            cmd.Parameters.AddWithValue("@SemesterID" + i, semesterIds[i]);
-                        }
-                    }
-                    else
-                    {
-                        // If no semester selected, throw a meaningful message or handle it
-                        MessageBox.Show("Please select at least one semester.");
-                        return null;
-                    }
-
+                   
                     // Log the final query and parameters (for debugging purposes)
                     Console.WriteLine("Executing SQL Query: " + cmd.CommandText);
                     foreach (SqlParameter param in cmd.Parameters)
@@ -476,7 +418,6 @@ WHERE s.DepartmentID = @DepartmentID";
                                 SubjectID = Convert.ToInt32(reader["SubjectID"]),
                                 SubjectName = reader["SubName"].ToString(),
                                 DepartmentName = reader["DeptName"].ToString(),
-                                SemesterName = reader["SemName"].ToString(),
                                 TeacherName = reader["FullName"] != DBNull.Value ? reader["FullName"].ToString() : "Not assigned"
                             });
                         }
@@ -569,12 +510,10 @@ WHERE s.DepartmentID = @DepartmentID";
                 t.TeacherID, 
                 t.FullName AS TeacherName,
                 d.DeptName AS DepartmentName,
-                STRING_AGG(s.SubName, ', ') AS Subjects,
-                STRING_AGG(sem.SemName, ', ') AS Semesters
+                STRING_AGG(s.SubName, ', ') AS Subjects
                 FROM Teacher t
                 LEFT JOIN Department d ON t.DepartmentID = d.DepartmentID
                 LEFT JOIN Subject s ON t.TeacherID = s.TeacherID
-                LEFT JOIN Semester sem ON s.SemesterID = sem.SemesterID
                 GROUP BY t.TeacherID, t.FullName, d.DeptName
                 ORDER BY t.TeacherID;
                 ";
@@ -597,7 +536,6 @@ WHERE s.DepartmentID = @DepartmentID";
                                 TeacherName = reader["TeacherName"].ToString(),
                                 DepartmentName = reader["DepartmentName"].ToString(),
                                 Subjects = reader["Subjects"].ToString(),
-                                Semesters = reader["Semesters"].ToString()
                             });
                         }
                     }
@@ -996,6 +934,13 @@ WHERE s.DepartmentID = @DepartmentID";
                 }
             }
         }
+
+        // TEACHER ATTENDENCE SECTION ------------
+        // ADD ATTENDENCE
+
+        // ALL ATTENDENCE
+
+        
 
         
     }

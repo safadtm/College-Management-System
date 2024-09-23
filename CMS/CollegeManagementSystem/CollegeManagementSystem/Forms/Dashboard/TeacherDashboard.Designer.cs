@@ -36,7 +36,6 @@
             manageDepartmentsToolStripMenuItem = new ToolStripMenuItem();
             addDepartmentToolStripMenuItem = new ToolStripMenuItem();
             allDepartmentsToolStripMenuItem = new ToolStripMenuItem();
-            editAttendenceToolStripMenuItem = new ToolStripMenuItem();
             manageCoursesToolStripMenuItem = new ToolStripMenuItem();
             addCourseToolStripMenuItem = new ToolStripMenuItem();
             allCoursesToolStripMenuItem = new ToolStripMenuItem();
@@ -87,20 +86,20 @@
             // addStudentToolStripMenuItem
             // 
             addStudentToolStripMenuItem.Name = "addStudentToolStripMenuItem";
-            addStudentToolStripMenuItem.Size = new Size(180, 26);
+            addStudentToolStripMenuItem.Size = new Size(165, 26);
             addStudentToolStripMenuItem.Text = "Add Student";
             addStudentToolStripMenuItem.Click += addTeacherToolStripMenuItem_Click;
             // 
             // allStudentsToolStripMenuItem
             // 
             allStudentsToolStripMenuItem.Name = "allStudentsToolStripMenuItem";
-            allStudentsToolStripMenuItem.Size = new Size(180, 26);
+            allStudentsToolStripMenuItem.Size = new Size(165, 26);
             allStudentsToolStripMenuItem.Text = "All Students";
             allStudentsToolStripMenuItem.Click += allTeachersToolStripMenuItem_Click;
             // 
             // manageDepartmentsToolStripMenuItem
             // 
-            manageDepartmentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addDepartmentToolStripMenuItem, allDepartmentsToolStripMenuItem, editAttendenceToolStripMenuItem });
+            manageDepartmentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addDepartmentToolStripMenuItem, allDepartmentsToolStripMenuItem });
             manageDepartmentsToolStripMenuItem.Name = "manageDepartmentsToolStripMenuItem";
             manageDepartmentsToolStripMenuItem.Size = new Size(100, 25);
             manageDepartmentsToolStripMenuItem.Text = "Attendence";
@@ -118,13 +117,6 @@
             allDepartmentsToolStripMenuItem.Size = new Size(190, 26);
             allDepartmentsToolStripMenuItem.Text = "All Attendence";
             allDepartmentsToolStripMenuItem.Click += allDepartmentsToolStripMenuItem_Click;
-            // 
-            // editAttendenceToolStripMenuItem
-            // 
-            editAttendenceToolStripMenuItem.Name = "editAttendenceToolStripMenuItem";
-            editAttendenceToolStripMenuItem.Size = new Size(190, 26);
-            editAttendenceToolStripMenuItem.Text = "Edit Attendence";
-            editAttendenceToolStripMenuItem.Click += editAttendenceToolStripMenuItem_Click;
             // 
             // manageCoursesToolStripMenuItem
             // 
@@ -319,7 +311,6 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private ToolStripMenuItem editAttendenceToolStripMenuItem;
         private ToolStripMenuItem editGradesToolStripMenuItem;
         private ToolStripMenuItem addTimetableToolStripMenuItem;
     }

@@ -29,34 +29,22 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            label2 = new Label();
             label1 = new Label();
             txtSubjectName = new TextBox();
             label3 = new Label();
             label4 = new Label();
             cmbDepartment = new ComboBox();
-            cmbSemester = new ComboBox();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(199, 294);
+            button1.Location = new Point(186, 255);
             button1.Name = "button1";
             button1.Size = new Size(124, 40);
             button1.TabIndex = 7;
             button1.Text = "Add";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(72, 225);
-            label2.Name = "label2";
-            label2.Size = new Size(94, 25);
-            label2.TabIndex = 5;
-            label2.Text = "Semester ";
             // 
             // label1
             // 
@@ -103,27 +91,17 @@
             cmbDepartment.Size = new Size(186, 29);
             cmbDepartment.TabIndex = 11;
             // 
-            // cmbSemester
-            // 
-            cmbSemester.FormattingEnabled = true;
-            cmbSemester.Location = new Point(249, 221);
-            cmbSemester.Name = "cmbSemester";
-            cmbSemester.Size = new Size(188, 29);
-            cmbSemester.TabIndex = 12;
-            // 
             // AddSubForm
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(500, 370);
-            Controls.Add(cmbSemester);
             Controls.Add(cmbDepartment);
             Controls.Add(label4);
             Controls.Add(txtSubjectName);
             Controls.Add(label3);
             Controls.Add(button1);
-            Controls.Add(label2);
             Controls.Add(label1);
             Name = "AddSubForm";
             Text = "AddSubForm";
@@ -135,12 +113,10 @@
         #endregion
 
         private Button button1;
-        private Label label2;
         private Label label1;
         private TextBox txtSubjectName;
         private Label label3;
         private Label label4;
         private ComboBox cmbDepartment;
-        private ComboBox cmbSemester;
     }
 }
