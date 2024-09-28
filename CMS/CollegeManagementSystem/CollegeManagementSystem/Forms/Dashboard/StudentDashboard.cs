@@ -3,6 +3,7 @@ using CollegeManagementSystem.Forms.AttendanceManagement;
 using CollegeManagementSystem.Forms.GradeManagement;
 using CollegeManagementSystem.Forms.ProfileForms;
 using CollegeManagementSystem.Model;
+using CollegeManagementSystem.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,16 @@ namespace CollegeManagementSystem.Forms.Dashboard
         public StudentDashboard()
         {
             InitializeComponent();
+            this.BackColor = AppColors.NeutralColor;
+            CustomizeMenuStrip(menuStrip1);
             studentController = new StudentController();
+        }
+
+        private void CustomizeMenuStrip(MenuStrip menuStrip)
+        {
+            menuStrip.Renderer = new ToolStripProfessionalRenderer(new CustomMenuStripColorTable());
+            menuStrip.BackColor = AppColors.PrimaryColor;  // MenuStrip background
+            menuStrip.ForeColor = AppColors.NeutralColor;  // MenuStrip text color
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

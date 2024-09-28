@@ -1,5 +1,6 @@
 ﻿using CollegeManagementSystem.Controllers;
 using CollegeManagementSystem.Model;
+using CollegeManagementSystem.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace CollegeManagementSystem.Forms.ProfileForms
         public StudentProfileForm()
         {
             InitializeComponent();
+            this.BackColor = AppColors.NeutralColor;
             studentController = new StudentController();
         }
 

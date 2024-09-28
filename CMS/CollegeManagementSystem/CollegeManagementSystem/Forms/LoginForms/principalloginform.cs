@@ -1,5 +1,6 @@
 ﻿using CollegeManagementSystem.Controllers;
 using CollegeManagementSystem.Forms.Dashboard;
+using CollegeManagementSystem.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace CollegeManagementSystem.Forms.LoginForms
         public principalloginform()
         {
             InitializeComponent();
+            this.BackColor = AppColors.NeutralColor;
         }
 
         private void principalloginform_Load(object sender, EventArgs e)

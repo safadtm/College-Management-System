@@ -21,6 +21,7 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
         public AddTeacherForm()
         {
             InitializeComponent();
+            this.BackColor = AppColors.NeutralColor;
             cmbDepartment.SelectedIndexChanged += cmbDepartment_SelectedIndexChanged;
         }
 

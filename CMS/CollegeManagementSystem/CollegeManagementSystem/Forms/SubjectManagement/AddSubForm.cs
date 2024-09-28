@@ -1,6 +1,7 @@
 ﻿using CollegeManagementSystem.Controllers;
 using CollegeManagementSystem.Forms.Dashboard;
 using CollegeManagementSystem.Model;
+using CollegeManagementSystem.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace CollegeManagementSystem.Forms.SubjectManagement
         public AddSubForm()
         {
             InitializeComponent();
+            this.BackColor = AppColors.NeutralColor;
         }
 
         // load departments

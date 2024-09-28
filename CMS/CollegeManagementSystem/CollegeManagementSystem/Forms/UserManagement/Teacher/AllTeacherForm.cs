@@ -1,4 +1,5 @@
 ﻿using CollegeManagementSystem.Controllers;
+using CollegeManagementSystem.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
         public AllTeacherForm()
         {
             InitializeComponent();
+            this.BackColor = AppColors.NeutralColor;
         }
 
         private void AllTeacherForm_Load(object sender, EventArgs e)

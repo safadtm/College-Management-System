@@ -20,6 +20,7 @@ namespace CollegeManagementSystem.Forms.UserManagement.Student
         public AddStudentForm()
         {
             InitializeComponent();
+            this.BackColor = AppColors.NeutralColor;
             departmentController = new DepartmentController();
 
         }

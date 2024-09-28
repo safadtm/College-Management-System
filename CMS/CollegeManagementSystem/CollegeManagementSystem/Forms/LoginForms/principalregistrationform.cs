@@ -20,6 +20,7 @@ namespace CollegeManagementSystem.Forms.LoginForms
         public principalregistrationform()
         {
             InitializeComponent();
+            this.BackColor = AppColors.NeutralColor;
         }
 
         private void button1_Click(object sender, EventArgs e)

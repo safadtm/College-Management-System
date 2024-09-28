@@ -1,5 +1,6 @@
 ﻿using CollegeManagementSystem.Controllers;
 using CollegeManagementSystem.Forms.Dashboard;
+using CollegeManagementSystem.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace CollegeManagementSystem.Forms.LoginForms
         public teacherloginform()
         {
             InitializeComponent();
+            this.BackColor = AppColors.NeutralColor;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

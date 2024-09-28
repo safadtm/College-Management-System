@@ -7,6 +7,7 @@ namespace CollegeManagementSystem
         public SplashScreenForm()
         {
             InitializeComponent();
+            this.BackColor = AppColors.NeutralColor;
         }
 
         private void SplashScreenForm_Load(object sender, EventArgs e)

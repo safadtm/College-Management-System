@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CollegeManagementSystem.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace CollegeManagementSystem.Forms.AttendanceManagement
         public AddAttendenceForm()
         {
             InitializeComponent();
+            this.BackColor = AppColors.NeutralColor;
         }
     }
 }

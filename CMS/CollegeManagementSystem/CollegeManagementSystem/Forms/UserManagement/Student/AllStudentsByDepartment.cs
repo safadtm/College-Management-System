@@ -1,4 +1,5 @@
 ﻿using CollegeManagementSystem.Controllers;
+using CollegeManagementSystem.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace CollegeManagementSystem.Forms.UserManagement.Student
         public AllStudentsByDepartment()
         {
             InitializeComponent();
+            this.BackColor = AppColors.NeutralColor;
         }
 
         private void AllStudentsByDepartment_Load(object sender, EventArgs e)

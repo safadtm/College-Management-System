@@ -8,20 +8,16 @@ namespace CollegeManagementSystem.Utilities
 {
     public static class AppColors
     {
-        // Primary colors
-        public static Color PrimaryColor = ColorTranslator.FromHtml("#002D62"); // Navy Blue
-        public static Color SecondaryColor = ColorTranslator.FromHtml("#00A8E8"); // Sky Blue
+        // Core color scheme
+        public static Color PrimaryColor = Color.FromArgb(44, 62, 80);  // Dark Blue
+        public static Color SecondaryColor = Color.FromArgb(189, 195, 199);  // Silver Gray
+        public static Color AccentColor = Color.FromArgb(26, 188, 156);  // Teal
+        public static Color NeutralColor = Color.FromArgb(236, 240, 241);  // Off White
+        public static Color HighlightColor = Color.FromArgb(230, 126, 34);  // Soft Orange
 
-        // Neutral colors
-        public static Color BackgroundColor = ColorTranslator.FromHtml("#F8F9FA"); // Light Gray
-        public static Color TextColor = Color.White; // White
-
-        // Success, warning, error colors
-        public static Color SuccessColor = ColorTranslator.FromHtml("#28A745"); // Green
-        public static Color WarningColor = ColorTranslator.FromHtml("#FFC107"); // Yellow
-        public static Color ErrorColor = ColorTranslator.FromHtml("#DC3545"); // Red
-
-        // Accent colors
-        public static Color AccentColor = ColorTranslator.FromHtml("#20C997"); // Teal
+       
+        public static Color PresentColor = Color.FromArgb(46, 204, 113);  // Green (Present)
+        public static Color AbsentColor = Color.FromArgb(231, 76, 60);    // Red (Absent)
+        public static Color WarningColor = Color.FromArgb(241, 196, 15);
     }
 }
