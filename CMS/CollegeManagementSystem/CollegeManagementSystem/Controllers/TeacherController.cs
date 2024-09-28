@@ -91,5 +91,12 @@ namespace CollegeManagementSystem.Controllers
             return databaseHelper.UpdateTeacher(teacher);
         }
 
+        // delete teacher
+        public bool DeleteTeacher(int teacherID)
+        {
+            return databaseHelper.DeleteTeacher(teacherID);
+        }
+
+
     }
 }

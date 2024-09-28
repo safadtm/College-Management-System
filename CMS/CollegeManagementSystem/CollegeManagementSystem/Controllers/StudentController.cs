@@ -130,5 +130,11 @@ namespace CollegeManagementSystem.Controllers
         {
             return databaseHelper.UpdateStudent(student);
         }
+
+        // delete teacher
+        public bool DeleteStudent(int studentID)
+        {
+            return databaseHelper.DeleteStudent(studentID);
+        }
     }
 }

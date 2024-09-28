@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|c:\\users\\safad\\sdsa\\college-management-system\\cms\\collegemanagementsystem\\collegemanagementsystem\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|c:\\users\\safad\\sdsa\\college-management-system\\cms\\collegemanagementsystem\\collegemanagementsystem\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|c:\\users\\safad\\sdsa\\college-management-system\\cms\\collegemanagementsystem\\collegemanagementsystem\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|c:\\users\\safad\\sdsa\\college-management-system\\cms\\collegemanagementsystem\\collegemanagementsystem\\forms\\dashboard\\studentdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\forms\\dashboard\\studentdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,7 +27,7 @@
       "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\forms\\dashboard\\principaldashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|c:\\users\\safad\\sdsa\\college-management-system\\cms\\collegemanagementsystem\\collegemanagementsystem\\forms\\dashboard\\principaldashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\collegemanagementsystem\\forms\\dashboard\\principaldashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\forms\\dashboard\\principaldashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -143,7 +155,7 @@
       "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\utilities\\appcolors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|c:\\users\\safad\\sdsa\\college-management-system\\cms\\collegemanagementsystem\\collegemanagementsystem\\forms\\loginforms\\teacherloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\collegemanagementsystem\\forms\\loginforms\\teacherloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\forms\\loginforms\\teacherloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -153,10 +165,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\collegemanagementsystem\\forms\\loginforms\\principalloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\forms\\loginforms\\principalloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|c:\\users\\safad\\sdsa\\college-management-system\\cms\\collegemanagementsystem\\collegemanagementsystem\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|c:\\users\\safad\\sdsa\\college-management-system\\cms\\collegemanagementsystem\\collegemanagementsystem\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -171,16 +179,8 @@
       "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\forms\\subjectmanagement\\addsubform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|c:\\users\\safad\\sdsa\\college-management-system\\cms\\collegemanagementsystem\\collegemanagementsystem\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|c:\\users\\safad\\sdsa\\college-management-system\\cms\\collegemanagementsystem\\collegemanagementsystem\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|c:\\users\\safad\\sdsa\\college-management-system\\cms\\collegemanagementsystem\\collegemanagementsystem\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|solutionrelative:collegemanagementsystem\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20AE8F93-95A4-4806-8012-7BD28EF84ACE}|CollegeManagementSystem\\CollegeManagementSystem.csproj|c:\\users\\safad\\sdsa\\college-management-system\\cms\\collegemanagementsystem\\collegemanagementsystem\\model\\teacherdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -242,49 +242,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 383,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PrincipalDashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\Dashboard\\PrincipalDashboard.cs",
-              "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\Dashboard\\PrincipalDashboard.cs",
-              "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\Dashboard\\PrincipalDashboard.cs [Design]",
-              "RelativeToolTip": "CollegeManagementSystem\\Forms\\Dashboard\\PrincipalDashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T10:02:36.534Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CustomMenuStripRenderer.cs",
-              "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Utilities\\CustomMenuStripRenderer.cs",
-              "RelativeDocumentMoniker": "CollegeManagementSystem\\Utilities\\CustomMenuStripRenderer.cs",
-              "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Utilities\\CustomMenuStripRenderer.cs",
-              "RelativeToolTip": "CollegeManagementSystem\\Utilities\\CustomMenuStripRenderer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:48:00.21Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "StudentDashboard.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\Dashboard\\StudentDashboard.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\Dashboard\\StudentDashboard.cs",
               "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\Dashboard\\StudentDashboard.cs",
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\Dashboard\\StudentDashboard.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA/wCcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwCcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T02:04:54.206Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Data\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "CollegeManagementSystem\\Data\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Data\\DatabaseHelper.cs",
+              "RelativeToolTip": "CollegeManagementSystem\\Data\\DatabaseHelper.cs",
+              "ViewState": "AgIAAPkBAAAAAAAAAAA1wKUDAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T02:24:13.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TeacherDashboard.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\Dashboard\\TeacherDashboard.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\Dashboard\\TeacherDashboard.cs",
@@ -297,7 +285,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "TeacherController.cs",
+              "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Controllers\\TeacherController.cs",
+              "RelativeDocumentMoniker": "CollegeManagementSystem\\Controllers\\TeacherController.cs",
+              "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Controllers\\TeacherController.cs",
+              "RelativeToolTip": "CollegeManagementSystem\\Controllers\\TeacherController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAA1wGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T02:38:04.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "CollegeManagementSystem\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "CollegeManagementSystem\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAIA1wIYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T06:33:53.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PrincipalDashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\Dashboard\\PrincipalDashboard.cs",
+              "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\Dashboard\\PrincipalDashboard.cs",
+              "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\Dashboard\\PrincipalDashboard.cs [Design]",
+              "RelativeToolTip": "CollegeManagementSystem\\Forms\\Dashboard\\PrincipalDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T10:02:36.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CustomMenuStripRenderer.cs",
+              "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Utilities\\CustomMenuStripRenderer.cs",
+              "RelativeDocumentMoniker": "CollegeManagementSystem\\Utilities\\CustomMenuStripRenderer.cs",
+              "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Utilities\\CustomMenuStripRenderer.cs",
+              "RelativeToolTip": "CollegeManagementSystem\\Utilities\\CustomMenuStripRenderer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T09:48:00.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PrincipalDashboard.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\Dashboard\\PrincipalDashboard.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\Dashboard\\PrincipalDashboard.cs",
@@ -305,12 +342,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\Dashboard\\PrincipalDashboard.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAiwCQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T11:08:23.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-20T11:08:23.157Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "AllAttendenceForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\AttendanceManagement\\AllAttendenceForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\AttendanceManagement\\AllAttendenceForm.cs",
@@ -318,12 +354,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\AttendanceManagement\\AllAttendenceForm.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwBIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:39:23.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:39:23.577Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "AddDeptForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\DepartmentMangement\\AddDeptForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\DepartmentMangement\\AddDeptForm.cs",
@@ -331,12 +366,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\DepartmentMangement\\AddDeptForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:38:43.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:38:43.375Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "AllDeptForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\DepartmentMangement\\AllDeptForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\DepartmentMangement\\AllDeptForm.cs",
@@ -344,12 +378,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\DepartmentMangement\\AllDeptForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:38:48.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:38:48.218Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "AddAttendenceForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\AttendanceManagement\\AddAttendenceForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\AttendanceManagement\\AddAttendenceForm.cs",
@@ -357,12 +390,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\AttendanceManagement\\AddAttendenceForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:39:18.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:39:18.932Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "EditGradesForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\GradeManagement\\EditGradesForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\GradeManagement\\EditGradesForm.cs",
@@ -370,12 +402,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\GradeManagement\\EditGradesForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:38:33.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:38:33.786Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "AllGradesForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\GradeManagement\\AllGradesForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\GradeManagement\\AllGradesForm.cs",
@@ -383,12 +414,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\GradeManagement\\AllGradesForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:38:29.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:38:29.172Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "AddGradesForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\GradeManagement\\AddGradesForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\GradeManagement\\AddGradesForm.cs",
@@ -396,12 +426,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\GradeManagement\\AddGradesForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:38:24.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:38:24.378Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "PrincipalLoginForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\LoginForms\\PrincipalLoginForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\LoginForms\\PrincipalLoginForm.cs",
@@ -414,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "StudentProfileForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\ProfileForms\\StudentProfileForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\ProfileForms\\StudentProfileForm.cs",
@@ -427,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "PrincipalRegistrationForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\LoginForms\\PrincipalRegistrationForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\LoginForms\\PrincipalRegistrationForm.cs",
@@ -440,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "StudentLoginForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\LoginForms\\StudentLoginForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\LoginForms\\StudentLoginForm.cs",
@@ -453,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "TeacherLoginForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\LoginForms\\TeacherLoginForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\LoginForms\\TeacherLoginForm.cs",
@@ -466,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "PrincipalProfileForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\ProfileForms\\PrincipalProfileForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\ProfileForms\\PrincipalProfileForm.cs",
@@ -474,12 +503,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\ProfileForms\\PrincipalProfileForm.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAABkAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T02:41:19.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-20T02:41:19.875Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "EditTeacherProfileForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\ProfileForms\\EditTeacherProfileForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\ProfileForms\\EditTeacherProfileForm.cs",
@@ -492,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "EditStudentProfileForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\ProfileForms\\EditStudentProfileForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\ProfileForms\\EditStudentProfileForm.cs",
@@ -505,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "TeacherProfileForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\ProfileForms\\TeacherProfileForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\ProfileForms\\TeacherProfileForm.cs",
@@ -513,12 +541,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\ProfileForms\\TeacherProfileForm.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAABkAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T02:39:26.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-20T02:39:26.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "EditPrincipalProfileForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\ProfileForms\\EditPrincipalProfileForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\ProfileForms\\EditPrincipalProfileForm.cs",
@@ -526,12 +553,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\ProfileForms\\EditPrincipalProfileForm.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T02:07:12.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-20T02:07:12.665Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "AllSubForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\SubjectManagement\\AllSubForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\SubjectManagement\\AllSubForm.cs",
@@ -539,12 +565,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\SubjectManagement\\AllSubForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:36:57.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:36:57.832Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "ViewTimeTableForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\TimeTableManagement\\ViewTimeTableForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\TimeTableManagement\\ViewTimeTableForm.cs",
@@ -552,12 +577,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\TimeTableManagement\\ViewTimeTableForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:36:43.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:36:43.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "EditTimeTableForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\TimeTableManagement\\EditTimeTableForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\TimeTableManagement\\EditTimeTableForm.cs",
@@ -565,12 +589,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\TimeTableManagement\\EditTimeTableForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:36:37.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:36:37.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "AddTimeTableForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\TimeTableManagement\\AddTimeTableForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\TimeTableManagement\\AddTimeTableForm.cs",
@@ -578,12 +601,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\TimeTableManagement\\AddTimeTableForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:36:30.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:36:30.777Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "AllTeacherForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\UserManagement\\Teacher\\AllTeacherForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\UserManagement\\Teacher\\AllTeacherForm.cs",
@@ -596,7 +618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "AddSubForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\SubjectManagement\\AddSubForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\SubjectManagement\\AddSubForm.cs",
@@ -609,19 +631,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "AllTeacherForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\UserManagement\\Teacher\\AllTeacherForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\UserManagement\\Teacher\\AllTeacherForm.cs",
               "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\UserManagement\\Teacher\\AllTeacherForm.cs [Design]",
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\UserManagement\\Teacher\\AllTeacherForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T10:53:38.804Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-20T10:53:38.804Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "AddStudentForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\UserManagement\\Student\\AddStudentForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\UserManagement\\Student\\AddStudentForm.cs",
@@ -634,7 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "AllStudentForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\UserManagement\\Student\\AllStudentForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\UserManagement\\Student\\AllStudentForm.cs",
@@ -647,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "AllStudentsByDepartment.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\UserManagement\\Student\\AllStudentsByDepartment.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\UserManagement\\Student\\AllStudentsByDepartment.cs",
@@ -660,7 +681,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "AddTeacherForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\UserManagement\\Teacher\\AddTeacherForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\UserManagement\\Teacher\\AddTeacherForm.cs",
@@ -668,12 +689,11 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\UserManagement\\Teacher\\AddTeacherForm.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T06:27:15.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-20T06:27:15.505Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "SplashScreenForm.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\StartupForms\\SplashScreenForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\StartupForms\\SplashScreenForm.cs",
@@ -681,36 +701,22 @@
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\StartupForms\\SplashScreenForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:34:38.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:34:38.737Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 38,
-              "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Data\\DatabaseHelper.cs",
-              "RelativeDocumentMoniker": "CollegeManagementSystem\\Data\\DatabaseHelper.cs",
-              "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Data\\DatabaseHelper.cs",
-              "RelativeToolTip": "CollegeManagementSystem\\Data\\DatabaseHelper.cs",
-              "ViewState": "AgIAAI8BAAAAAAAAAAAuwIMBAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T02:24:13.508Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
               "Title": "TeacherLoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\LoginForms\\TeacherLoginForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\LoginForms\\TeacherLoginForm.cs",
               "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\LoginForms\\TeacherLoginForm.cs [Design]",
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\LoginForms\\TeacherLoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T03:28:53.486Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-23T03:28:53.486Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "AppColors.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Utilities\\AppColors.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Utilities\\AppColors.cs",
@@ -718,36 +724,33 @@
               "RelativeToolTip": "CollegeManagementSystem\\Utilities\\AppColors.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-28T09:09:59.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-28T09:09:59.705Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "PrincipalLoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\LoginForms\\PrincipalLoginForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\LoginForms\\PrincipalLoginForm.cs",
               "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\LoginForms\\PrincipalLoginForm.cs [Design]",
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\LoginForms\\PrincipalLoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T11:59:32.21Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-20T11:59:32.21Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "StudentLoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\LoginForms\\StudentLoginForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\LoginForms\\StudentLoginForm.cs",
               "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\LoginForms\\StudentLoginForm.cs [Design]",
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\LoginForms\\StudentLoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T09:04:39.893Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-20T09:04:39.893Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "SubjectController.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Controllers\\SubjectController.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Controllers\\SubjectController.cs",
@@ -759,19 +762,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "AddSubForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\SubjectManagement\\AddSubForm.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Forms\\SubjectManagement\\AddSubForm.cs",
               "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\SubjectManagement\\AddSubForm.cs [Design]",
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\SubjectManagement\\AddSubForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T02:48:22.355Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-23T02:48:22.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "Subject.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Model\\Subject.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Model\\Subject.cs",
@@ -784,30 +786,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 44,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "CollegeManagementSystem\\Controllers\\StudentController.cs",
-              "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "CollegeManagementSystem\\Controllers\\StudentController.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAIA1wEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T06:33:53.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "TeacherController.cs",
-              "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Controllers\\TeacherController.cs",
-              "RelativeDocumentMoniker": "CollegeManagementSystem\\Controllers\\TeacherController.cs",
-              "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Controllers\\TeacherController.cs",
-              "RelativeToolTip": "CollegeManagementSystem\\Controllers\\TeacherController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAYwCwAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T02:38:04.259Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
               "Title": "DepartmentController.cs",
               "DocumentMoniker": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Controllers\\DepartmentController.cs",
               "RelativeDocumentMoniker": "CollegeManagementSystem\\Controllers\\DepartmentController.cs",
@@ -838,8 +816,7 @@
               "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\Dashboard\\TeacherDashboard.cs [Design]",
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\Dashboard\\TeacherDashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T06:19:03.559Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-20T06:19:03.559Z"
             },
             {
               "$type": "Document",
@@ -908,8 +885,7 @@
               "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\Dashboard\\StudentDashboard.cs [Design]",
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\Dashboard\\StudentDashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T12:04:06.581Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-20T12:04:06.581Z"
             },
             {
               "$type": "Document",
@@ -920,8 +896,7 @@
               "ToolTip": "C:\\Users\\safad\\SDSA\\College-Management-System\\CMS\\CollegeManagementSystem\\CollegeManagementSystem\\Forms\\LoginForms\\PrincipalRegistrationForm.cs [Design]",
               "RelativeToolTip": "CollegeManagementSystem\\Forms\\LoginForms\\PrincipalRegistrationForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-20T11:58:35.79Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-20T11:58:35.79Z"
             },
             {
               "$type": "Document",

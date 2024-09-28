@@ -644,6 +644,33 @@ WHERE s.DepartmentID = @DepartmentID";
             }
         }
 
+        // delete teacher
+        public bool DeleteTeacher(int teacherID)
+        {
+            string query = @"DELETE FROM Teacher WHERE TeacherID = @TeacherID";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@TeacherID", teacherID);
+
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;  
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error deleting teacher: " + ex.Message);
+            }
+        }
+
+
         /// STUDENT SECTION 
          // teacher add student
         // Insert a new student
@@ -902,6 +929,34 @@ WHERE s.DepartmentID = @DepartmentID";
 
             }
         }
+
+        // delete student
+        public bool DeleteStudent(int studentID)
+        {
+            string query = @"DELETE FROM Student WHERE StudentID = @StudentID";
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@StudentID", studentID);
+
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;  
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error deleting student: " + ex.Message);
+            }
+        }
+
+
 
         // Fetch the last used number from the database
         public int GetLastUsedNumber(string userType)
