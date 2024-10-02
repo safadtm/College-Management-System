@@ -27,5 +27,7 @@ namespace CollegeManagementSystem.Forms.UserManagement.Student
             studentController.LoadStudentsByDepartmentIntoDataGridView(dataGridViewStudents, DeptID);
 
         }
+
+
     }
 }

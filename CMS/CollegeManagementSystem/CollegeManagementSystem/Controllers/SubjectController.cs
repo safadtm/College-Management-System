@@ -1,5 +1,6 @@
 ﻿using CollegeManagementSystem.Data;
 using CollegeManagementSystem.Model;
+using CollegeManagementSystem.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,20 +38,16 @@ namespace CollegeManagementSystem.Controllers
                 dataGridView.Columns["SubjectName"].HeaderText = "Subject";
                 dataGridView.Columns["DepartmentName"].HeaderText = "Department";
                 dataGridView.Columns["TeacherName"].HeaderText = "Teacher";
+
+                // Adjust column sizes
                 dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
+                // Ensure the last column fills any remaining space
+                dataGridView.Columns[dataGridView.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-                int totalColumnWidth = dataGridView.Columns.Cast<DataGridViewColumn>().Sum(col => col.Width);
-                dataGridView.Width = totalColumnWidth + dataGridView.Padding.Left + dataGridView.Padding.Right;
-
-                int totalHeight = dataGridView.ColumnHeadersHeight;
-                foreach (DataGridViewRow row in dataGridView.Rows)
-                {
-                    totalHeight += row.Height;
-                }
-                dataGridView.Height = totalHeight + dataGridView.Rows.Count;
-                dataGridView.ScrollBars = ScrollBars.None;
+                // Dynamically adjust the DataGridView size to fit content
+                DataGridViewHelper.AdjustDataGridViewSizeToFitColumns(dataGridView);
             }
             else
             {
