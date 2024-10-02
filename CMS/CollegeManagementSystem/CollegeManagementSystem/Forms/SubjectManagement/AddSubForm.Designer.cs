@@ -103,6 +103,8 @@
             Controls.Add(label3);
             Controls.Add(button1);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "AddSubForm";
             Text = "AddSubForm";
             Load += AddSubForm_Load;

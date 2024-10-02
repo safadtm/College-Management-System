@@ -81,6 +81,8 @@
             Controls.Add(txtDepartmentName);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "AddDeptForm";
             Text = "Add Deptartment Form";
             ResumeLayout(false);

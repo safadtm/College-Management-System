@@ -146,7 +146,9 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(2);
+            MinimizeBox = false;
             Name = "studentloginform";
             Text = "studentloginform";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

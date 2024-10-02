@@ -158,6 +158,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MinimizeBox = false;
             Name = "StudentProfileForm";
             Text = "StudentProfileForm";
             Load += StudentProfileForm_Load;

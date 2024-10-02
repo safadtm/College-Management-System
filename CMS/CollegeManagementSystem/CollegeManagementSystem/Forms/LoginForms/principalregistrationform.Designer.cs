@@ -369,7 +369,9 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(2);
+            MinimizeBox = false;
             Name = "principalregistrationform";
             Text = "Principal Registration Form";
             Load += principalregistrationform_Load;

@@ -47,7 +47,7 @@
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(229, 30);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(58, 75);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -95,7 +95,7 @@
             // 
             txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtUsername.Location = new Point(389, 130);
-            txtUsername.Margin = new Padding(2, 2, 2, 2);
+            txtUsername.Margin = new Padding(2);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(200, 29);
             txtUsername.TabIndex = 4;
@@ -104,7 +104,7 @@
             // 
             txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtPassword.Location = new Point(389, 179);
-            txtPassword.Margin = new Padding(2, 2, 2, 2);
+            txtPassword.Margin = new Padding(2);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(200, 29);
             txtPassword.TabIndex = 5;
@@ -114,7 +114,7 @@
             checkBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             checkBox1.AutoSize = true;
             checkBox1.Location = new Point(389, 209);
-            checkBox1.Margin = new Padding(2, 2, 2, 2);
+            checkBox1.Margin = new Padding(2);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(138, 25);
             checkBox1.TabIndex = 6;
@@ -127,7 +127,7 @@
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button1.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Location = new Point(422, 247);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(105, 42);
             button1.TabIndex = 7;
@@ -178,7 +178,9 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Margin = new Padding(2, 2, 2, 2);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(2);
+            MaximizeBox = false;
             Name = "principalloginform";
             Text = "principalloginform";
             Load += principalloginform_Load;

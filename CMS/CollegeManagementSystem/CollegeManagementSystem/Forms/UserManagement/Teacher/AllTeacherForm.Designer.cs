@@ -59,6 +59,8 @@
             ClientSize = new Size(837, 476);
             Controls.Add(label1);
             Controls.Add(dataGridViewTeachers);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MinimizeBox = false;
             Name = "AllTeacherForm";
             Text = "AllTeacherForm";
             Load += AllTeacherForm_Load;

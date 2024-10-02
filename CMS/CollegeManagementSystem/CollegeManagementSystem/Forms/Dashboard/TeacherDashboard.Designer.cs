@@ -273,7 +273,9 @@
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(2);
+            MaximizeBox = false;
             Name = "TeacherDashboard";
             Text = "Teacher Dashboard";
             Load += TeacherDashboard_Load;

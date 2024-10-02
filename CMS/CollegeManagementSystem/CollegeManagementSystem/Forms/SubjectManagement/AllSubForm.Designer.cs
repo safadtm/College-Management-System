@@ -59,6 +59,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
             Controls.Add(dataGridViewSubjects);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MinimizeBox = false;
             Name = "AllSubForm";
             Text = "AllSubForm";
             Load += AllSubForm_Load;

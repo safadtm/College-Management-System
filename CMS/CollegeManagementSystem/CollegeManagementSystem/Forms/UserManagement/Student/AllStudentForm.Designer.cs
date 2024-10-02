@@ -59,6 +59,8 @@
             ClientSize = new Size(800, 514);
             Controls.Add(label1);
             Controls.Add(dataGridViewStudents);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MinimizeBox = false;
             Name = "AllStudentForm";
             Text = "AllStudentForm";
             Load += AllStudentForm_Load;

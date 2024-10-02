@@ -36,6 +36,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(800, 450);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "AllGradesForm";
             Text = "AllGradesForm";
             ResumeLayout(false);

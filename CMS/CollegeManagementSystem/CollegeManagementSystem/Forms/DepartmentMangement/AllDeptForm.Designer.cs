@@ -59,6 +59,8 @@
             ClientSize = new Size(800, 464);
             Controls.Add(label1);
             Controls.Add(dataGridViewDepartments);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "AllDeptForm";
             Text = "AllDeptForm";
             Load += AllDeptForm_Load;

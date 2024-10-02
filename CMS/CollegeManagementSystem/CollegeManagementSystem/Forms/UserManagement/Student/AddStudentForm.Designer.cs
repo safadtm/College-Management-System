@@ -357,6 +357,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "AddStudentForm";
             Text = "AddStudentForm";
             Load += AddStudentForm_Load;

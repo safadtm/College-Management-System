@@ -139,14 +139,14 @@
             // addCourseToolStripMenuItem
             // 
             addCourseToolStripMenuItem.Name = "addCourseToolStripMenuItem";
-            addCourseToolStripMenuItem.Size = new Size(180, 26);
+            addCourseToolStripMenuItem.Size = new Size(163, 26);
             addCourseToolStripMenuItem.Text = "Add Subject";
             addCourseToolStripMenuItem.Click += addCourseToolStripMenuItem_Click;
             // 
             // allCoursesToolStripMenuItem
             // 
             allCoursesToolStripMenuItem.Name = "allCoursesToolStripMenuItem";
-            allCoursesToolStripMenuItem.Size = new Size(180, 26);
+            allCoursesToolStripMenuItem.Size = new Size(163, 26);
             allCoursesToolStripMenuItem.Text = "All Subjects";
             allCoursesToolStripMenuItem.Click += allCoursesToolStripMenuItem_Click;
             // 
@@ -249,8 +249,10 @@
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MainMenuStrip = menuStrip1;
             Margin = new Padding(2);
+            MaximizeBox = false;
             Name = "PrincipalDashboard";
             Text = "Principal Dashboard";
             Load += PrincipalDashboard_Load;

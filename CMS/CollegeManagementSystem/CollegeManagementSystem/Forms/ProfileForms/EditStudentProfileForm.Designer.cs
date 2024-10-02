@@ -271,6 +271,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MinimizeBox = false;
             Name = "EditStudentProfileForm";
             Text = "Edit Student Profile";
             Load += EditStudentProfileForm_Load;

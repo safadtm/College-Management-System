@@ -296,6 +296,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "EditPrincipalProfileForm";
             Text = "Edit Principal Profile";
             Load += EditPrincipalProfileForm_Load;

@@ -170,6 +170,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "PrincipalProfileForm";
             Text = "Principal Profile Form";
             Load += PrincipalProfileForm_Load;
