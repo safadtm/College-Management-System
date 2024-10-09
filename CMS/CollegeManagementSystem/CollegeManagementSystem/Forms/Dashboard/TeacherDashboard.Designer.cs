@@ -43,7 +43,6 @@
             timetableToolStripMenuItem = new ToolStripMenuItem();
             addTimetableToolStripMenuItem = new ToolStripMenuItem();
             viewTimetableToolStripMenuItem = new ToolStripMenuItem();
-            editTimetableToolStripMenuItem = new ToolStripMenuItem();
             profileToolStripMenuItem = new ToolStripMenuItem();
             viewProfileToolStripMenuItem = new ToolStripMenuItem();
             ediToolStripMenuItem = new ToolStripMenuItem();
@@ -148,7 +147,7 @@
             // 
             // timetableToolStripMenuItem
             // 
-            timetableToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addTimetableToolStripMenuItem, viewTimetableToolStripMenuItem, editTimetableToolStripMenuItem });
+            timetableToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addTimetableToolStripMenuItem, viewTimetableToolStripMenuItem });
             timetableToolStripMenuItem.Name = "timetableToolStripMenuItem";
             timetableToolStripMenuItem.Size = new Size(90, 25);
             timetableToolStripMenuItem.Text = "Timetable";
@@ -166,13 +165,6 @@
             viewTimetableToolStripMenuItem.Size = new Size(186, 26);
             viewTimetableToolStripMenuItem.Text = "View Timetable";
             viewTimetableToolStripMenuItem.Click += viewTimetableToolStripMenuItem_Click;
-            // 
-            // editTimetableToolStripMenuItem
-            // 
-            editTimetableToolStripMenuItem.Name = "editTimetableToolStripMenuItem";
-            editTimetableToolStripMenuItem.Size = new Size(186, 26);
-            editTimetableToolStripMenuItem.Text = "Edit Timetable";
-            editTimetableToolStripMenuItem.Click += editTimetableToolStripMenuItem_Click;
             // 
             // profileToolStripMenuItem
             // 
@@ -305,7 +297,6 @@
         private ToolStripMenuItem ediToolStripMenuItem;
         private ToolStripMenuItem timetableToolStripMenuItem;
         private ToolStripMenuItem viewTimetableToolStripMenuItem;
-        private ToolStripMenuItem editTimetableToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem1;
         private Label label1;
         private Panel panel1;

@@ -23,8 +23,10 @@ namespace CollegeManagementSystem.Forms.Dashboard
     {
         // Property to store the username
         public string Username { get; set; }
+        
         private TeacherController teacherController;
         public int deptID;
+        public int tchID;
 
         public TeacherDashboard()
         {
@@ -49,6 +51,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void TeacherDashboard_Load(object sender, EventArgs e)
         {
             Teacher teacher = teacherController.GetTeacherByUsername(Username);
+            tchID=teacher.TeacherID;
             deptID = teacher.DepartmentID;
          
 
@@ -177,7 +180,11 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void addTimetableToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // add timetable to particular department
-            using (AddTimeTableForm addTimeTableForm = new AddTimeTableForm())
+            using (AddTimeTableForm addTimeTableForm = new AddTimeTableForm()
+            {
+                DeptID = deptID,
+                TchID=tchID
+            })
             {
                 addTimeTableForm.ShowDialog();
             }
@@ -194,11 +201,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void editTimetableToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // edit timetable to particular department
-            using (EditTimeTableForm editTimeTableForm = new EditTimeTableForm())
-            {
-                editTimeTableForm.ShowDialog();
-            }
+           
         }
     }
 }
