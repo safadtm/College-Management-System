@@ -1034,8 +1034,125 @@ WHERE s.DepartmentID = @DepartmentID";
 
         // TEACHER ATTENDENCE SECTION ------------
         // ADD ATTENDENCE
+        public bool InsertAttendance(int studentId, int teacherId, DateTime date, string status)
+        {
+            string query = @"INSERT INTO Attendance (StudentID, TeacherID, Date, Status)
+                     VALUES (@StudentID, @TeacherID, @Date, @Status)";
 
-        // ALL ATTENDENCE
+            try
+            {
+                using (SqlConnection conn = GetConnection())  
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@StudentID", studentId);
+                        cmd.Parameters.AddWithValue("@TeacherID", teacherId);
+                        cmd.Parameters.AddWithValue("@Date", date);
+                        cmd.Parameters.AddWithValue("@Status", status);
+
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0; 
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error inserting attendance: " + ex.Message);
+            }
+        }
+
+
+        // ALL ATTENDENCE BY DEPARTMENT
+        public List<Attendance> GetTodaysAttendanceForTeacher(int teacherId)
+        {
+            string query = @"
+        SELECT S.StudentName, A.Date, A.Status
+        FROM Attendance A
+        INNER JOIN Student S ON A.StudentID = S.StudentID
+        WHERE A.TeacherID = @TeacherID
+        AND A.Date = @Today
+        ORDER BY A.Date ASC";
+
+            List<Attendance> attendanceList = new List<Attendance>();
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())  // Assuming GetConnection() is your function for DB connection
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@TeacherID", teacherId);
+                        cmd.Parameters.AddWithValue("@Today", DateTime.Today);
+
+                        conn.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Attendance attendance = new Attendance
+                                {
+                                    StudentName = reader["StudentName"].ToString(),
+                                    Date = Convert.ToDateTime(reader["Date"]),
+                                    Status = reader["Status"].ToString()
+                                };
+                                attendanceList.Add(attendance);
+                            }
+                        }
+                    }
+                }
+                return attendanceList;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error fetching today's attendance: " + ex.Message);
+            }
+        }
+
+
+        // STUDENT ATTENDENCE
+        public List<Attendance> GetStudentAttendanceHistory(int studentId)
+        {
+            string query = @"
+        SELECT A.Date, A.Status
+        FROM Attendance A
+        WHERE A.StudentID = @StudentID
+        ORDER BY A.Date ASC";
+
+            List<Attendance> attendanceList = new List<Attendance>();
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())  // Assuming GetConnection() is your function for DB connection
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@StudentID", studentId);
+
+                        conn.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Attendance attendance = new Attendance
+                                {
+                                    Date = Convert.ToDateTime(reader["Date"]),
+                                    Status = reader["Status"].ToString()
+                                };
+                                attendanceList.Add(attendance);
+                            }
+                        }
+                    }
+                }
+                return attendanceList;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error fetching student attendance history: " + ex.Message);
+            }
+        }
+
 
         // EXAM MARK ---------------
         // ADD EXAM MARK

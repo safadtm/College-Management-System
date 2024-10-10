@@ -18,5 +18,6 @@ namespace CollegeManagementSystem.Forms.AttendanceManagement
             InitializeComponent();
             this.BackColor = AppColors.NeutralColor;
         }
+
     }
 }
