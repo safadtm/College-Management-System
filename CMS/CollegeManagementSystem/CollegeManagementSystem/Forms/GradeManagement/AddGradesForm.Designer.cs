@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             dptLabel = new Label();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dptLabel
@@ -40,18 +42,28 @@
             dptLabel.TabIndex = 0;
             dptLabel.Text = "dptLabel";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(67, 81);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(556, 208);
+            dataGridView1.TabIndex = 1;
+            // 
             // AddGradesForm
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(724, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(dptLabel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MinimizeBox = false;
             Name = "AddGradesForm";
             Text = "AddGradesForm";
             Load += AddGradesForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -59,5 +71,6 @@
         #endregion
 
         private Label dptLabel;
+        private DataGridView dataGridView1;
     }
 }

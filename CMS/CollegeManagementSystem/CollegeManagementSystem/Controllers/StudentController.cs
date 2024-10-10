@@ -96,7 +96,8 @@ namespace CollegeManagementSystem.Controllers
                 dataGridView.Columns["StudentID"].HeaderText = "SI.NO";
                 dataGridView.Columns["StudentUserID"].HeaderText = "Admission ID";
                 dataGridView.Columns["StudentName"].HeaderText = "Name";
-                dataGridView.Columns["DepartmentName"].HeaderText = "Department";
+
+                dataGridView.Columns["DepartmentName"].Visible = false;
 
                 // Add Delete button column
                 DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn();

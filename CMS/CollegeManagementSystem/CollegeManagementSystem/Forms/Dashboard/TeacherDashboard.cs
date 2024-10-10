@@ -155,7 +155,8 @@ namespace CollegeManagementSystem.Forms.Dashboard
             // add mark by teachers class
             using (AddGradesForm addGradesForm = new AddGradesForm()
             {
-                TchID=tchID
+                TchID=tchID,
+                DptID=deptID
             })
             {
                 addGradesForm.ShowDialog();

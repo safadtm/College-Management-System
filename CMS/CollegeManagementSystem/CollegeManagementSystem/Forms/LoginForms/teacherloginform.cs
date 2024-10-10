@@ -19,6 +19,7 @@ namespace CollegeManagementSystem.Forms.LoginForms
         {
             InitializeComponent();
             this.BackColor = AppColors.NeutralColor;
+            txtPassword.UseSystemPasswordChar = true;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
