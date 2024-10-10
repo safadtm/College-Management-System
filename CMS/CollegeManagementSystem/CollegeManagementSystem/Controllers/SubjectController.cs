@@ -64,9 +64,9 @@ namespace CollegeManagementSystem.Controllers
         }
 
         // update subject table for teacherID s
-        public bool UpdateSubjectsForTeacher(int teacherID, List<int> subjectIDs)
+        public bool UpdateSubjectsForTeacher(int teacherID, int subjectID)
         {
-            return databaseHelper.UpdateSubjectsForTeacher(teacherID, subjectIDs);
+            return databaseHelper.UpdateSubjectForTeacher(teacherID, subjectID);
         }
 
 

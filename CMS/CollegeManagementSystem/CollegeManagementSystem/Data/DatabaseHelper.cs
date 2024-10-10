@@ -299,9 +299,8 @@ namespace CollegeManagementSystem.Data
         }
 
         // update subject table for teacherID s
-        public bool UpdateSubjectsForTeacher(int teacherID, List<int> subjectIDs)
+        public bool UpdateSubjectForTeacher(int teacherID, int subjectID)
         {
-            // Construct the query for updating subjects
             string query = "UPDATE Subject SET TeacherID = @TeacherID WHERE SubjectID = @SubjectID";
 
             try
@@ -310,17 +309,13 @@ namespace CollegeManagementSystem.Data
                 {
                     conn.Open();
 
-                    // Iterate over the list of subject IDs and update the TeacherID for each
-                    foreach (var subjectID in subjectIDs)
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        using (SqlCommand cmd = new SqlCommand(query, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@TeacherID", teacherID);
-                            cmd.Parameters.AddWithValue("@SubjectID", subjectID);
+                        cmd.Parameters.AddWithValue("@TeacherID", teacherID);
+                        cmd.Parameters.AddWithValue("@SubjectID", subjectID);
 
-
-                            cmd.ExecuteNonQuery();
-                        }
+                       
+                        cmd.ExecuteNonQuery();
                     }
 
                     return true;
@@ -328,7 +323,7 @@ namespace CollegeManagementSystem.Data
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error updating subjects with TeacherID: " + ex.Message);
+                Console.WriteLine("Error updating subject with TeacherID: " + ex.Message);
                 return false;
             }
         }
@@ -506,17 +501,16 @@ WHERE s.DepartmentID = @DepartmentID";
         public List<TeacherDetails> GetTeachersWithDetails()
         {
             string query = @"
-                SELECT DISTINCT
-                t.TeacherID, 
-                t.FullName AS TeacherName,
-                d.DeptName AS DepartmentName,
-                STRING_AGG(s.SubName, ', ') AS Subjects
-                FROM Teacher t
-                LEFT JOIN Department d ON t.DepartmentID = d.DepartmentID
-                LEFT JOIN Subject s ON t.TeacherID = s.TeacherID
-                GROUP BY t.TeacherID, t.FullName, d.DeptName
-                ORDER BY t.TeacherID;
-                ";
+        SELECT 
+            t.TeacherID, 
+            t.FullName AS TeacherName,
+            d.DeptName AS DepartmentName,
+            s.SubName AS Subject
+        FROM Teacher t
+        LEFT JOIN Department d ON t.DepartmentID = d.DepartmentID
+        LEFT JOIN Subject s ON t.TeacherID = s.TeacherID
+        ORDER BY t.TeacherID;
+    ";
 
             List<TeacherDetails> teacherDetailsList = new List<TeacherDetails>();
 
@@ -535,7 +529,7 @@ WHERE s.DepartmentID = @DepartmentID";
                                 TeacherID = Convert.ToInt32(reader["TeacherID"]),
                                 TeacherName = reader["TeacherName"].ToString(),
                                 DepartmentName = reader["DepartmentName"].ToString(),
-                                Subjects = reader["Subjects"].ToString(),
+                                Subject = reader["Subject"] != DBNull.Value ? reader["Subject"].ToString() : string.Empty,
                             });
                         }
                     }
@@ -549,7 +543,7 @@ WHERE s.DepartmentID = @DepartmentID";
             return teacherDetailsList;
         }
 
-        
+
         // Fetch teacher details by username
         public Teacher GetTeacherByUsername(string username)
         {
@@ -995,9 +989,132 @@ WHERE s.DepartmentID = @DepartmentID";
 
         // ALL ATTENDENCE
 
-        
+        // EXAM MARK ---------------
+        // ADD EXAM MARK
+        public bool InsertScore(int gradeValue, int examId, int studentId, int subjectId)
+        {
+            string query = @"INSERT INTO Grades (GradeValue, ExamID, StudentID, SubjectID)
+                     VALUES (@GradeValue, @ExamID, @StudentID, @SubjectID)";
 
-        
+            try
+            {
+                using (SqlConnection conn = GetConnection())  // Assuming GetConnection() is your function for DB connection
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@GradeValue", gradeValue);
+                        cmd.Parameters.AddWithValue("@ExamID", examId);
+                        cmd.Parameters.AddWithValue("@StudentID", studentId);
+                        cmd.Parameters.AddWithValue("@SubjectID", subjectId);
+
+                        conn.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        return rowsAffected > 0;  // Returns true if the insertion was successful
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error inserting grade: " + ex.Message);
+            }
+        }
+
+
+        // ALL EXAM MARK OF STUDENTS BY SUBJECT
+        public List<StudentMarksView> GetStudentMarksBySubjectID(int subjectID)
+        {
+            string query = @"
+        SELECT s.StudentID, s.FullName AS StudentName, g.GradeValue AS MarksObtained
+        FROM Student s
+        LEFT JOIN Grades g ON s.StudentID = g.StudentID AND g.SubjectID = @SubjectID
+        WHERE s.StudentID IN (
+            SELECT StudentID FROM Grades WHERE SubjectID = @SubjectID
+        )";
+
+            List<StudentMarksView> studentMarksList = new List<StudentMarksView>();
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@SubjectID", subjectID);
+
+                        conn.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                StudentMarksView studentMark = new StudentMarksView
+                                {
+                                    StudentID = reader.GetInt32(0),
+                                    StudentName = reader.GetString(1),
+                                    MarksObtained = reader.IsDBNull(2) ? (int?)null : reader.GetInt32(2)
+                                };
+                                studentMarksList.Add(studentMark);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error fetching student marks: " + ex.Message);
+            }
+
+            return studentMarksList;
+        }
+
+
+
+        // Particular student exam mark
+        public List<StudentMarksView> GetStudentMarksByStudentID(int studentID)
+        {
+            string query = @"
+        SELECT g.StudentID, sub.SubjectName, g.GradeValue AS MarksObtained
+        FROM Grades g
+        JOIN Subject sub ON g.SubjectID = sub.SubjectID
+        WHERE g.StudentID = @StudentID";
+
+            List<StudentMarksView> studentMarksList = new List<StudentMarksView>();
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@StudentID", studentID);
+
+                        conn.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                StudentMarksView studentMark = new StudentMarksView
+                                {
+                                    StudentID = reader.GetInt32(0),
+                                    SubjectName = reader.GetString(1), // Get the subject name
+                                    MarksObtained = reader.IsDBNull(2) ? (int?)null : reader.GetInt32(2),
+                                };
+                                studentMarksList.Add(studentMark);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error fetching student marks: " + ex.Message);
+            }
+
+            return studentMarksList;
+        }
+
+
+
     }
 }
 

@@ -28,7 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dptLabel = new Label();
             SuspendLayout();
+            // 
+            // dptLabel
+            // 
+            dptLabel.AutoSize = true;
+            dptLabel.Location = new Point(333, 24);
+            dptLabel.Name = "dptLabel";
+            dptLabel.Size = new Size(70, 21);
+            dptLabel.TabIndex = 0;
+            dptLabel.Text = "dptLabel";
             // 
             // AddGradesForm
             // 
@@ -36,13 +46,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(800, 450);
+            Controls.Add(dptLabel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MinimizeBox = false;
             Name = "AddGradesForm";
             Text = "AddGradesForm";
+            Load += AddGradesForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label dptLabel;
     }
 }

@@ -191,8 +191,8 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
                 return;
             }
 
-            // Collect selected subjects
-            List<int> selectedSubjectIds = new List<int>();
+            // Collect the selected subject
+            int selectedSubjectId = -1; 
             foreach (CheckBox subjectCheckBox in tableLayoutPanelSubjects.Controls.OfType<CheckBox>())
             {
                 if (subjectCheckBox.Checked)
@@ -200,7 +200,8 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
                     var subject = subjectCheckBox.Tag as Subject;
                     if (subject != null)
                     {
-                        selectedSubjectIds.Add(subject.SubjectID);
+                        selectedSubjectId = subject.SubjectID; 
+                        break; 
                     }
                 }
             }
@@ -215,10 +216,10 @@ namespace CollegeManagementSystem.Forms.UserManagement.Teacher
             if (teacherID > 0)
             {
                 // Update the subjects with the new teacher's ID
-                if (selectedSubjectIds.Any()) // Check if any subjects were selected
+                if (selectedSubjectId != -1) // Check if any subjects were selected
                 {
                     SubjectController subjectController = new SubjectController();
-                    bool updateSuccessful = subjectController.UpdateSubjectsForTeacher(teacherID, selectedSubjectIds);
+                    bool updateSuccessful = subjectController.UpdateSubjectsForTeacher(teacherID, selectedSubjectId);
 
                     if (updateSuccessful)
                     {

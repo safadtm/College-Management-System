@@ -11,7 +11,7 @@ namespace CollegeManagementSystem.Model
         public int TeacherID { get; set; }
         public string TeacherName { get; set; }
         public string DepartmentName { get; set; }
-        public string Subjects { get; set; }
+        public string Subject { get; set; }
       
     }
 }
