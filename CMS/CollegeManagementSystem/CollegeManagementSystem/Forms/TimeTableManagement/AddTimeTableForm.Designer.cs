@@ -34,9 +34,9 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(870, 522);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "AddTimeTableForm";
             Text = "AddTimeTableForm";

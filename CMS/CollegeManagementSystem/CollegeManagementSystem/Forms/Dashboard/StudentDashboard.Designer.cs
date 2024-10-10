@@ -60,7 +60,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(1142, 29);
+            menuStrip1.Size = new Size(601, 29);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -229,7 +229,7 @@
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
-            ClientSize = new Size(1142, 534);
+            ClientSize = new Size(601, 534);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(menuStrip1);

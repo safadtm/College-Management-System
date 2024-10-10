@@ -40,9 +40,6 @@
             addCourseToolStripMenuItem = new ToolStripMenuItem();
             allCoursesToolStripMenuItem = new ToolStripMenuItem();
             editGradesToolStripMenuItem = new ToolStripMenuItem();
-            timetableToolStripMenuItem = new ToolStripMenuItem();
-            addTimetableToolStripMenuItem = new ToolStripMenuItem();
-            viewTimetableToolStripMenuItem = new ToolStripMenuItem();
             profileToolStripMenuItem = new ToolStripMenuItem();
             viewProfileToolStripMenuItem = new ToolStripMenuItem();
             ediToolStripMenuItem = new ToolStripMenuItem();
@@ -60,11 +57,11 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, manageTeachersToolStripMenuItem, manageDepartmentsToolStripMenuItem, manageCoursesToolStripMenuItem, timetableToolStripMenuItem, profileToolStripMenuItem, exitToolStripMenuItem1 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, manageTeachersToolStripMenuItem, manageDepartmentsToolStripMenuItem, manageCoursesToolStripMenuItem, profileToolStripMenuItem, exitToolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(1142, 29);
+            menuStrip1.Size = new Size(552, 29);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -145,27 +142,6 @@
             editGradesToolStripMenuItem.Text = "Edit Grades";
             editGradesToolStripMenuItem.Click += editGradesToolStripMenuItem_Click;
             // 
-            // timetableToolStripMenuItem
-            // 
-            timetableToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addTimetableToolStripMenuItem, viewTimetableToolStripMenuItem });
-            timetableToolStripMenuItem.Name = "timetableToolStripMenuItem";
-            timetableToolStripMenuItem.Size = new Size(90, 25);
-            timetableToolStripMenuItem.Text = "Timetable";
-            // 
-            // addTimetableToolStripMenuItem
-            // 
-            addTimetableToolStripMenuItem.Name = "addTimetableToolStripMenuItem";
-            addTimetableToolStripMenuItem.Size = new Size(186, 26);
-            addTimetableToolStripMenuItem.Text = "Add Timetable";
-            addTimetableToolStripMenuItem.Click += addTimetableToolStripMenuItem_Click;
-            // 
-            // viewTimetableToolStripMenuItem
-            // 
-            viewTimetableToolStripMenuItem.Name = "viewTimetableToolStripMenuItem";
-            viewTimetableToolStripMenuItem.Size = new Size(186, 26);
-            viewTimetableToolStripMenuItem.Text = "View Timetable";
-            viewTimetableToolStripMenuItem.Click += viewTimetableToolStripMenuItem_Click;
-            // 
             // profileToolStripMenuItem
             // 
             profileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewProfileToolStripMenuItem, ediToolStripMenuItem });
@@ -176,14 +152,14 @@
             // viewProfileToolStripMenuItem
             // 
             viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            viewProfileToolStripMenuItem.Size = new Size(163, 26);
+            viewProfileToolStripMenuItem.Size = new Size(180, 26);
             viewProfileToolStripMenuItem.Text = "View Profile";
             viewProfileToolStripMenuItem.Click += viewProfileToolStripMenuItem_Click;
             // 
             // ediToolStripMenuItem
             // 
             ediToolStripMenuItem.Name = "ediToolStripMenuItem";
-            ediToolStripMenuItem.Size = new Size(163, 26);
+            ediToolStripMenuItem.Size = new Size(180, 26);
             ediToolStripMenuItem.Text = "Edit Profile";
             ediToolStripMenuItem.Click += ediToolStripMenuItem_Click;
             // 
@@ -261,7 +237,7 @@
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
-            ClientSize = new Size(1142, 534);
+            ClientSize = new Size(552, 534);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
@@ -295,8 +271,6 @@
         private ToolStripMenuItem profileToolStripMenuItem;
         private ToolStripMenuItem viewProfileToolStripMenuItem;
         private ToolStripMenuItem ediToolStripMenuItem;
-        private ToolStripMenuItem timetableToolStripMenuItem;
-        private ToolStripMenuItem viewTimetableToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem1;
         private Label label1;
         private Panel panel1;
@@ -305,6 +279,5 @@
         private Label label3;
         private Label label2;
         private ToolStripMenuItem editGradesToolStripMenuItem;
-        private ToolStripMenuItem addTimetableToolStripMenuItem;
     }
 }
