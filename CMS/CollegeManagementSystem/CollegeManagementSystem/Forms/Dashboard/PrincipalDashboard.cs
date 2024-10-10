@@ -54,15 +54,15 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            SplashScreenForm sp = new SplashScreenForm();
+            sp.Show();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            SplashScreenForm sp = new SplashScreenForm();
-            sp.Show();
+           
         }
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)

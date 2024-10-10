@@ -35,9 +35,6 @@
             weekwiseAttendenceToolStripMenuItem = new ToolStripMenuItem();
             coursewiseReportToolStripMenuItem = new ToolStripMenuItem();
             manageDepartmentsToolStripMenuItem = new ToolStripMenuItem();
-            internalExam1ToolStripMenuItem = new ToolStripMenuItem();
-            internalExam2ToolStripMenuItem = new ToolStripMenuItem();
-            modelExamToolStripMenuItem = new ToolStripMenuItem();
             mainExamToolStripMenuItem = new ToolStripMenuItem();
             profileToolStripMenuItem = new ToolStripMenuItem();
             viewProfileToolStripMenuItem = new ToolStripMenuItem();
@@ -101,37 +98,16 @@
             // 
             // manageDepartmentsToolStripMenuItem
             // 
-            manageDepartmentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { internalExam1ToolStripMenuItem, internalExam2ToolStripMenuItem, modelExamToolStripMenuItem, mainExamToolStripMenuItem });
+            manageDepartmentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mainExamToolStripMenuItem });
             manageDepartmentsToolStripMenuItem.Name = "manageDepartmentsToolStripMenuItem";
-            manageDepartmentsToolStripMenuItem.Size = new Size(71, 25);
-            manageDepartmentsToolStripMenuItem.Text = "Grades";
-            // 
-            // internalExam1ToolStripMenuItem
-            // 
-            internalExam1ToolStripMenuItem.Name = "internalExam1ToolStripMenuItem";
-            internalExam1ToolStripMenuItem.Size = new Size(187, 26);
-            internalExam1ToolStripMenuItem.Text = "Internal Exam 1";
-            internalExam1ToolStripMenuItem.Click += internalExam1ToolStripMenuItem_Click;
-            // 
-            // internalExam2ToolStripMenuItem
-            // 
-            internalExam2ToolStripMenuItem.Name = "internalExam2ToolStripMenuItem";
-            internalExam2ToolStripMenuItem.Size = new Size(187, 26);
-            internalExam2ToolStripMenuItem.Text = "Internal Exam 2";
-            internalExam2ToolStripMenuItem.Click += internalExam2ToolStripMenuItem_Click;
-            // 
-            // modelExamToolStripMenuItem
-            // 
-            modelExamToolStripMenuItem.Name = "modelExamToolStripMenuItem";
-            modelExamToolStripMenuItem.Size = new Size(187, 26);
-            modelExamToolStripMenuItem.Text = "Model Exam";
-            modelExamToolStripMenuItem.Click += modelExamToolStripMenuItem_Click;
+            manageDepartmentsToolStripMenuItem.Size = new Size(59, 25);
+            manageDepartmentsToolStripMenuItem.Text = "Exam";
             // 
             // mainExamToolStripMenuItem
             // 
             mainExamToolStripMenuItem.Name = "mainExamToolStripMenuItem";
-            mainExamToolStripMenuItem.Size = new Size(187, 26);
-            mainExamToolStripMenuItem.Text = "Main Exam";
+            mainExamToolStripMenuItem.Size = new Size(180, 26);
+            mainExamToolStripMenuItem.Text = "View Scores";
             mainExamToolStripMenuItem.Click += mainExamToolStripMenuItem_Click;
             // 
             // profileToolStripMenuItem
@@ -158,8 +134,8 @@
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(46, 25);
-            exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Size = new Size(71, 25);
+            exitToolStripMenuItem.Text = "Logout";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // label1
@@ -266,9 +242,6 @@
         private ToolStripMenuItem viewAttendenceToolStripMenuItem;
         private ToolStripMenuItem weekwiseAttendenceToolStripMenuItem;
         private ToolStripMenuItem coursewiseReportToolStripMenuItem;
-        private ToolStripMenuItem internalExam1ToolStripMenuItem;
-        private ToolStripMenuItem internalExam2ToolStripMenuItem;
-        private ToolStripMenuItem modelExamToolStripMenuItem;
         private ToolStripMenuItem mainExamToolStripMenuItem;
     }
 }

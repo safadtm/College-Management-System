@@ -45,7 +45,9 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            SplashScreenForm sp = new SplashScreenForm();
+            sp.Show();
         }
 
         private void TeacherDashboard_Load(object sender, EventArgs e)
@@ -68,9 +70,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            SplashScreenForm sp = new SplashScreenForm();
-            sp.Show();
+            
         }
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -151,7 +151,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void addCourseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // add grade by teachers class
+            // add mark by teachers class
             using (AddGradesForm addGradesForm = new AddGradesForm())
             {
                 addGradesForm.ShowDialog();
@@ -160,7 +160,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void allCoursesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // all grade by teachers class
+            // all mark by teachers class
 
             using (AllGradesForm allGradesForm = new AllGradesForm())
             {

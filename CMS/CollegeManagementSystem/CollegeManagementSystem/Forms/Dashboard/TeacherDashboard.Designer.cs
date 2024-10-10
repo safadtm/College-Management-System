@@ -39,7 +39,6 @@
             manageCoursesToolStripMenuItem = new ToolStripMenuItem();
             addCourseToolStripMenuItem = new ToolStripMenuItem();
             allCoursesToolStripMenuItem = new ToolStripMenuItem();
-            editGradesToolStripMenuItem = new ToolStripMenuItem();
             profileToolStripMenuItem = new ToolStripMenuItem();
             viewProfileToolStripMenuItem = new ToolStripMenuItem();
             ediToolStripMenuItem = new ToolStripMenuItem();
@@ -116,31 +115,24 @@
             // 
             // manageCoursesToolStripMenuItem
             // 
-            manageCoursesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addCourseToolStripMenuItem, allCoursesToolStripMenuItem, editGradesToolStripMenuItem });
+            manageCoursesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addCourseToolStripMenuItem, allCoursesToolStripMenuItem });
             manageCoursesToolStripMenuItem.Name = "manageCoursesToolStripMenuItem";
-            manageCoursesToolStripMenuItem.Size = new Size(71, 25);
-            manageCoursesToolStripMenuItem.Text = "Grades";
+            manageCoursesToolStripMenuItem.Size = new Size(59, 25);
+            manageCoursesToolStripMenuItem.Text = "Exam";
             // 
             // addCourseToolStripMenuItem
             // 
             addCourseToolStripMenuItem.Name = "addCourseToolStripMenuItem";
-            addCourseToolStripMenuItem.Size = new Size(161, 26);
-            addCourseToolStripMenuItem.Text = "Add Grades";
+            addCourseToolStripMenuItem.Size = new Size(180, 26);
+            addCourseToolStripMenuItem.Text = "Add Scores";
             addCourseToolStripMenuItem.Click += addCourseToolStripMenuItem_Click;
             // 
             // allCoursesToolStripMenuItem
             // 
             allCoursesToolStripMenuItem.Name = "allCoursesToolStripMenuItem";
-            allCoursesToolStripMenuItem.Size = new Size(161, 26);
-            allCoursesToolStripMenuItem.Text = "All Grades";
+            allCoursesToolStripMenuItem.Size = new Size(180, 26);
+            allCoursesToolStripMenuItem.Text = "All Scores";
             allCoursesToolStripMenuItem.Click += allCoursesToolStripMenuItem_Click;
-            // 
-            // editGradesToolStripMenuItem
-            // 
-            editGradesToolStripMenuItem.Name = "editGradesToolStripMenuItem";
-            editGradesToolStripMenuItem.Size = new Size(161, 26);
-            editGradesToolStripMenuItem.Text = "Edit Grades";
-            editGradesToolStripMenuItem.Click += editGradesToolStripMenuItem_Click;
             // 
             // profileToolStripMenuItem
             // 
@@ -152,22 +144,22 @@
             // viewProfileToolStripMenuItem
             // 
             viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            viewProfileToolStripMenuItem.Size = new Size(180, 26);
+            viewProfileToolStripMenuItem.Size = new Size(163, 26);
             viewProfileToolStripMenuItem.Text = "View Profile";
             viewProfileToolStripMenuItem.Click += viewProfileToolStripMenuItem_Click;
             // 
             // ediToolStripMenuItem
             // 
             ediToolStripMenuItem.Name = "ediToolStripMenuItem";
-            ediToolStripMenuItem.Size = new Size(180, 26);
+            ediToolStripMenuItem.Size = new Size(163, 26);
             ediToolStripMenuItem.Text = "Edit Profile";
             ediToolStripMenuItem.Click += ediToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem1
             // 
             exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            exitToolStripMenuItem1.Size = new Size(46, 25);
-            exitToolStripMenuItem1.Text = "Exit";
+            exitToolStripMenuItem1.Size = new Size(71, 25);
+            exitToolStripMenuItem1.Text = "Logout";
             exitToolStripMenuItem1.Click += exitToolStripMenuItem1_Click;
             // 
             // label1
@@ -278,6 +270,5 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private ToolStripMenuItem editGradesToolStripMenuItem;
     }
 }

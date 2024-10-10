@@ -174,8 +174,8 @@
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(46, 25);
-            exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Size = new Size(71, 25);
+            exitToolStripMenuItem.Text = "Logout";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // label1
