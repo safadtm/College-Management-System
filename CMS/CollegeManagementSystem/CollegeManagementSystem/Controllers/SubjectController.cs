@@ -12,7 +12,7 @@ namespace CollegeManagementSystem.Controllers
 {
     public class SubjectController
     {
-        DatabaseHelper databaseHelper = new DatabaseHelper();
+        DatabaseHelper databaseHelper = new();
 
         // add subject
         public bool AddSubject(string subjectName, int departmentID, int? teacherID = null)
@@ -31,7 +31,7 @@ namespace CollegeManagementSystem.Controllers
         {
             List<Subject> subjects = GetAllSubjects();
 
-            if (subjects != null && subjects.Any())
+            if (subjects != null && subjects.Count != 0)
             {
                 dataGridView.DataSource = subjects;
                 dataGridView.Columns["SubjectID"].HeaderText = "SI.NO";
@@ -69,6 +69,11 @@ namespace CollegeManagementSystem.Controllers
             return databaseHelper.UpdateSubjectForTeacher(teacherID, subjectID);
         }
 
+        // fetch subject according to teacher
+        public Subject GetSubjectByTeacherUsername(string username)
+        {
+            return databaseHelper.GetSubjectByTeacherUsername(username);
+        }
 
     }
 }

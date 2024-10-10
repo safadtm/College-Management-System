@@ -30,17 +30,20 @@
         {
             dptLabel = new Label();
             dataGridView1 = new DataGridView();
+            btnSbmt = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dptLabel
             // 
             dptLabel.AutoSize = true;
-            dptLabel.Location = new Point(333, 24);
+            dptLabel.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dptLabel.Location = new Point(142, 19);
             dptLabel.Name = "dptLabel";
-            dptLabel.Size = new Size(70, 21);
+            dptLabel.Size = new Size(97, 30);
             dptLabel.TabIndex = 0;
             dptLabel.Text = "dptLabel";
+            dptLabel.Click += dptLabel_Click;
             // 
             // dataGridView1
             // 
@@ -50,12 +53,23 @@
             dataGridView1.Size = new Size(556, 208);
             dataGridView1.TabIndex = 1;
             // 
+            // btnSbmt
+            // 
+            btnSbmt.Location = new Point(265, 380);
+            btnSbmt.Name = "btnSbmt";
+            btnSbmt.Size = new Size(101, 45);
+            btnSbmt.TabIndex = 2;
+            btnSbmt.Text = "Submit";
+            btnSbmt.UseVisualStyleBackColor = true;
+            btnSbmt.Click += btnSbmt_Click_1;
+            // 
             // AddGradesForm
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(724, 450);
+            Controls.Add(btnSbmt);
             Controls.Add(dataGridView1);
             Controls.Add(dptLabel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -72,5 +86,6 @@
 
         private Label dptLabel;
         private DataGridView dataGridView1;
+        private Button btnSbmt;
     }
 }

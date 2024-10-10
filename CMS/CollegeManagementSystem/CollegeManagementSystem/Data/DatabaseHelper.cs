@@ -24,27 +24,23 @@ namespace CollegeManagementSystem.Data
 
             try
             {
-                using (SqlConnection conn = GetConnection())
-                {
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@FullName", principal.FullName);
-                        cmd.Parameters.AddWithValue("@Email", principal.Email);
-                        cmd.Parameters.AddWithValue("@Phone", principal.Phone);
-                        cmd.Parameters.AddWithValue("@DOB", principal.DOB);
-                        cmd.Parameters.AddWithValue("@Gender", principal.Gender);
-                        cmd.Parameters.AddWithValue("@Address", principal.Address);
-                        cmd.Parameters.AddWithValue("@Joined", principal.Joined);
-                        cmd.Parameters.AddWithValue("@Experience", principal.Experience);
-                        cmd.Parameters.AddWithValue("@Username", principal.Username);
-                        cmd.Parameters.AddWithValue("@Password", principal.Password);
+                using SqlConnection conn = GetConnection();
+                using SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@FullName", principal.FullName);
+                cmd.Parameters.AddWithValue("@Email", principal.Email);
+                cmd.Parameters.AddWithValue("@Phone", principal.Phone);
+                cmd.Parameters.AddWithValue("@DOB", principal.DOB);
+                cmd.Parameters.AddWithValue("@Gender", principal.Gender);
+                cmd.Parameters.AddWithValue("@Address", principal.Address);
+                cmd.Parameters.AddWithValue("@Joined", principal.Joined);
+                cmd.Parameters.AddWithValue("@Experience", principal.Experience);
+                cmd.Parameters.AddWithValue("@Username", principal.Username);
+                cmd.Parameters.AddWithValue("@Password", principal.Password);
 
-                        conn.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
+                conn.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
 
-                        return rowsAffected > 0; // Return true if a row was inserted
-                    }
-                }
+                return rowsAffected > 0; // Return true if a row was inserted
             }
             catch (Exception ex)
             {
@@ -369,8 +365,6 @@ namespace CollegeManagementSystem.Data
             return subjects;
         }
 
-
-
         // fetch subjects according to department
         public List<Subject> GetSubjectsByDepartment(int departmentId)
         {
@@ -425,6 +419,60 @@ WHERE s.DepartmentID = @DepartmentID";
             }
             return subjects;
         }
+
+        // fetch subject according to teacher
+        public Subject GetSubjectByTeacherUsername(string username)
+        {
+            // Create the base query
+            string query = @"
+                SELECT TOP 1 s.SubjectID, s.SubName, d.DeptName, t.FullName
+                FROM Subject s
+                INNER JOIN Teacher t ON s.TeacherID = t.TeacherID
+                INNER JOIN Department d ON s.DepartmentID = d.DepartmentID
+                WHERE t.Username = @Username";
+
+            Subject subject = null;
+
+            try
+            {
+                using (SqlConnection conn = GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    // Add Username parameter
+                    cmd.Parameters.AddWithValue("@Username", username);
+
+                    // Log the final query and parameters (for debugging purposes)
+                    Console.WriteLine("Executing SQL Query: " + cmd.CommandText);
+                    foreach (SqlParameter param in cmd.Parameters)
+                    {
+                        Console.WriteLine($"Parameter Name: {param.ParameterName}, Value: {param.Value}");
+                    }
+
+                    conn.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            subject = new Subject
+                            {
+                                SubjectID = Convert.ToInt32(reader["SubjectID"]),
+                                SubjectName = reader["SubName"].ToString(),
+                                DepartmentName = reader["DeptName"] != DBNull.Value ? reader["DeptName"].ToString() : "Not assigned",
+                                TeacherName = reader["FullName"] != DBNull.Value ? reader["FullName"].ToString() : "Not assigned"
+                            };
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading subject: " + ex.Message);
+            }
+            return subject;
+        }
+
 
         // principal add teacher
         // Insert a new teacher
@@ -1066,7 +1114,6 @@ WHERE s.DepartmentID = @DepartmentID";
 
             return studentMarksList;
         }
-
 
 
         // Particular student exam mark

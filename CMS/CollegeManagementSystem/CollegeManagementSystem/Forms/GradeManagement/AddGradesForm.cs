@@ -15,9 +15,14 @@ namespace CollegeManagementSystem.Forms.GradeManagement
 {
     public partial class AddGradesForm : Form
     {
-        
+
         public int TchID { get; set; }
         public int DptID { get; set; }
+
+        public string username { get; set; }
+
+        public int SbjID;
+        public string subjectName;
 
         ScoreController scoreController = new ScoreController();
         StudentController studentController = new StudentController();
@@ -32,8 +37,12 @@ namespace CollegeManagementSystem.Forms.GradeManagement
 
         private void AddGradesForm_Load(object sender, EventArgs e)
         {
-            dptLabel.Text=DptID.ToString();
- 
+            Subject subject = subjectController.GetSubjectByTeacherUsername(username);
+            SbjID = subject.SubjectID;
+            subjectName = subject.SubjectName;
+
+            dptLabel.Text = "Enter the marks for the suject : " + subjectName;
+
             List<StudentDetails> students = studentController.GetDepartmentWiseStudentsWithDetails(DptID);
             if (students != null && students.Any())
             {
@@ -107,15 +116,21 @@ namespace CollegeManagementSystem.Forms.GradeManagement
         }
 
 
-        private void btnSave_Click(object sender, EventArgs e)
+        
+        private void dptLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSbmt_Click_1(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 int studentId = Convert.ToInt32(row.Cells["StudentID"].Value);
-                int examId = /* get the exam ID for this context */;
-                int subjectId = /* get the subject ID for this context */;
+                int examId = 4;
+                int subjectId = SbjID;
 
-                if (int.TryParse(row.Cells["Marks"].Value?.ToString(), out int marks))
+                if (int.TryParse(row.Cells["Scores"].Value?.ToString(), out int marks))
                 {
                     // Call the AddScore function to save the mark
                     bool result = scoreController.AddScore(marks, examId, studentId, subjectId);
@@ -129,6 +144,5 @@ namespace CollegeManagementSystem.Forms.GradeManagement
 
             MessageBox.Show("Marks saved successfully!");
         }
-
     }
 }

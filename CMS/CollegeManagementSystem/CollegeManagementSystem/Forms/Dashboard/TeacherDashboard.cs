@@ -156,7 +156,8 @@ namespace CollegeManagementSystem.Forms.Dashboard
             using (AddGradesForm addGradesForm = new AddGradesForm()
             {
                 TchID=tchID,
-                DptID=deptID
+                DptID=deptID,
+                username=Username
             })
             {
                 addGradesForm.ShowDialog();
@@ -167,7 +168,10 @@ namespace CollegeManagementSystem.Forms.Dashboard
         {
             // all mark by teachers class
 
-            using (AllGradesForm allGradesForm = new AllGradesForm())
+            using (AllGradesForm allGradesForm = new AllGradesForm()
+            {
+                username = Username
+            })
             {
                 allGradesForm.ShowDialog();
             }
