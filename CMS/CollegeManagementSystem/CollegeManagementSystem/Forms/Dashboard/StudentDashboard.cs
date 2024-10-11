@@ -22,6 +22,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
         public string Username { get; set; }
         string attendenceType;
         string examType;
+        public int stuID;
         private StudentController studentController;
 
         public StudentDashboard()
@@ -49,6 +50,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void StudentDashboard_Load(object sender, EventArgs e)
         {
             Student student = studentController.GetStudentByUsername(Username);
+            stuID=student.StudentID;
 
             if (!string.IsNullOrEmpty(Username))
             {
@@ -93,9 +95,13 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void viewAttendenceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // daily attendence page
-            attendenceType = "daily";
-            AllAttendenceForm allAttendenceForm = new AllAttendenceForm();
-            allAttendenceForm.Show();
+            using (StudentAttendenceView studentAttendenceView = new StudentAttendenceView()
+            {
+                StuID = stuID
+            })
+            {
+                studentAttendenceView.ShowDialog();
+            }
 
         }
 

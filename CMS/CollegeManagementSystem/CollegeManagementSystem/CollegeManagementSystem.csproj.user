@@ -7,6 +7,9 @@
     <Compile Update="Forms\AttendanceManagement\AllAttendenceForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\AttendanceManagement\StudentAttendenceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Dashboard\PrincipalDashboard.cs">
       <SubType>Form</SubType>
     </Compile>

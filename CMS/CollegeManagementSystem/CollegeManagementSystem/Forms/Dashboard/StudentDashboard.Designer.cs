@@ -32,7 +32,6 @@
             homeToolStripMenuItem = new ToolStripMenuItem();
             manageTeachersToolStripMenuItem = new ToolStripMenuItem();
             viewAttendenceToolStripMenuItem = new ToolStripMenuItem();
-            weekwiseAttendenceToolStripMenuItem = new ToolStripMenuItem();
             coursewiseReportToolStripMenuItem = new ToolStripMenuItem();
             manageDepartmentsToolStripMenuItem = new ToolStripMenuItem();
             mainExamToolStripMenuItem = new ToolStripMenuItem();
@@ -70,7 +69,7 @@
             // 
             // manageTeachersToolStripMenuItem
             // 
-            manageTeachersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewAttendenceToolStripMenuItem, weekwiseAttendenceToolStripMenuItem, coursewiseReportToolStripMenuItem });
+            manageTeachersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewAttendenceToolStripMenuItem, coursewiseReportToolStripMenuItem });
             manageTeachersToolStripMenuItem.Name = "manageTeachersToolStripMenuItem";
             manageTeachersToolStripMenuItem.Size = new Size(100, 25);
             manageTeachersToolStripMenuItem.Text = "Attendence";
@@ -81,13 +80,6 @@
             viewAttendenceToolStripMenuItem.Size = new Size(218, 26);
             viewAttendenceToolStripMenuItem.Text = "Daily Attendence";
             viewAttendenceToolStripMenuItem.Click += viewAttendenceToolStripMenuItem_Click;
-            // 
-            // weekwiseAttendenceToolStripMenuItem
-            // 
-            weekwiseAttendenceToolStripMenuItem.Name = "weekwiseAttendenceToolStripMenuItem";
-            weekwiseAttendenceToolStripMenuItem.Size = new Size(218, 26);
-            weekwiseAttendenceToolStripMenuItem.Text = "Week-wise Report";
-            weekwiseAttendenceToolStripMenuItem.Click += weekwiseAttendenceToolStripMenuItem_Click;
             // 
             // coursewiseReportToolStripMenuItem
             // 
@@ -106,7 +98,7 @@
             // mainExamToolStripMenuItem
             // 
             mainExamToolStripMenuItem.Name = "mainExamToolStripMenuItem";
-            mainExamToolStripMenuItem.Size = new Size(180, 26);
+            mainExamToolStripMenuItem.Size = new Size(164, 26);
             mainExamToolStripMenuItem.Text = "View Scores";
             mainExamToolStripMenuItem.Click += mainExamToolStripMenuItem_Click;
             // 
@@ -240,7 +232,6 @@
         private Label label3;
         private Label label2;
         private ToolStripMenuItem viewAttendenceToolStripMenuItem;
-        private ToolStripMenuItem weekwiseAttendenceToolStripMenuItem;
         private ToolStripMenuItem coursewiseReportToolStripMenuItem;
         private ToolStripMenuItem mainExamToolStripMenuItem;
     }

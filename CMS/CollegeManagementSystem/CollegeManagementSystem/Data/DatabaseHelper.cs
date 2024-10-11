@@ -883,7 +883,7 @@ WHERE s.DepartmentID = @DepartmentID";
         // Fetch student details by username
         public Student GetStudentByUsername(string username)
         {
-            string query = @"SELECT FullName, Email, Phone, DOB, Gender, Address, Joined 
+            string query = @"SELECT StudentID, FullName, Email, Phone, DOB, Gender, Address, Joined 
                              FROM Student WHERE Username = @Username";
 
             try
@@ -904,6 +904,7 @@ WHERE s.DepartmentID = @DepartmentID";
 
                                 student = new Student
                                 {
+                                    StudentID = Convert.ToInt32(reader["StudentID"]),
                                     FullName = reader["FullName"].ToString(),
                                     Email = reader["Email"].ToString(),
                                     Phone = reader["Phone"].ToString(),
