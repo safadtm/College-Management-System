@@ -1111,6 +1111,52 @@ WHERE s.DepartmentID = @DepartmentID";
             }
         }
 
+        // ALL ATTENDENCE BY DATE
+        public List<Attendance> GetAttendanceForTeacherByDate(int teacherId, string date)
+        {
+            string query = @"
+        SELECT S.FullName, A.Date, A.Status
+        FROM Attendance A
+        INNER JOIN Student S ON A.StudentID = S.StudentID
+        WHERE A.TeacherID = @TeacherID
+        AND A.Date = @Date
+        ORDER BY A.Date ASC";
+
+            List<Attendance> attendanceList = new List<Attendance>();
+
+            try
+            {
+                using (SqlConnection conn = GetConnection()) // Assuming GetConnection() is your function for DB connection
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@TeacherID", teacherId);
+                        cmd.Parameters.AddWithValue("@Date", date); // Pass the date string
+
+                        conn.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Attendance attendance = new Attendance
+                                {
+                                    StudentName = reader["FullName"].ToString(),
+                                    Date = Convert.ToDateTime(reader["Date"]),
+                                    Status = reader["Status"].ToString()
+                                };
+                                attendanceList.Add(attendance);
+                            }
+                        }
+                    }
+                }
+                return attendanceList;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error fetching attendance for the specified date: " + ex.Message);
+            }
+        }
+
 
         // STUDENT ATTENDENCE
         public List<Attendance> GetStudentAttendanceHistory(int studentId)

@@ -18,6 +18,13 @@ namespace CollegeManagementSystem.Controllers
             return databaseHelper.InsertAttendance(studentId, teacherId, date, status);
         }
 
+        // attendence according to the date
+        public List<Attendance> GetTodaysAttendanceByDate(int teacherId,string date)
+        {
+            return databaseHelper.GetAttendanceForTeacherByDate(teacherId,date);
+        }
+
+
         // teacher view attendence
         public List<Attendance> GetTodaysAttendanceForTeacher(int teacherId)
         {

@@ -28,21 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dataGridView1 = new DataGridView();
+            dptLabel = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(63, 83);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(441, 208);
+            dataGridView1.TabIndex = 5;
+            // 
+            // dptLabel
+            // 
+            dptLabel.AutoSize = true;
+            dptLabel.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dptLabel.Location = new Point(112, 29);
+            dptLabel.Name = "dptLabel";
+            dptLabel.Size = new Size(97, 30);
+            dptLabel.TabIndex = 4;
+            dptLabel.Text = "dptLabel";
             // 
             // AllAttendenceForm
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(601, 450);
+            Controls.Add(dataGridView1);
+            Controls.Add(dptLabel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "AllAttendenceForm";
             Text = "ViewAttendence";
+            Load += AllAttendenceForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
+        private Label dptLabel;
     }
 }

@@ -37,7 +37,7 @@ namespace CollegeManagementSystem.Forms.AttendanceManagement
         private void AddAttendenceForm_Load(object sender, EventArgs e)
         {
             date = DateTime.Now.ToString("dd/MM/yyyy");
-            label1.Text = "Enter the attendence today :" + DateTime.Now.ToString("dd/MM/yyyy");
+            label1.Text = "Enter the attendence today :" + date;
 
             List<StudentDetails> students = studentController.GetDepartmentWiseStudentsWithDetails(DptID);
             if (students != null && students.Count != 0)

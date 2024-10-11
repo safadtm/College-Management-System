@@ -143,7 +143,10 @@ namespace CollegeManagementSystem.Forms.Dashboard
         {
             // all attendence by teachers class
 
-            using (AllAttendenceForm allAttendenceForm = new AllAttendenceForm())
+            using (AllAttendenceForm allAttendenceForm = new AllAttendenceForm()
+            {
+                TchID = tchID
+            })
             {
                 allAttendenceForm.ShowDialog();
             }
