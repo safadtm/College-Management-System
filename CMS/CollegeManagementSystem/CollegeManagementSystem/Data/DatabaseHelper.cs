@@ -1285,7 +1285,7 @@ WHERE s.DepartmentID = @DepartmentID";
         public List<StudentMarksView> GetStudentMarksByStudentID(int studentID)
         {
             string query = @"
-        SELECT g.StudentID, sub.SubjectName, g.GradeValue AS MarksObtained
+        SELECT g.StudentID, sub.SubName, g.GradeValue AS MarksObtained
         FROM Grades g
         JOIN Subject sub ON g.SubjectID = sub.SubjectID
         WHERE g.StudentID = @StudentID";
@@ -1308,7 +1308,7 @@ WHERE s.DepartmentID = @DepartmentID";
                                 StudentMarksView studentMark = new StudentMarksView
                                 {
                                     StudentID = reader.GetInt32(0),
-                                    SubjectName = reader.GetString(1), // Get the subject name
+                                    SubjectName = reader.GetString(1), 
                                     MarksObtained = reader.IsDBNull(2) ? (int?)null : reader.GetInt32(2),
                                 };
                                 studentMarksList.Add(studentMark);

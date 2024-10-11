@@ -105,52 +105,16 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         }
 
-        private void weekwiseAttendenceToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // week wise report
-            attendenceType = "week";
-            AllAttendenceForm allAttendenceForm = new AllAttendenceForm();
-            allAttendenceForm.Show();
-        }
-
-        private void coursewiseReportToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // course wise report
-            attendenceType = "course";
-            AllAttendenceForm allAttendenceForm = new AllAttendenceForm();
-            allAttendenceForm.Show();
-        }
-
-        private void internalExam1ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // internal exam 1
-            examType = "internal1";
-            AllGradesForm allGradesForm = new AllGradesForm();
-            allGradesForm.Show();
-        }
-
-        private void internalExam2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // internal exam 2
-            examType = "internal2";
-            AllGradesForm allGradesForm = new AllGradesForm();
-            allGradesForm.Show();
-        }
-
-        private void modelExamToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // model exam
-            examType = "model";
-            AllGradesForm allGradesForm = new AllGradesForm();
-            allGradesForm.Show();
-        }
-
         private void mainExamToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // main exam
-            examType = "main";
-            AllGradesForm allGradesForm = new AllGradesForm();
-            allGradesForm.Show();
+            using (StudentScoreView studentScoreView= new()
+            {
+                StuID = stuID,
+                Username=Username
+            })
+            {
+                studentScoreView.ShowDialog();
+            }
         }
     }
 }

@@ -30,9 +30,6 @@
         {
             menuStrip1 = new MenuStrip();
             homeToolStripMenuItem = new ToolStripMenuItem();
-            manageTeachersToolStripMenuItem = new ToolStripMenuItem();
-            viewAttendenceToolStripMenuItem = new ToolStripMenuItem();
-            coursewiseReportToolStripMenuItem = new ToolStripMenuItem();
             manageDepartmentsToolStripMenuItem = new ToolStripMenuItem();
             mainExamToolStripMenuItem = new ToolStripMenuItem();
             profileToolStripMenuItem = new ToolStripMenuItem();
@@ -45,6 +42,8 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            viewAttendenceToolStripMenuItem = new ToolStripMenuItem();
+            manageTeachersToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -67,27 +66,6 @@
             homeToolStripMenuItem.Text = "Home";
             homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
             // 
-            // manageTeachersToolStripMenuItem
-            // 
-            manageTeachersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewAttendenceToolStripMenuItem, coursewiseReportToolStripMenuItem });
-            manageTeachersToolStripMenuItem.Name = "manageTeachersToolStripMenuItem";
-            manageTeachersToolStripMenuItem.Size = new Size(100, 25);
-            manageTeachersToolStripMenuItem.Text = "Attendence";
-            // 
-            // viewAttendenceToolStripMenuItem
-            // 
-            viewAttendenceToolStripMenuItem.Name = "viewAttendenceToolStripMenuItem";
-            viewAttendenceToolStripMenuItem.Size = new Size(218, 26);
-            viewAttendenceToolStripMenuItem.Text = "Daily Attendence";
-            viewAttendenceToolStripMenuItem.Click += viewAttendenceToolStripMenuItem_Click;
-            // 
-            // coursewiseReportToolStripMenuItem
-            // 
-            coursewiseReportToolStripMenuItem.Name = "coursewiseReportToolStripMenuItem";
-            coursewiseReportToolStripMenuItem.Size = new Size(218, 26);
-            coursewiseReportToolStripMenuItem.Text = "Course Wise Report";
-            coursewiseReportToolStripMenuItem.Click += coursewiseReportToolStripMenuItem_Click;
-            // 
             // manageDepartmentsToolStripMenuItem
             // 
             manageDepartmentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mainExamToolStripMenuItem });
@@ -98,7 +76,7 @@
             // mainExamToolStripMenuItem
             // 
             mainExamToolStripMenuItem.Name = "mainExamToolStripMenuItem";
-            mainExamToolStripMenuItem.Size = new Size(164, 26);
+            mainExamToolStripMenuItem.Size = new Size(180, 26);
             mainExamToolStripMenuItem.Text = "View Scores";
             mainExamToolStripMenuItem.Click += mainExamToolStripMenuItem_Click;
             // 
@@ -192,6 +170,20 @@
             label2.TabIndex = 0;
             label2.Text = "Total Teachers :";
             // 
+            // viewAttendenceToolStripMenuItem
+            // 
+            viewAttendenceToolStripMenuItem.Name = "viewAttendenceToolStripMenuItem";
+            viewAttendenceToolStripMenuItem.Size = new Size(197, 26);
+            viewAttendenceToolStripMenuItem.Text = "Daily Attendence";
+            viewAttendenceToolStripMenuItem.Click += viewAttendenceToolStripMenuItem_Click;
+            // 
+            // manageTeachersToolStripMenuItem
+            // 
+            manageTeachersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewAttendenceToolStripMenuItem });
+            manageTeachersToolStripMenuItem.Name = "manageTeachersToolStripMenuItem";
+            manageTeachersToolStripMenuItem.Size = new Size(100, 25);
+            manageTeachersToolStripMenuItem.Text = "Attendence";
+            // 
             // StudentDashboard
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -219,7 +211,6 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem homeToolStripMenuItem;
-        private ToolStripMenuItem manageTeachersToolStripMenuItem;
         private ToolStripMenuItem manageDepartmentsToolStripMenuItem;
         private ToolStripMenuItem profileToolStripMenuItem;
         private ToolStripMenuItem viewProfileToolStripMenuItem;
@@ -231,8 +222,8 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private ToolStripMenuItem viewAttendenceToolStripMenuItem;
-        private ToolStripMenuItem coursewiseReportToolStripMenuItem;
         private ToolStripMenuItem mainExamToolStripMenuItem;
+        private ToolStripMenuItem manageTeachersToolStripMenuItem;
+        private ToolStripMenuItem viewAttendenceToolStripMenuItem;
     }
 }
