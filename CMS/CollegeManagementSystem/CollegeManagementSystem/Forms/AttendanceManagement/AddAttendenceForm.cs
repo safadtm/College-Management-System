@@ -36,7 +36,6 @@ namespace CollegeManagementSystem.Forms.AttendanceManagement
 
         private void AddAttendenceForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(TchID.ToString());
             date = DateTime.Now.ToString("dd/MM/yyyy");
             label1.Text = "Enter the attendence today :" + DateTime.Now.ToString("dd/MM/yyyy");
 
@@ -63,6 +62,9 @@ namespace CollegeManagementSystem.Forms.AttendanceManagement
 
                 dataGridView1.Columns.Add(statusColumn);
 
+                dataGridView1.CellFormatting += new DataGridViewCellFormattingEventHandler(dataGridView1_CellFormatting);
+
+
                 dataGridView1.Columns["StudentUserID"].Width = 100; 
                 dataGridView1.Columns["StudentName"].Width = 200; 
                 
@@ -80,6 +82,11 @@ namespace CollegeManagementSystem.Forms.AttendanceManagement
                 MessageBox.Show("No students found.");
             }
 
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+           DataGridViewHelper.FormatAttendanceCell(dataGridView1, e, "Status");
         }
 
         public void AdjustDataGridViewHeight(DataGridView dataGridView)

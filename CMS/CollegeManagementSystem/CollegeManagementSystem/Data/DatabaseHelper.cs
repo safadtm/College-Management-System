@@ -595,7 +595,7 @@ WHERE s.DepartmentID = @DepartmentID";
         // Fetch teacher details by username
         public Teacher GetTeacherByUsername(string username)
         {
-            string query = @"SELECT FullName, Email, Phone, DOB, Gender, Address, Joined,DepartmentID
+            string query = @"SELECT TeacherID, FullName, Email, Phone, DOB, Gender, Address, Joined,DepartmentID
                              FROM Teacher WHERE Username = @Username";
 
             try

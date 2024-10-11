@@ -57,8 +57,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
             tchID=teacher.TeacherID;
             deptID = teacher.DepartmentID;
 
-            MessageBox.Show(tchID.ToString());
-
+           
             if (!string.IsNullOrEmpty(teacher.FullName))
             {
 

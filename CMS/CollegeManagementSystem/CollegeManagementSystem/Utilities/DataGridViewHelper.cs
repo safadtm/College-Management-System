@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CollegeManagementSystem.Utilities
 {
@@ -36,6 +37,30 @@ namespace CollegeManagementSystem.Utilities
 
             // Disable scrollbars
             dataGridView.ScrollBars = ScrollBars.None;
+        }
+
+        // Reusable CellFormatting function for attendance status
+        public static void FormatAttendanceCell(DataGridView dataGridView, DataGridViewCellFormattingEventArgs e, string statusColumnName)
+        {
+            // Check if we are in the specified "Status" column
+            if (dataGridView.Columns[e.ColumnIndex].Name == statusColumnName)
+            {
+                // Get the value of the cell
+                string statusValue = dataGridView.Rows[e.RowIndex].Cells[statusColumnName].Value?.ToString();
+
+                // Apply the appropriate color
+                if (statusValue == AttendanceStatus.Present)
+                {
+                    e.CellStyle.BackColor = AppColors.PresentColor;
+                    e.CellStyle.ForeColor = AppColors.NeutralColor;
+                }
+                else if (statusValue == AttendanceStatus.Absent)
+                {
+                    e.CellStyle.BackColor = AppColors.AbsentColor;
+                    e.CellStyle.ForeColor = AppColors.NeutralColor;
+                }
+            }
+
         }
     }
 }
