@@ -56,7 +56,8 @@ namespace CollegeManagementSystem.Forms.Dashboard
             Teacher teacher = teacherController.GetTeacherByUsername(Username);
             tchID=teacher.TeacherID;
             deptID = teacher.DepartmentID;
-            
+
+            MessageBox.Show(tchID.ToString());
 
             if (!string.IsNullOrEmpty(teacher.FullName))
             {
@@ -129,7 +130,11 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void addDepartmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // add attendence by teachers class
-            using (AddAttendenceForm addAttendenceForm = new AddAttendenceForm())
+            using (AddAttendenceForm addAttendenceForm = new AddAttendenceForm()
+            {
+                TchID = tchID,
+                DptID = deptID
+            })
             {
                 addAttendenceForm.ShowDialog();
             }
@@ -153,7 +158,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void addCourseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // add mark by teachers class
-            using (AddGradesForm addGradesForm = new AddGradesForm()
+            using (AddGradesForm addGradesForm = new()
             {
                 TchID=tchID,
                 DptID=deptID,

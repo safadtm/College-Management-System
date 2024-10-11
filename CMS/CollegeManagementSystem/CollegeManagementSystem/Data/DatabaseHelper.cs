@@ -616,6 +616,7 @@ WHERE s.DepartmentID = @DepartmentID";
                                 
                                 teacher = new Teacher
                                 {
+                                    TeacherID= Convert.ToInt32(reader["TeacherID"]),
                                     FullName = reader["FullName"].ToString(),
                                     Email = reader["Email"].ToString(),
                                     Phone = reader["Phone"].ToString(),
@@ -1034,7 +1035,7 @@ WHERE s.DepartmentID = @DepartmentID";
 
         // TEACHER ATTENDENCE SECTION ------------
         // ADD ATTENDENCE
-        public bool InsertAttendance(int studentId, int teacherId, DateTime date, string status)
+        public bool InsertAttendance(int studentId, int teacherId, string date, string status)
         {
             string query = @"INSERT INTO Attendance (StudentID, TeacherID, Date, Status)
                      VALUES (@StudentID, @TeacherID, @Date, @Status)";

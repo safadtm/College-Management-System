@@ -28,7 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
+            btnSbmt = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(157, 31);
+            label1.Name = "label1";
+            label1.Size = new Size(202, 21);
+            label1.TabIndex = 0;
+            label1.Text = "Enter the attendence today :";
+            label1.Click += label1_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(132, 111);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(396, 150);
+            dataGridView1.TabIndex = 1;
+            // 
+            // btnSbmt
+            // 
+            btnSbmt.Location = new Point(282, 380);
+            btnSbmt.Name = "btnSbmt";
+            btnSbmt.Size = new Size(101, 45);
+            btnSbmt.TabIndex = 3;
+            btnSbmt.Text = "Submit";
+            btnSbmt.UseVisualStyleBackColor = true;
+            btnSbmt.Click += btnSbmt_Click;
             // 
             // AddAttendenceForm
             // 
@@ -36,13 +68,23 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSbmt);
+            Controls.Add(dataGridView1);
+            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "AddAttendenceForm";
             Text = "AddAttendence";
+            Load += AddAttendenceForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private DataGridView dataGridView1;
+        private Button btnSbmt;
     }
 }

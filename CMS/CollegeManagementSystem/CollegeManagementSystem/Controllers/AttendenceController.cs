@@ -13,7 +13,7 @@ namespace CollegeManagementSystem.Controllers
         DatabaseHelper databaseHelper = new DatabaseHelper();
 
         // add attendence
-        public bool AddAttendance(int studentId, int teacherId, DateTime date, string status)
+        public bool AddAttendance(int studentId, int teacherId, string date, string status)
         {
             return databaseHelper.InsertAttendance(studentId, teacherId, date, status);
         }
