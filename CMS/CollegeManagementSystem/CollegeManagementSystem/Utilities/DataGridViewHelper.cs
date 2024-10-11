@@ -42,13 +42,10 @@ namespace CollegeManagementSystem.Utilities
         // Reusable CellFormatting function for attendance status
         public static void FormatAttendanceCell(DataGridView dataGridView, DataGridViewCellFormattingEventArgs e, string statusColumnName)
         {
-            // Check if we are in the specified "Status" column
             if (dataGridView.Columns[e.ColumnIndex].Name == statusColumnName)
             {
-                // Get the value of the cell
                 string statusValue = dataGridView.Rows[e.RowIndex].Cells[statusColumnName].Value?.ToString();
 
-                // Apply the appropriate color
                 if (statusValue == AttendanceStatus.Present)
                 {
                     e.CellStyle.BackColor = AppColors.PresentColor;
@@ -59,8 +56,13 @@ namespace CollegeManagementSystem.Utilities
                     e.CellStyle.BackColor = AppColors.AbsentColor;
                     e.CellStyle.ForeColor = AppColors.NeutralColor;
                 }
+                else
+                {
+                    // Default color when no value is selected
+                    e.CellStyle.BackColor = Color.White;
+                    e.CellStyle.ForeColor = Color.Black;
+                }
             }
-
         }
     }
 }

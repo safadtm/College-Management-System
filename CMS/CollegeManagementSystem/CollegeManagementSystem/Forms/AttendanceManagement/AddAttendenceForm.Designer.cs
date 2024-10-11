@@ -37,9 +37,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(157, 31);
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(132, 47);
             label1.Name = "label1";
-            label1.Size = new Size(202, 21);
+            label1.Size = new Size(286, 30);
             label1.TabIndex = 0;
             label1.Text = "Enter the attendence today :";
             label1.Click += label1_Click;
@@ -49,7 +50,7 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(132, 111);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(396, 150);
+            dataGridView1.Size = new Size(416, 150);
             dataGridView1.TabIndex = 1;
             // 
             // btnSbmt
@@ -67,7 +68,7 @@
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(705, 450);
             Controls.Add(btnSbmt);
             Controls.Add(dataGridView1);
             Controls.Add(label1);

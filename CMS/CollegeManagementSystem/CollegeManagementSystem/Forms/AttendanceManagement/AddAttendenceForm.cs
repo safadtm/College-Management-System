@@ -63,6 +63,9 @@ namespace CollegeManagementSystem.Forms.AttendanceManagement
                 dataGridView1.Columns.Add(statusColumn);
 
                 dataGridView1.CellFormatting += new DataGridViewCellFormattingEventHandler(dataGridView1_CellFormatting);
+                dataGridView1.CellValueChanged += new DataGridViewCellEventHandler(dataGridView1_CellValueChanged);
+                dataGridView1.CurrentCellDirtyStateChanged += new EventHandler(dataGridView1_CurrentCellDirtyStateChanged);
+                dataGridView1.EditingControlShowing += new DataGridViewEditingControlShowingEventHandler(dataGridView1_EditingControlShowing);
 
 
                 dataGridView1.Columns["StudentUserID"].Width = 100; 
@@ -83,6 +86,81 @@ namespace CollegeManagementSystem.Forms.AttendanceManagement
             }
 
         }
+
+        private void dataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (dataGridView1.CurrentCell.ColumnIndex == dataGridView1.Columns["Status"].Index && e.Control is ComboBox)
+            {
+                ComboBox comboBox = e.Control as ComboBox;
+                comboBox.DrawMode = DrawMode.OwnerDrawFixed;  // Enable custom drawing for items
+                comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+
+                // Handle the draw event for the combo box items
+                comboBox.DrawItem -= ComboBox_DrawItem;  // Remove previous handler (if any)
+                comboBox.DrawItem += ComboBox_DrawItem;  // Attach new handler
+            }
+        }
+
+        private void ComboBox_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            ComboBox comboBox = (ComboBox)sender;
+            if (e.Index < 0) return;
+
+            string status = comboBox.Items[e.Index].ToString();
+            Color backColor;
+            Color textColor = AppColors.NeutralColor;
+
+            if (status == AttendanceStatus.Present)
+            {
+                backColor = AppColors.PresentColor;
+            }
+            else if (status == AttendanceStatus.Absent)
+            {
+                backColor = AppColors.AbsentColor;
+            }
+            else
+            {
+                backColor = Color.White;
+                textColor = Color.Black;
+            }
+
+            // Set background and text color
+            e.Graphics.FillRectangle(new SolidBrush(backColor), e.Bounds);
+            e.Graphics.DrawString(status, e.Font, new SolidBrush(textColor), e.Bounds);
+            e.DrawFocusRectangle();
+        }
+
+        private void dataGridView1_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.IsCurrentCellDirty && dataGridView1.CurrentCell is DataGridViewComboBoxCell)
+            {
+                dataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dataGridView1.Columns[e.ColumnIndex].Name == "Status")
+            {
+                // Get the new status value
+                string status = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value?.ToString();
+
+                // Apply the color manually to the cell immediately
+                if (status == AttendanceStatus.Present)
+                {
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = AppColors.PresentColor;
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = AppColors.NeutralColor;
+                }
+                else if (status == AttendanceStatus.Absent)
+                {
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = AppColors.AbsentColor;
+                    dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = AppColors.NeutralColor;
+                }
+
+                dataGridView1.Invalidate(); // Force the grid to refresh and reapply styles
+            }
+        }
+
 
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -121,7 +199,7 @@ namespace CollegeManagementSystem.Forms.AttendanceManagement
                 }
             }
 
-            MessageBox.Show("Marks saved successfully!");
+            MessageBox.Show("Attendence submitted successfully!");
         }
     }
 }
