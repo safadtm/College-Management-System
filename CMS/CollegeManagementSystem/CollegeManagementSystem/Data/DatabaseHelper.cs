@@ -1238,12 +1238,20 @@ WHERE s.DepartmentID = @DepartmentID";
         public List<StudentMarksView> GetStudentMarksBySubjectID(int subjectID)
         {
             string query = @"
-        SELECT s.StudentID, s.FullName AS StudentName, g.GradeValue AS MarksObtained
-        FROM Student s
-        LEFT JOIN Grades g ON s.StudentID = g.StudentID AND g.SubjectID = @SubjectID
-        WHERE s.StudentID IN (
-            SELECT StudentID FROM Grades WHERE SubjectID = @SubjectID
-        )";
+            WITH RankedGrades AS (
+                SELECT 
+                    s.StudentID, 
+                    s.FullName AS StudentName, 
+                    g.GradeValue AS MarksObtained, 
+                    ROW_NUMBER() OVER (PARTITION BY s.StudentID ORDER BY g.GradeID DESC) AS RowNum
+                FROM Student s
+                JOIN Grades g ON s.StudentID = g.StudentID
+                WHERE g.SubjectID = @SubjectID
+            )
+            SELECT StudentID, StudentName, MarksObtained
+            FROM RankedGrades
+            WHERE RowNum = 1";
+
 
             List<StudentMarksView> studentMarksList = new List<StudentMarksView>();
 

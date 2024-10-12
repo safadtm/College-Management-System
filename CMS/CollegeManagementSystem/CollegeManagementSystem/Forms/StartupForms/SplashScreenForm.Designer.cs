@@ -56,7 +56,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(34, 40, 49);
-            label1.Location = new Point(298, 63);
+            label1.Location = new Point(206, 63);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(577, 36);
@@ -71,10 +71,10 @@
             panel2.Controls.Add(button5);
             panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(button6);
-            panel2.Location = new Point(353, 251);
-            panel2.Margin = new Padding(2, 2, 2, 2);
+            panel2.Location = new Point(252, 251);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(471, 80);
+            panel2.Size = new Size(478, 80);
             panel2.TabIndex = 6;
             // 
             // button5
@@ -83,9 +83,9 @@
             button5.Font = new Font("Segoe UI Emoji", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.FromArgb(0, 173, 181);
             button5.Location = new Point(73, 0);
-            button5.Margin = new Padding(2, 2, 2, 2);
+            button5.Margin = new Padding(2);
             button5.Name = "button5";
-            button5.Size = new Size(398, 80);
+            button5.Size = new Size(405, 80);
             button5.TabIndex = 4;
             button5.Text = "Log in as teacher";
             button5.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@
             pictureBox4.Dock = DockStyle.Left;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(0, 0);
-            pictureBox4.Margin = new Padding(2, 2, 2, 2);
+            pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(73, 80);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -110,9 +110,9 @@
             button6.Font = new Font("Segoe UI Emoji", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button6.ForeColor = Color.FromArgb(0, 173, 181);
             button6.Location = new Point(0, 0);
-            button6.Margin = new Padding(2, 2, 2, 2);
+            button6.Margin = new Padding(2);
             button6.Name = "button6";
-            button6.Size = new Size(471, 80);
+            button6.Size = new Size(478, 80);
             button6.TabIndex = 0;
             button6.Text = "Log in as principal";
             button6.UseVisualStyleBackColor = true;
@@ -124,10 +124,10 @@
             panel3.Controls.Add(button7);
             panel3.Controls.Add(pictureBox5);
             panel3.Controls.Add(button8);
-            panel3.Location = new Point(353, 355);
-            panel3.Margin = new Padding(2, 2, 2, 2);
+            panel3.Location = new Point(252, 355);
+            panel3.Margin = new Padding(2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(471, 87);
+            panel3.Size = new Size(478, 87);
             panel3.TabIndex = 7;
             // 
             // button7
@@ -136,9 +136,9 @@
             button7.Font = new Font("Segoe UI Emoji", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button7.ForeColor = Color.FromArgb(0, 173, 181);
             button7.Location = new Point(73, 0);
-            button7.Margin = new Padding(2, 2, 2, 2);
+            button7.Margin = new Padding(2);
             button7.Name = "button7";
-            button7.Size = new Size(398, 87);
+            button7.Size = new Size(405, 87);
             button7.TabIndex = 4;
             button7.Text = "Log in as student";
             button7.UseVisualStyleBackColor = true;
@@ -150,7 +150,7 @@
             pictureBox5.Dock = DockStyle.Left;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(0, 0);
-            pictureBox5.Margin = new Padding(2, 2, 2, 2);
+            pictureBox5.Margin = new Padding(2);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(73, 87);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -163,9 +163,9 @@
             button8.Font = new Font("Segoe UI Emoji", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button8.ForeColor = Color.FromArgb(0, 173, 181);
             button8.Location = new Point(0, 0);
-            button8.Margin = new Padding(2, 2, 2, 2);
+            button8.Margin = new Padding(2);
             button8.Name = "button8";
-            button8.Size = new Size(471, 87);
+            button8.Size = new Size(478, 87);
             button8.TabIndex = 0;
             button8.Text = "Log in as principal";
             button8.UseVisualStyleBackColor = true;
@@ -177,10 +177,10 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(button2);
-            panel1.Location = new Point(353, 154);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Location = new Point(252, 154);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(471, 80);
+            panel1.Size = new Size(478, 80);
             panel1.TabIndex = 8;
             // 
             // button1
@@ -189,9 +189,9 @@
             button1.Font = new Font("Segoe UI Emoji", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.FromArgb(0, 173, 181);
             button1.Location = new Point(73, 0);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(398, 80);
+            button1.Size = new Size(405, 80);
             button1.TabIndex = 4;
             button1.Text = "Log in as principal";
             button1.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             pictureBox1.Dock = DockStyle.Left;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(73, 80);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -216,9 +216,9 @@
             button2.Font = new Font("Segoe UI Emoji", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.FromArgb(0, 173, 181);
             button2.Location = new Point(0, 0);
-            button2.Margin = new Padding(2, 2, 2, 2);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(471, 80);
+            button2.Size = new Size(478, 80);
             button2.TabIndex = 0;
             button2.Text = "Log in as principal";
             button2.UseVisualStyleBackColor = true;
@@ -228,14 +228,14 @@
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
-            ClientSize = new Size(1142, 534);
+            ClientSize = new Size(1011, 534);
             Controls.Add(panel1);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(label1);
             ForeColor = Color.Cornsilk;
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "SplashScreenForm";
             Text = "Splash Screen";

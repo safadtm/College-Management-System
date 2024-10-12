@@ -8,6 +8,10 @@ namespace CollegeManagementSystem
         {
             InitializeComponent();
             this.BackColor = AppColors.NeutralColor;
+            pictureBox1.BackColor = AppColors.HighlightColor;
+            pictureBox4.BackColor = AppColors.SecondaryColor;
+            pictureBox5.BackColor = AppColors.AccentColor;
+
         }
 
         private void SplashScreenForm_Load(object sender, EventArgs e)

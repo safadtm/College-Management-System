@@ -143,6 +143,9 @@ namespace CollegeManagementSystem.Forms.GradeManagement
             }
 
             MessageBox.Show("Marks saved successfully!");
+            this.Hide();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }
