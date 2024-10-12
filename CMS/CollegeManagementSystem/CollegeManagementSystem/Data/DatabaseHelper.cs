@@ -1285,10 +1285,12 @@ WHERE s.DepartmentID = @DepartmentID";
         public List<StudentMarksView> GetStudentMarksByStudentID(int studentID)
         {
             string query = @"
-        SELECT g.StudentID, sub.SubName, g.GradeValue AS MarksObtained
+        SELECT g.StudentID, sub.SubName, MAX(g.GradeValue) AS MarksObtained
         FROM Grades g
         JOIN Subject sub ON g.SubjectID = sub.SubjectID
-        WHERE g.StudentID = @StudentID";
+        WHERE g.StudentID = @StudentID
+        GROUP BY g.StudentID, sub.SubName
+        ";
 
             List<StudentMarksView> studentMarksList = new List<StudentMarksView>();
 

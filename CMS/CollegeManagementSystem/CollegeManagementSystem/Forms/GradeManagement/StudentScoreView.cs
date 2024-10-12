@@ -27,27 +27,10 @@ namespace CollegeManagementSystem.Forms.GradeManagement
         {
             InitializeComponent();
             this.BackColor = AppColors.NeutralColor;
-            InitializeListView();
+          
         }
 
-        private void InitializeListView()
-        {
-            listView1 = new System.Windows.Forms.ListView
-            {
-                Size = new Size(350, 0), 
-                View = View.Details,
-                Font = new Font("Arial", 14, FontStyle.Bold), 
-                FullRowSelect = true,
-                GridLines = true,
-                Location = new Point(180, 125) 
-            };
-
-            // Add columns
-            listView1.Columns.Add("Subject", 200, HorizontalAlignment.Center);
-            listView1.Columns.Add("Marks", 200, HorizontalAlignment.Center);
-            Controls.Add(listView1); 
-        }
-
+        
         private void StudentScoreView_Load(object sender, EventArgs e)
         {
             Student  student= studentController.GetStudentByUsername(Username);
@@ -56,50 +39,76 @@ namespace CollegeManagementSystem.Forms.GradeManagement
 
             List<StudentMarksView> studentMarksViews = scoreController.GetMarksByStudent(StuID);
 
-            if (studentMarksViews == null || studentMarksViews.Count == 0)
+            // Create TableLayoutPanel
+            TableLayoutPanel tableLayoutPanel = new TableLayoutPanel
             {
-                listView1.Visible = false;
-                Label noDataLabel = new Label
-                {
-                    Text = "No scores found for this student.",
-                    AutoSize = true,
-                    Font = new Font("Arial", 12, FontStyle.Italic),
-                    Location = new Point(10, 10)
-                };
-                this.Controls.Add(noDataLabel);
-                return;
-            }
+                ColumnCount = 2,
+                AutoSize = true, 
+                CellBorderStyle = TableLayoutPanelCellBorderStyle.Single,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left,
+                Padding = new Padding(10), 
+                Location = new Point(170, 110)
+            };
 
-            // Add items to the ListView
+            // Set column widths using AutoSize
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F)); // Equal width for Subject column
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 200F)); // Equal width for Marks column
+
+            // Add header row
+            tableLayoutPanel.Controls.Add(new Label
+            {
+                Text = "Subject",
+                Font = new Font("Arial", 14, FontStyle.Bold), // Adjust font size as needed
+                TextAlign = ContentAlignment.MiddleCenter,
+                Dock = DockStyle.Fill,
+                BackColor = AppColors.HighlightColor,
+                MinimumSize = new Size(0, 35)
+            }, 0, 0); // Column 0, Row 0
+
+            tableLayoutPanel.Controls.Add(new Label
+            {
+                Text = "Marks",
+                Font = new Font("Arial", 14, FontStyle.Bold),
+                TextAlign = ContentAlignment.MiddleCenter,
+                Dock = DockStyle.Fill,
+                BackColor = AppColors.HighlightColor,
+                MinimumSize = new Size(0, 35)
+            }, 1, 0); // Column 1, Row 0
+
+            // Add rows for each student mark
+            int rowIndex = 1; // Start at row 1 (after header)
             foreach (var studentMark in studentMarksViews)
             {
-                ListViewItem item = new ListViewItem(studentMark.SubjectName)
+                // Subject
+                var subjectLabel = new Label
                 {
-                     
-                  Font = new Font("Arial", 14, FontStyle.Bold) 
-                
+                    Text = studentMark.SubjectName,
+                    Font = new Font("Arial", 14, FontStyle.Bold),
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Dock = DockStyle.Fill,
+                    BackColor=AppColors.SecondaryColor,
+                    MinimumSize = new Size(0, 50) // Minimum height for the label
                 };
+                tableLayoutPanel.Controls.Add(subjectLabel, 0, rowIndex);
 
-                item.SubItems.Add(studentMark.MarksObtained?.ToString() ?? "N/A");
-
-
-                if (studentMark.MarksObtained.HasValue && studentMark.MarksObtained.Value >= 50)
+                // Marks with background color
+                Label marksLabel = new()
                 {
-                    item.SubItems[1].BackColor = AppColors.PresentColor; 
-                }
-                else
-                {
-                    item.SubItems[1].BackColor = AppColors.AbsentColor;
-                }
+                    Text = studentMark.MarksObtained?.ToString() ?? "N/A",
+                    Font = new Font("Arial", 14, FontStyle.Bold),
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    Dock = DockStyle.Fill,
+                    BackColor = studentMark.MarksObtained >= 50 ? AppColors.PresentColor : AppColors.AbsentColor,
+                    MinimumSize = new Size(0, 50) // Minimum height for the label
+                };
+                tableLayoutPanel.Controls.Add(marksLabel, 1, rowIndex);
 
-                listView1.Items.Add(item);
+                rowIndex++;
             }
 
-            // Adjust the height of the ListView based on the number of items
-            int itemHeight = 100; // Approximate height of each row
-            listView1.Height = Math.Min(itemHeight * studentMarksViews.Count + 20, 200); // 20 for padding and max height limit
+            // Add the TableLayoutPanel to the form
+            this.Controls.Add(tableLayoutPanel);
 
-            listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
 
         }
 

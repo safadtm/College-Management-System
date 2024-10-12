@@ -34,10 +34,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(78, 46);
+            label1.Font = new Font("Segoe UI Emoji", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(47, 47);
             label1.Name = "label1";
-            label1.Size = new Size(277, 30);
+            label1.Size = new Size(303, 32);
             label1.TabIndex = 0;
             label1.Text = "Hey your exam socres here";
             // 
@@ -59,5 +59,6 @@
         #endregion
 
         private Label label1;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }
