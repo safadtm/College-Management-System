@@ -16,7 +16,7 @@ namespace CollegeManagementSystem.Forms.AttendanceManagement
     public partial class AllAttendenceForm : Form
     {
         public int TchID { get; set; }
-     
+
 
         string date;
 

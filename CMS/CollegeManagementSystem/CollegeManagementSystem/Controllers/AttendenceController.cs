@@ -19,7 +19,7 @@ namespace CollegeManagementSystem.Controllers
         }
 
         // attendence according to the date
-        public List<Attendance> GetTodaysAttendanceByDate(int teacherId,string date)
+        public List<Attendance> GetTodaysAttendanceByDate(int teacherId, string date)
         {
             return databaseHelper.GetAttendanceForTeacherByDate(teacherId,date);
         }

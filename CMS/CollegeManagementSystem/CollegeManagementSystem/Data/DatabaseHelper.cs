@@ -1043,19 +1043,29 @@ WHERE s.DepartmentID = @DepartmentID";
 
             try
             {
-                using (SqlConnection conn = GetConnection())  
+                using (SqlConnection conn = GetConnection())
                 {
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@StudentID", studentId);
                         cmd.Parameters.AddWithValue("@TeacherID", teacherId);
-                        cmd.Parameters.AddWithValue("@Date", date);
+
+                        // Convert the date string to DateTime
+                        if (DateTime.TryParse(date, out DateTime parsedDate))
+                        {
+                            cmd.Parameters.AddWithValue("@Date", parsedDate);
+                        }
+                        else
+                        {
+                            throw new Exception("Invalid date format.");
+                        }
+
                         cmd.Parameters.AddWithValue("@Status", status);
 
                         conn.Open();
                         int rowsAffected = cmd.ExecuteNonQuery();
 
-                        return rowsAffected > 0; 
+                        return rowsAffected > 0;
                     }
                 }
             }
@@ -1064,7 +1074,6 @@ WHERE s.DepartmentID = @DepartmentID";
                 throw new Exception("Error inserting attendance: " + ex.Message);
             }
         }
-
 
         // ALL ATTENDENCE BY DEPARTMENT
         public List<Attendance> GetTodaysAttendanceForTeacher(int teacherId)
@@ -1142,7 +1151,9 @@ WHERE s.DepartmentID = @DepartmentID";
                                 Attendance attendance = new Attendance
                                 {
                                     StudentName = reader["FullName"].ToString(),
-                                    Date = Convert.ToDateTime(reader["Date"]),
+                                    Date = reader["Date"] != DBNull.Value && DateTime.TryParse(reader["Date"].ToString(), out DateTime parsedDate)
+                                ? parsedDate
+                                : DateTime.MinValue,
                                     Status = reader["Status"].ToString()
                                 };
                                 attendanceList.Add(attendance);
