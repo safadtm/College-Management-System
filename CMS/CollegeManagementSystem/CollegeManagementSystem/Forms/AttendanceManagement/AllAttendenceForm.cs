@@ -18,9 +18,7 @@ namespace CollegeManagementSystem.Forms.AttendanceManagement
         public int TchID { get; set; }
 
 
-        string date;
-
-        AttendenceController attendenceController = new();
+       AttendenceController attendenceController = new();
         StudentController studentController = new();
 
 
@@ -51,10 +49,12 @@ namespace CollegeManagementSystem.Forms.AttendanceManagement
 
         private void AllAttendenceForm_Load(object sender, EventArgs e)
         {
-            date = DateTime.Now.ToString("dd/MM/yyyy");
-            dptLabel.Text = "Todays Attendence : " + date;
+            string displayDate = DateTime.Now.ToString("dd/MM/yyyy");
+            dptLabel.Text = "Today's Attendance: " + displayDate;
 
-            List<Attendance> attendances = attendenceController.GetTodaysAttendanceByDate(TchID,date);
+            string queryDate = DateTime.Now.ToString("yyyy-MM-dd");
+
+            List<Attendance> attendances = attendenceController.GetTodaysAttendanceByDate(TchID, queryDate);
             if (attendances != null && attendances.Count != 0)
             {
                 dataGridView1.DataSource = attendances;

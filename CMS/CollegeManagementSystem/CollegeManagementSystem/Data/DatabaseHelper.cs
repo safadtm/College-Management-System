@@ -1079,12 +1079,22 @@ WHERE s.DepartmentID = @DepartmentID";
         public List<Attendance> GetTodaysAttendanceForTeacher(int teacherId)
         {
             string query = @"
-        SELECT S.StudentName, A.Date, A.Status
+    WITH RankedAttendance AS (
+        SELECT 
+            S.StudentName, 
+            A.Date, 
+            A.Status,
+            ROW_NUMBER() OVER (PARTITION BY A.Date ORDER BY A.Date DESC) AS RowNum
         FROM Attendance A
         INNER JOIN Student S ON A.StudentID = S.StudentID
         WHERE A.TeacherID = @TeacherID
         AND A.Date = @Today
-        ORDER BY A.Date ASC";
+    )
+    SELECT StudentName, Date, Status 
+    FROM RankedAttendance
+    WHERE RowNum = 1
+    ORDER BY Date ASC";
+
 
             List<Attendance> attendanceList = new List<Attendance>();
 
@@ -1125,12 +1135,22 @@ WHERE s.DepartmentID = @DepartmentID";
         public List<Attendance> GetAttendanceForTeacherByDate(int teacherId, string date)
         {
             string query = @"
-        SELECT S.FullName, A.Date, A.Status
+    WITH RankedAttendance AS (
+        SELECT 
+            S.FullName, 
+            A.Date, 
+            A.Status,
+            ROW_NUMBER() OVER (PARTITION BY S.StudentID ORDER BY A.Date DESC) AS RowNum
         FROM Attendance A
         INNER JOIN Student S ON A.StudentID = S.StudentID
         WHERE A.TeacherID = @TeacherID
         AND A.Date = @Date
-        ORDER BY A.Date ASC";
+    )
+    SELECT FullName, Date, Status 
+    FROM RankedAttendance
+    WHERE RowNum = 1
+    ORDER BY Date ASC";
+
 
             List<Attendance> attendanceList = new List<Attendance>();
 
@@ -1174,10 +1194,20 @@ WHERE s.DepartmentID = @DepartmentID";
         public List<Attendance> GetStudentAttendanceHistory(int studentId)
         {
             string query = @"
-        SELECT A.Date, A.Status
+    WITH RankedAttendance AS (
+        SELECT 
+            A.Date, 
+            A.Status,
+            ROW_NUMBER() OVER (PARTITION BY A.Date ORDER BY A.Date DESC) AS RowNum
         FROM Attendance A
         WHERE A.StudentID = @StudentID
-        ORDER BY A.Date ASC";
+    )
+    SELECT Date, Status 
+    FROM RankedAttendance
+    WHERE RowNum = 1
+    ORDER BY Date DESC";
+
+
 
             List<Attendance> attendanceList = new List<Attendance>();
 
