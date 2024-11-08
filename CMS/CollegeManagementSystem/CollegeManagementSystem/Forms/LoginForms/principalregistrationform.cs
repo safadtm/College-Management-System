@@ -16,7 +16,7 @@ namespace CollegeManagementSystem.Forms.LoginForms
 {
     public partial class principalregistrationform : Form
     {
-        
+
         public principalregistrationform()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace CollegeManagementSystem.Forms.LoginForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             // Get data from form inputs
             string fullName = txtFullName.Text;
             string email = txtEmail.Text;
@@ -97,7 +97,7 @@ namespace CollegeManagementSystem.Forms.LoginForms
                 MessageBox.Show("Error registering principal.");
             }
 
-            
+
         }
 
         private void principalregistrationform_Load(object sender, EventArgs e)
@@ -112,12 +112,20 @@ namespace CollegeManagementSystem.Forms.LoginForms
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Exit Application","Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
