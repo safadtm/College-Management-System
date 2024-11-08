@@ -30,6 +30,8 @@
         {
             menuStrip1 = new MenuStrip();
             homeToolStripMenuItem = new ToolStripMenuItem();
+            manageTeachersToolStripMenuItem = new ToolStripMenuItem();
+            viewAttendenceToolStripMenuItem = new ToolStripMenuItem();
             manageDepartmentsToolStripMenuItem = new ToolStripMenuItem();
             mainExamToolStripMenuItem = new ToolStripMenuItem();
             profileToolStripMenuItem = new ToolStripMenuItem();
@@ -42,8 +44,6 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            viewAttendenceToolStripMenuItem = new ToolStripMenuItem();
-            manageTeachersToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -66,6 +66,20 @@
             homeToolStripMenuItem.Text = "Home";
             homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
             // 
+            // manageTeachersToolStripMenuItem
+            // 
+            manageTeachersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewAttendenceToolStripMenuItem });
+            manageTeachersToolStripMenuItem.Name = "manageTeachersToolStripMenuItem";
+            manageTeachersToolStripMenuItem.Size = new Size(100, 25);
+            manageTeachersToolStripMenuItem.Text = "Attendence";
+            // 
+            // viewAttendenceToolStripMenuItem
+            // 
+            viewAttendenceToolStripMenuItem.Name = "viewAttendenceToolStripMenuItem";
+            viewAttendenceToolStripMenuItem.Size = new Size(197, 26);
+            viewAttendenceToolStripMenuItem.Text = "Daily Attendence";
+            viewAttendenceToolStripMenuItem.Click += viewAttendenceToolStripMenuItem_Click;
+            // 
             // manageDepartmentsToolStripMenuItem
             // 
             manageDepartmentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mainExamToolStripMenuItem });
@@ -76,7 +90,7 @@
             // mainExamToolStripMenuItem
             // 
             mainExamToolStripMenuItem.Name = "mainExamToolStripMenuItem";
-            mainExamToolStripMenuItem.Size = new Size(180, 26);
+            mainExamToolStripMenuItem.Size = new Size(164, 26);
             mainExamToolStripMenuItem.Text = "View Scores";
             mainExamToolStripMenuItem.Click += mainExamToolStripMenuItem_Click;
             // 
@@ -170,20 +184,6 @@
             label2.TabIndex = 0;
             label2.Text = "Total Teachers :";
             // 
-            // viewAttendenceToolStripMenuItem
-            // 
-            viewAttendenceToolStripMenuItem.Name = "viewAttendenceToolStripMenuItem";
-            viewAttendenceToolStripMenuItem.Size = new Size(197, 26);
-            viewAttendenceToolStripMenuItem.Text = "Daily Attendence";
-            viewAttendenceToolStripMenuItem.Click += viewAttendenceToolStripMenuItem_Click;
-            // 
-            // manageTeachersToolStripMenuItem
-            // 
-            manageTeachersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewAttendenceToolStripMenuItem });
-            manageTeachersToolStripMenuItem.Name = "manageTeachersToolStripMenuItem";
-            manageTeachersToolStripMenuItem.Size = new Size(100, 25);
-            manageTeachersToolStripMenuItem.Text = "Attendence";
-            // 
             // StudentDashboard
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -197,6 +197,7 @@
             Margin = new Padding(2);
             MaximizeBox = false;
             Name = "StudentDashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Student Dashboard";
             Load += StudentDashboard_Load;
             menuStrip1.ResumeLayout(false);

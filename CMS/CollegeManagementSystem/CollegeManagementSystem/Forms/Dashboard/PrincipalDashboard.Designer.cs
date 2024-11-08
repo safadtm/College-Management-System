@@ -254,6 +254,7 @@
             Margin = new Padding(2);
             MaximizeBox = false;
             Name = "PrincipalDashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Principal Dashboard";
             Load += PrincipalDashboard_Load;
             menuStrip1.ResumeLayout(false);

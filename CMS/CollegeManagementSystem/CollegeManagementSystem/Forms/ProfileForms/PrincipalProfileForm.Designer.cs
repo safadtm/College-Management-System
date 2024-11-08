@@ -173,6 +173,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "PrincipalProfileForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Principal Profile Form";
             Load += PrincipalProfileForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -123,14 +123,14 @@
             // addCourseToolStripMenuItem
             // 
             addCourseToolStripMenuItem.Name = "addCourseToolStripMenuItem";
-            addCourseToolStripMenuItem.Size = new Size(180, 26);
+            addCourseToolStripMenuItem.Size = new Size(158, 26);
             addCourseToolStripMenuItem.Text = "Add Scores";
             addCourseToolStripMenuItem.Click += addCourseToolStripMenuItem_Click;
             // 
             // allCoursesToolStripMenuItem
             // 
             allCoursesToolStripMenuItem.Name = "allCoursesToolStripMenuItem";
-            allCoursesToolStripMenuItem.Size = new Size(180, 26);
+            allCoursesToolStripMenuItem.Size = new Size(158, 26);
             allCoursesToolStripMenuItem.Text = "All Scores";
             allCoursesToolStripMenuItem.Click += allCoursesToolStripMenuItem_Click;
             // 
@@ -237,6 +237,7 @@
             Margin = new Padding(2);
             MaximizeBox = false;
             Name = "TeacherDashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Teacher Dashboard";
             Load += TeacherDashboard_Load;
             menuStrip1.ResumeLayout(false);

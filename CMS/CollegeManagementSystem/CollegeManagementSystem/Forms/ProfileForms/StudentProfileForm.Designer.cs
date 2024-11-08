@@ -161,6 +161,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MinimizeBox = false;
             Name = "StudentProfileForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "StudentProfileForm";
             Load += StudentProfileForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

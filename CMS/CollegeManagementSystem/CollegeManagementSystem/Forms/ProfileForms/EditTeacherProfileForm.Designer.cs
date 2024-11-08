@@ -274,6 +274,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MinimizeBox = false;
             Name = "EditTeacherProfileForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Edit Teacher Profile";
             Load += EditTeacherProfileForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

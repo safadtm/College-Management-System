@@ -62,6 +62,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MinimizeBox = false;
             Name = "AllSubForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AllSubForm";
             Load += AllSubForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewSubjects).EndInit();

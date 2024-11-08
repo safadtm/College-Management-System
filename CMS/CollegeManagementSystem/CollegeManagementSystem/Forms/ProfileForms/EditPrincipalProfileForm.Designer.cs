@@ -299,6 +299,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "EditPrincipalProfileForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Edit Principal Profile";
             Load += EditPrincipalProfileForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

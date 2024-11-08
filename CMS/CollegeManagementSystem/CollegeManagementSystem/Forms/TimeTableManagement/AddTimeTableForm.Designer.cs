@@ -39,6 +39,7 @@
             ClientSize = new Size(870, 522);
             MaximizeBox = false;
             Name = "AddTimeTableForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddTimeTableForm";
             Load += AddTimeTableForm_Load;
             ResumeLayout(false);

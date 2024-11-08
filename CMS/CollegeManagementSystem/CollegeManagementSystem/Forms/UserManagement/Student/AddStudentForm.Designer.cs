@@ -360,6 +360,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "AddStudentForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddStudentForm";
             Load += AddStudentForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

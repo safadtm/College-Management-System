@@ -39,6 +39,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "EditGradesForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "EditGradesForm";
             ResumeLayout(false);
         }

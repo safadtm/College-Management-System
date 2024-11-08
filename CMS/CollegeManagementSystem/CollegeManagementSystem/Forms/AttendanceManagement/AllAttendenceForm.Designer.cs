@@ -62,6 +62,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "AllAttendenceForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ViewAttendence";
             Load += AllAttendenceForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

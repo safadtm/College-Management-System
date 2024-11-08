@@ -75,6 +75,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MinimizeBox = false;
             Name = "AddGradesForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddGradesForm";
             Load += AddGradesForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

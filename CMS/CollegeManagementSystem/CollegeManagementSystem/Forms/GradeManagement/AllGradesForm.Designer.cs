@@ -62,6 +62,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "AllGradesForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AllGradesForm";
             Load += AllGradesForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

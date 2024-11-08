@@ -389,6 +389,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MinimizeBox = false;
             Name = "AddTeacherForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddTeacherForm";
             Load += AddTeacherForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

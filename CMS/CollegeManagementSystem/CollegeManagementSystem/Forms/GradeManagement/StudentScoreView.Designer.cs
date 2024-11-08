@@ -50,6 +50,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "StudentScoreView";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "StudentScoreView";
             Load += StudentScoreView_Load;
             ResumeLayout(false);

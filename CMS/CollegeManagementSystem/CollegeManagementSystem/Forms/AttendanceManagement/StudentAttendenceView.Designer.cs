@@ -59,6 +59,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(dptLabel);
             Name = "StudentAttendenceView";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "StudentAttendenceView";
             Load += StudentAttendenceView_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

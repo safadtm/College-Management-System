@@ -62,6 +62,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MinimizeBox = false;
             Name = "AllStudentForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AllStudentForm";
             Load += AllStudentForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewStudents).EndInit();

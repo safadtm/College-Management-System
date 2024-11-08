@@ -39,6 +39,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "ViewTimeTableForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ViewTimeTableForm";
             ResumeLayout(false);
         }

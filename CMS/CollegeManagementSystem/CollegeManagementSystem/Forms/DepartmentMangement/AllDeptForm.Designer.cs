@@ -62,6 +62,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "AllDeptForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AllDeptForm";
             Load += AllDeptForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewDepartments).EndInit();

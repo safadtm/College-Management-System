@@ -274,6 +274,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MinimizeBox = false;
             Name = "EditStudentProfileForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Edit Student Profile";
             Load += EditStudentProfileForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

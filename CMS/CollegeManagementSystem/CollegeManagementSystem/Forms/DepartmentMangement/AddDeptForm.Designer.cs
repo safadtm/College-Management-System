@@ -84,6 +84,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "AddDeptForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Add Deptartment Form";
             ResumeLayout(false);
             PerformLayout();

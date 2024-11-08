@@ -106,6 +106,7 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             Name = "AddSubForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddSubForm";
             Load += AddSubForm_Load;
             ResumeLayout(false);
