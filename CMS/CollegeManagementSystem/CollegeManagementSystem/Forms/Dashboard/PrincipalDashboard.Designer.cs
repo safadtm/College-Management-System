@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalDashboard));
             menuStrip1 = new MenuStrip();
             homeToolStripMenuItem = new ToolStripMenuItem();
             manageTeachersToolStripMenuItem = new ToolStripMenuItem();
@@ -46,13 +47,13 @@
             ediToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
-            panel1 = new Panel();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
+            panel5 = new Panel();
+            pictureBox1 = new PictureBox();
+            pictureBox3 = new PictureBox();
             menuStrip1.SuspendLayout();
-            panel1.SuspendLayout();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -61,10 +62,10 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, manageTeachersToolStripMenuItem, studentsToolStripMenuItem, manageDepartmentsToolStripMenuItem, manageCoursesToolStripMenuItem, profileToolStripMenuItem, exitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(619, 29);
+            menuStrip1.Size = new Size(575, 29);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // homeToolStripMenuItem
             // 
@@ -182,74 +183,59 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Emoji", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 56);
+            label1.Location = new Point(15, 56);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(133, 36);
             label1.TabIndex = 1;
             label1.Text = "Welcome";
             // 
-            // panel1
+            // panel5
             // 
-            panel1.BackColor = Color.FromArgb(203, 241, 245);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Location = new Point(12, 163);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(459, 297);
-            panel1.TabIndex = 2;
+            panel5.BackColor = Color.FromArgb(0, 192, 192);
+            panel5.Controls.Add(pictureBox1);
+            panel5.Controls.Add(pictureBox3);
+            panel5.Dock = DockStyle.Bottom;
+            panel5.Location = new Point(0, 502);
+            panel5.Margin = new Padding(4, 3, 4, 3);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(575, 32);
+            panel5.TabIndex = 43;
             // 
-            // label5
+            // pictureBox1
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(21, 223);
-            label5.Name = "label5";
-            label5.Size = new Size(176, 26);
-            label5.TabIndex = 3;
-            label5.Text = "Total Departments :";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(530, 0);
+            pictureBox1.Margin = new Padding(4, 3, 4, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(45, 33);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 44;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
-            // label4
+            // pictureBox3
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(21, 160);
-            label4.Name = "label4";
-            label4.Size = new Size(135, 26);
-            label4.TabIndex = 2;
-            label4.Text = "Total Courses :";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(21, 102);
-            label3.Name = "label3";
-            label3.Size = new Size(141, 26);
-            label3.TabIndex = 1;
-            label3.Text = "Total Students :";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(21, 42);
-            label2.Name = "label2";
-            label2.Size = new Size(143, 26);
-            label2.TabIndex = 0;
-            label2.Text = "Total Teachers :";
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(885, 11);
+            pictureBox3.Margin = new Padding(4, 3, 4, 3);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(45, 33);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 43;
+            pictureBox3.TabStop = false;
             // 
             // PrincipalDashboard
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(166, 227, 233);
-            ClientSize = new Size(619, 534);
-            Controls.Add(panel1);
+            ClientSize = new Size(575, 534);
+            Controls.Add(panel5);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
             Margin = new Padding(2);
             MaximizeBox = false;
@@ -259,8 +245,9 @@
             Load += PrincipalDashboard_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -283,12 +270,10 @@
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem ediToolStripMenuItem;
         private Label label1;
-        private Panel panel1;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
         private ToolStripMenuItem studentsToolStripMenuItem;
         private ToolStripMenuItem viewStudentsToolStripMenuItem;
+        private Panel panel5;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox1;
     }
 }

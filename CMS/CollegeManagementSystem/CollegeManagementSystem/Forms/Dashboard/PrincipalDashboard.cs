@@ -46,10 +46,10 @@ namespace CollegeManagementSystem.Forms.Dashboard
                 label1.Text = $"Welcome, {Username}";
             }
 
-            label2.Text = "Total Teachers : 10";
-            label3.Text = "Total Students : 9";
-            label4.Text = "Total Departments : 6";
-            label5.Text = "Total Courses : 10";
+            // label2.Text = "Total Teachers : 10";
+            // label3.Text = "Total Students : 9";
+            // label4.Text = "Total Departments : 6";
+            // label5.Text = "Total Courses : 10";
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-           
+
         }
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
         {
             using (EditPrincipalProfileForm editPrincipalProfileForm = new EditPrincipalProfileForm
             {
-                Username = Username 
+                Username = Username
             })
             {
                 if (editPrincipalProfileForm.ShowDialog() == DialogResult.OK)
@@ -152,6 +152,19 @@ namespace CollegeManagementSystem.Forms.Dashboard
             using (AllSubForm allSubForm = new AllSubForm())
             {
                 allSubForm.ShowDialog();
+            }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Exit Application", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }
