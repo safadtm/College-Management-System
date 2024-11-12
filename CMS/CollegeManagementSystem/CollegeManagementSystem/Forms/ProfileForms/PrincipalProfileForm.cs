@@ -31,7 +31,8 @@ namespace CollegeManagementSystem.Forms.ProfileForms
             // Fetch the principal's data again
             LoadProfileData();
         }
-        public void LoadProfileData() {
+        public void LoadProfileData()
+        {
             // Get principal data using the controller
             Principal principal = principalController.GetPrincipalByUsername(Username);
 
@@ -57,7 +58,15 @@ namespace CollegeManagementSystem.Forms.ProfileForms
         private void PrincipalProfileForm_Load(object sender, EventArgs e)
         {
             RefreshProfileData();
-         
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Exit Application", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

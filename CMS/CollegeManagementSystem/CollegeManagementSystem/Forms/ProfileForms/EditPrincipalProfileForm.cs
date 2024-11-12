@@ -76,7 +76,7 @@ namespace CollegeManagementSystem.Forms.ProfileForms
             {
                 MessageBox.Show("Profile updated successfully.");
                 this.Hide();
-                this.DialogResult = DialogResult.OK; 
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
@@ -84,6 +84,14 @@ namespace CollegeManagementSystem.Forms.ProfileForms
                 MessageBox.Show("Error updating profile.");
             }
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Exit Application", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

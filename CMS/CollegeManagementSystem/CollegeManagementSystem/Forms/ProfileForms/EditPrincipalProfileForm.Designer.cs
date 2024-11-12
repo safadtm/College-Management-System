@@ -49,14 +49,19 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            panel5 = new Panel();
+            pictureBox3 = new PictureBox();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // radioButtonFemale
             // 
-            radioButtonFemale.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            radioButtonFemale.Anchor = AnchorStyles.None;
             radioButtonFemale.AutoSize = true;
-            radioButtonFemale.Location = new Point(241, 294);
+            radioButtonFemale.Location = new Point(355, 340);
             radioButtonFemale.Name = "radioButtonFemale";
             radioButtonFemale.Size = new Size(78, 25);
             radioButtonFemale.TabIndex = 66;
@@ -66,9 +71,9 @@
             // 
             // radioButtonMale
             // 
-            radioButtonMale.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            radioButtonMale.Anchor = AnchorStyles.None;
             radioButtonMale.AutoSize = true;
-            radioButtonMale.Location = new Point(158, 294);
+            radioButtonMale.Location = new Point(255, 340);
             radioButtonMale.Name = "radioButtonMale";
             radioButtonMale.Size = new Size(62, 25);
             radioButtonMale.TabIndex = 65;
@@ -78,35 +83,35 @@
             // 
             // dateTimePickerJoined
             // 
-            dateTimePickerJoined.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dateTimePickerJoined.Location = new Point(158, 389);
+            dateTimePickerJoined.Anchor = AnchorStyles.None;
+            dateTimePickerJoined.Location = new Point(255, 434);
             dateTimePickerJoined.Name = "dateTimePickerJoined";
-            dateTimePickerJoined.Size = new Size(200, 29);
+            dateTimePickerJoined.Size = new Size(182, 29);
             dateTimePickerJoined.TabIndex = 64;
             // 
             // dateTimePickerDOB
             // 
-            dateTimePickerDOB.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dateTimePickerDOB.Location = new Point(158, 243);
+            dateTimePickerDOB.Anchor = AnchorStyles.None;
+            dateTimePickerDOB.Location = new Point(255, 291);
             dateTimePickerDOB.Name = "dateTimePickerDOB";
-            dateTimePickerDOB.Size = new Size(200, 29);
+            dateTimePickerDOB.Size = new Size(182, 29);
             dateTimePickerDOB.TabIndex = 63;
             // 
             // txtExperience
             // 
-            txtExperience.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtExperience.Location = new Point(158, 442);
+            txtExperience.Anchor = AnchorStyles.None;
+            txtExperience.Location = new Point(255, 492);
             txtExperience.Margin = new Padding(2);
             txtExperience.Name = "txtExperience";
-            txtExperience.Size = new Size(205, 29);
+            txtExperience.Size = new Size(182, 29);
             txtExperience.TabIndex = 56;
             // 
             // label9
             // 
-            label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label9.Anchor = AnchorStyles.None;
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(46, 447);
+            label9.Location = new Point(117, 495);
             label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
             label9.Size = new Size(94, 21);
@@ -115,10 +120,10 @@
             // 
             // label8
             // 
-            label8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label8.Anchor = AnchorStyles.None;
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(46, 392);
+            label8.Location = new Point(117, 440);
             label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
             label8.Size = new Size(61, 21);
@@ -127,19 +132,19 @@
             // 
             // txtAddress
             // 
-            txtAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtAddress.Location = new Point(158, 336);
+            txtAddress.Anchor = AnchorStyles.None;
+            txtAddress.Location = new Point(255, 386);
             txtAddress.Margin = new Padding(2);
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(205, 29);
+            txtAddress.Size = new Size(182, 29);
             txtAddress.TabIndex = 53;
             // 
             // label6
             // 
-            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(46, 341);
+            label6.Location = new Point(117, 389);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
             label6.Size = new Size(73, 21);
@@ -148,10 +153,10 @@
             // 
             // label7
             // 
-            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(46, 292);
+            label7.Location = new Point(117, 340);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new Size(67, 21);
@@ -160,19 +165,19 @@
             // 
             // txtPhone
             // 
-            txtPhone.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtPhone.Location = new Point(158, 197);
+            txtPhone.Anchor = AnchorStyles.None;
+            txtPhone.Location = new Point(255, 242);
             txtPhone.Margin = new Padding(2);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(205, 29);
+            txtPhone.Size = new Size(182, 29);
             txtPhone.TabIndex = 50;
             // 
             // label4
             // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(46, 251);
+            label4.Location = new Point(117, 299);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(110, 21);
@@ -181,10 +186,10 @@
             // 
             // label5
             // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(46, 202);
+            label5.Location = new Point(117, 250);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
             label5.Size = new Size(59, 21);
@@ -193,41 +198,43 @@
             // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button1.Font = new Font("Segoe UI Emoji", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(190, 508);
+            button1.Anchor = AnchorStyles.None;
+            button1.BackColor = Color.Lime;
+            button1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(273, 549);
             button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(108, 40);
+            button1.Size = new Size(130, 47);
             button1.TabIndex = 47;
             button1.Text = "Update";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // txtEmail
             // 
-            txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtEmail.Location = new Point(158, 153);
+            txtEmail.Anchor = AnchorStyles.None;
+            txtEmail.Location = new Point(255, 202);
             txtEmail.Margin = new Padding(2);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(205, 29);
+            txtEmail.Size = new Size(182, 29);
             txtEmail.TabIndex = 45;
             // 
             // txtFullName
             // 
-            txtFullName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtFullName.Location = new Point(158, 103);
+            txtFullName.Anchor = AnchorStyles.None;
+            txtFullName.Location = new Point(255, 153);
             txtFullName.Margin = new Padding(2);
             txtFullName.Name = "txtFullName";
-            txtFullName.Size = new Size(205, 29);
+            txtFullName.Size = new Size(182, 29);
             txtFullName.TabIndex = 44;
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(46, 157);
+            label3.Location = new Point(117, 205);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(53, 21);
@@ -236,10 +243,10 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Emoji", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(46, 108);
+            label2.Location = new Point(117, 156);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(90, 21);
@@ -248,10 +255,10 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(74, 35);
+            label1.Location = new Point(145, 83);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(288, 32);
@@ -260,22 +267,57 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(11, 11);
+            pictureBox1.Location = new Point(81, 57);
             pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(63, 85);
+            pictureBox1.Size = new Size(53, 81);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 40;
             pictureBox1.TabStop = false;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.FromArgb(0, 192, 192);
+            panel5.Controls.Add(pictureBox3);
+            panel5.Dock = DockStyle.Top;
+            panel5.Location = new Point(0, 0);
+            panel5.Margin = new Padding(4, 3, 4, 3);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(598, 47);
+            panel5.TabIndex = 67;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(552, 11);
+            pictureBox3.Margin = new Padding(4, 3, 4, 3);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(45, 33);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 43;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(0, 192, 192);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(0, 625);
+            panel1.Margin = new Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(598, 47);
+            panel1.TabIndex = 68;
             // 
             // EditPrincipalProfileForm
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(166, 227, 233);
-            ClientSize = new Size(868, 605);
+            BackColor = Color.White;
+            ClientSize = new Size(598, 672);
+            Controls.Add(panel1);
+            Controls.Add(panel5);
             Controls.Add(radioButtonFemale);
             Controls.Add(radioButtonMale);
             Controls.Add(dateTimePickerJoined);
@@ -296,13 +338,15 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
             Name = "EditPrincipalProfileForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Edit Principal Profile";
             Load += EditPrincipalProfileForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -329,5 +373,8 @@
         private Label label2;
         private Label label1;
         private PictureBox pictureBox1;
+        private Panel panel5;
+        private PictureBox pictureBox3;
+        private Panel panel1;
     }
 }

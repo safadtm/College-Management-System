@@ -50,7 +50,7 @@ namespace CollegeManagementSystem.Forms.ProfileForms
                 label7.Text = "Gender: " + teacher.Gender;
                 label8.Text = "Address: " + teacher.Address;
                 label9.Text = "Joined: " + teacher.Joined;
-               
+
             }
             else
             {
@@ -67,6 +67,14 @@ namespace CollegeManagementSystem.Forms.ProfileForms
         {
             RefreshProfileData();
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Exit Application", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
