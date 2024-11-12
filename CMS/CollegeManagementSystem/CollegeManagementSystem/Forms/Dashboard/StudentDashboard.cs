@@ -50,7 +50,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void StudentDashboard_Load(object sender, EventArgs e)
         {
             Student student = studentController.GetStudentByUsername(Username);
-            stuID=student.StudentID;
+            stuID = student.StudentID;
 
             if (!string.IsNullOrEmpty(Username))
             {
@@ -65,7 +65,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,13 +107,21 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void mainExamToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (StudentScoreView studentScoreView= new()
+            using (StudentScoreView studentScoreView = new()
             {
                 StuID = stuID,
-                Username=Username
+                Username = Username
             })
             {
                 studentScoreView.ShowDialog();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Exit Application", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }

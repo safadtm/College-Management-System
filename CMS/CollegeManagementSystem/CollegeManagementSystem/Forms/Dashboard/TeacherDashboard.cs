@@ -23,7 +23,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
     {
         // Property to store the username
         public string Username { get; set; }
-        
+
         private TeacherController teacherController;
         public int deptID;
         public int subID;
@@ -54,10 +54,10 @@ namespace CollegeManagementSystem.Forms.Dashboard
         private void TeacherDashboard_Load(object sender, EventArgs e)
         {
             Teacher teacher = teacherController.GetTeacherByUsername(Username);
-            tchID=teacher.TeacherID;
+            tchID = teacher.TeacherID;
             deptID = teacher.DepartmentID;
 
-           
+
             if (!string.IsNullOrEmpty(teacher.FullName))
             {
 
@@ -71,7 +71,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,13 +104,13 @@ namespace CollegeManagementSystem.Forms.Dashboard
             // add student
             using (AddStudentForm addStudentForm = new AddStudentForm()
             {
-                DeptID=deptID
+                DeptID = deptID
             })
             {
-                
+
                 addStudentForm.ShowDialog();
             }
-            
+
         }
 
         private void allTeachersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -123,7 +123,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
             {
                 allStudentsByDepartment.ShowDialog();
             }
-            
+
         }
 
         private void addDepartmentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -154,7 +154,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void editAttendenceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void addCourseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -162,9 +162,9 @@ namespace CollegeManagementSystem.Forms.Dashboard
             // add mark by teachers class
             using (AddGradesForm addGradesForm = new()
             {
-                TchID=tchID,
-                DptID=deptID,
-                username=Username
+                TchID = tchID,
+                DptID = deptID,
+                username = Username
             })
             {
                 addGradesForm.ShowDialog();
@@ -199,7 +199,7 @@ namespace CollegeManagementSystem.Forms.Dashboard
             using (AddTimeTableForm addTimeTableForm = new AddTimeTableForm()
             {
                 DeptID = deptID,
-                TchID=tchID
+                TchID = tchID
             })
             {
                 addTimeTableForm.ShowDialog();
@@ -217,7 +217,15 @@ namespace CollegeManagementSystem.Forms.Dashboard
 
         private void editTimetableToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Exit Application", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -50,6 +50,10 @@
             panel5 = new Panel();
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
             menuStrip1.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -182,11 +186,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Emoji", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(15, 56);
+            label1.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Blue;
+            label1.Location = new Point(51, 56);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(133, 36);
+            label1.Size = new Size(137, 32);
             label1.TabIndex = 1;
             label1.Text = "Welcome";
             // 
@@ -196,7 +201,7 @@
             panel5.Controls.Add(pictureBox1);
             panel5.Controls.Add(pictureBox3);
             panel5.Dock = DockStyle.Bottom;
-            panel5.Location = new Point(0, 502);
+            panel5.Location = new Point(0, 340);
             panel5.Margin = new Padding(4, 3, 4, 3);
             panel5.Name = "panel5";
             panel5.Size = new Size(575, 32);
@@ -225,12 +230,52 @@
             pictureBox3.TabIndex = 43;
             pictureBox3.TabStop = false;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(51, 149);
+            label2.Name = "label2";
+            label2.Size = new Size(65, 22);
+            label2.TabIndex = 44;
+            label2.Text = "label2";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(304, 149);
+            label3.Name = "label3";
+            label3.Size = new Size(65, 22);
+            label3.TabIndex = 45;
+            label3.Text = "label3";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(51, 266);
+            label4.Name = "label4";
+            label4.Size = new Size(65, 22);
+            label4.TabIndex = 46;
+            label4.Text = "label4";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(304, 266);
+            label5.Name = "label5";
+            label5.Size = new Size(65, 22);
+            label5.TabIndex = 47;
+            label5.Text = "label5";
+            // 
             // PrincipalDashboard
             // 
             AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(166, 227, 233);
-            ClientSize = new Size(575, 534);
+            BackColor = Color.White;
+            ClientSize = new Size(575, 372);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(panel5);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
@@ -275,5 +320,9 @@
         private Panel panel5;
         private PictureBox pictureBox3;
         private PictureBox pictureBox1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
     }
 }
