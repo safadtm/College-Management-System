@@ -45,5 +45,13 @@ namespace CollegeManagementSystem
             studentloginform form3 = new studentloginform();
             form3.Show();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Exit Application", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

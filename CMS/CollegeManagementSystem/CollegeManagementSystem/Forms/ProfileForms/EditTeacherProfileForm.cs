@@ -67,7 +67,7 @@ namespace CollegeManagementSystem.Forms.ProfileForms
                 txtPhone.Text = teacher.Phone;
                 dateTimePickerDOB.Value = Convert.ToDateTime(teacher.DOB);
                 txtAddress.Text = teacher.Address;
-              
+
                 if (teacher.Gender == "Male")
                 {
                     radioButtonMale.Checked = true;
@@ -81,6 +81,14 @@ namespace CollegeManagementSystem.Forms.ProfileForms
             else
             {
                 MessageBox.Show("Error fetching profile details.");
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Exit Application", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }
